@@ -1,81 +1,47 @@
 ---
 layout: page
-title: project 8
-description: an other project with a background image and giscus comments
-img: assets/img/9.jpg
-importance: 2
+title: Peach Party
+description: 2D Arcade Mario Party "clone"
+img: assets/img/PeachParty.jpg
+importance: 5
 category: work
-giscus_comments: true
+giscus_comments: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Peach Party is a fast-paced, two-player arcade-style game where Peach and Yoshi compete to collect the most stars and coins within 99 seconds while navigating a dynamic game board filled with obstacles and enemies like Bowser and Boo. Players roll a virtual die to move across the board, encountering squares with special powers such as granting coins or teleporting them to new locations. The game is interactive, allowing players to use projectiles and strategically choose paths at forks to outmaneuver their opponent.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Each player controls their character using distinct keyboard inputs, with Peach and Yoshi having separate keys for rolling the die, navigating forks, and firing projectiles. The game features nine unique boards, each offering different challenges and layouts, encouraging both competitive and strategic gameplay. The winner is determined based on who collects the most stars and coins by the end of the timer, with ties broken based on coins or randomized if still tied. Peach Party combines luck and strategy, providing an engaging experience for both players.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/PeachParty.jpg" title="flow chart" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Screenshot of Peach Party
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Peach Controls:
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+- Roll the die: **Tab** key
+- Choose a left-fork: **A** key
+- Choose a right-fork: **D** key
+- Choose the up-fork: **W** key
+- Choose the down-fork: **S** key
+- Fire a Vortex projectile: **`** key
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### Yoshi Controls:
 
-{% raw %}
+- Roll the die: **Enter** key
+- Choose a left-fork: **Left Arrow** key
+- Choose a right-fork: **Right Arrow** key
+- Choose the up-fork: **Up Arrow** key
+- Choose the down-fork: **Down Arrow** key
+- Fire a Vortex projectile: **\\** key
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+### Game Framework:
 
-{% endraw %}
+- Quit: **Escape** key
+- Debug mode: **F** key (Run one tick at a time)
+- Resume full-speed play: **R** key
