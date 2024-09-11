@@ -12,7 +12,7 @@ In this project, I developed an advanced brain tumor segmentation framework that
 
 The success of this approach lies not only in its technical innovation but also in its accessibility. The framework simplifies complex segmentation tasks, making it user-friendly for medical professionals without machine learning expertise. This work was recognized during a research symposium where I was awarded Best Presenter, and it subsequently led to a PhD offer with a Presidential Scholarship. The project stands as a testament to the potential of AI-driven solutions in medical imaging, offering a more reliable and efficient method for brain tumor diagnosis and treatment planning.
 
-<iframe src="/assets/pdf/brain_tumor_segmentation.pdf" width="100%" height="600px">
+<iframe src="https://HandsomeYun.github.io/assets/pdf/brain_tumor_segmentation.pdf" width="100%" height="600px">
     This browser does not support PDFs. Please download the PDF to view it:
-    <a href="/assets/pdf/brain_tumor_segmentation.pdf">Download PDF</a>
+    <a href="https://HandsomeYun.github.io/assets/pdf/brain_tumor_segmentation.pdf">Download PDF</a>
 </iframe>
