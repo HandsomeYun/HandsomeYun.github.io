@@ -32,8 +32,3 @@ _Sep 2021 - Expected Jun 2025_
 
 - Cumulative GPA: 3.823/4.0
 - Honors: Dean's Honors List for Fall 2021, Winter/Spring/Fall 2022, Winter/Spring 2023
-
-<iframe src="/assets/pdf/Resume.pdf" width="100%" height="600px">
-    This browser does not support PDFs. Please download the PDF to view it:
-    <a href="/assets/pdf/Resume.pdf">Download PDF</a>
-</iframe>
