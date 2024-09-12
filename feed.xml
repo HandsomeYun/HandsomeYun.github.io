@@ -1,777 +1,958 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://handsomeyun.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://handsomeyun.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-09-12T02:00:34+00:00</updated><id>https://handsomeyun.github.io/feed.xml</id><title type="html">Yun Zhang</title><subtitle>A personal website of Yun Zhang </subtitle><entry><title type="html">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</title><link href="https://handsomeyun.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/" rel="alternate" type="text/html" title="Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra"/><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.]]></summary></entry><entry><title type="html">a post with tabs</title><link href="https://handsomeyun.github.io/blog/2024/tabs/" rel="alternate" type="text/html" title="a post with tabs"/><published>2024-05-01T00:32:13+00:00</published><updated>2024-05-01T00:32:13+00:00</updated><id>https://handsomeyun.github.io/blog/2024/tabs</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/tabs/"><![CDATA[<p>This is how a post with <a href="https://github.com/Ovski4/jekyll-tabs">tabs</a> looks like. Note that the tabs could be used for different purposes, not only for code.</p> <h2 id="first-tabs">First tabs</h2> <p>To add tabs, use the following syntax:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">tabs</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="cp">%}</span>
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">tab</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="nv">tab-name-1</span><span class="w"> </span><span class="cp">%}</span>
-
-Content 1
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">tab</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="nv">tab-name-2</span><span class="w"> </span><span class="cp">%}</span>
-
-Content 2
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endtabs</span><span class="w"> </span><span class="cp">%}</span>
-</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="7b21cc5c-e27b-4d26-be40-a8017662d52a" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="7b21cc5c-e27b-4d26-be40-a8017662d52a" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
-</code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
-</code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">pputs</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span>
-</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="b2b35971-c4b2-498d-9261-8e7073c0c633" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="b2b35971-c4b2-498d-9261-8e7073c0c633" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s2">"</span><span class="s">whatsup"</span>
-  <span class="pi">-</span> <span class="s2">"</span><span class="s">hi"</span>
-</code></pre></div></div> </li> <li> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"hello"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"whatsup"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hi"</span><span class="p">]</span><span class="w">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://handsomeyun.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://handsomeyun.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-09-12T23:33:00+00:00</updated><id>https://handsomeyun.github.io/feed.xml</id><title type="html">Yun Zhang</title><subtitle>A personal website of Yun Zhang </subtitle><entry><title type="html">How to Build and Run a Docker Image Anywhere</title><link href="https://handsomeyun.github.io/blog/2024/docker/" rel="alternate" type="text/html" title="How to Build and Run a Docker Image Anywhere"/><published>2024-09-11T16:00:00+00:00</published><updated>2024-09-11T16:00:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/docker</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/docker/"><![CDATA[<h2 id="what-is-a-docker-image">What is a Docker Image?</h2> <p>A <strong>Docker image</strong> is a standalone, executable package that includes everything needed to run an application: code, runtime, libraries, and settings. It ensures that software behaves consistently across different environments by packaging dependencies into one unit.</p> <hr/> <h2 id="steps-to-build-and-run-a-docker-image">Steps to Build and Run a Docker Image</h2> <h3 id="1-prepare-the-application-for-docker">1. Prepare the Application for Docker</h3> <p>Ensure that your application’s distributable files (e.g., a zip, tarball, or binary) are available on the system where Docker will be run. For example, if you have a <code class="language-plaintext highlighter-rouge">.zip</code> file containing your application:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Upload or move the distribution file to the desired location</span>
+<span class="nb">mv </span>dist.zip /path/to/your/project
+</code></pre></div></div> <h3 id="2-unzip-the-distribution-package">2. Unzip the Distribution Package</h3> <p>If your application is compressed, unzip the file to extract its contents:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Navigate to the project directory and unzip the file</span>
+<span class="nb">cd</span> /path/to/your/project
+unzip dist.zip
+</code></pre></div></div> <h3 id="3-build-the-docker-image">3. Build the Docker Image</h3> <p>To build the Docker image, you will need a Dockerfile that contains the instructions on how to create the image. You can then use the docker build command to build the image:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Build the Docker image from a Dockerfile</span>
+docker build <span class="nt">-f</span> Dockerfile <span class="nt">-t</span> your_image_name:latest <span class="nb">.</span>
+</code></pre></div></div> <ul> <li>`-f Dockerfile`: Specifies the name of the Dockerfile (if it’s not named `Dockerfile`).</li> <li>`-t your_image_name:latest`: Tags the image with a name and version (`latest` is commonly used).</li> </ul> <p>Optionally, you can pass arguments using `–build-arg` to parameterize your build process:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Build with arguments</span>
+docker build <span class="nt">-f</span> Dockerfile <span class="nt">--build-arg</span> <span class="nv">app</span><span class="o">=</span>my_app <span class="nt">-t</span> your_image_name:latest <span class="nb">.</span>
+</code></pre></div></div> <h3 id="4-check-for-running-containers">4. Check for Running Containers</h3> <p>Before running a new container, check if any previous instances of the application are running:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># List running containers</span>
+docker ps
+</code></pre></div></div> <p>If a container is already running, stop and remove it to avoid conflicts:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Stop and remove the container by ID or name</span>
+docker <span class="nb">rm</span> <span class="nt">-f</span> &lt;container_id_or_name&gt;
+</code></pre></div></div> <h3 id="5-run-the-docker-container">5. Run the Docker Container</h3> <p>Run the Docker image by mapping a port on your local machine to a port inside the container. This allows external access to the application:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Run the Docker container</span>
+docker run <span class="nt">-d</span> <span class="nt">-p</span> &lt;host_port&gt;:&lt;container_port&gt; your_image_name:latest
+</code></pre></div></div> <ul> <li>`-d`: Runs the container in the background.</li> <li>`-p <host_port>:<container_port>\`: Maps a port on your local machine (host) to a port inside the container.</container_port></host_port></li> </ul> <p>For example, to map port 8000 on the host to port 80 inside the container:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">-p</span> 8000:80 your_image_name:latest
+</code></pre></div></div> <h3 id="6-access-the-application">6. Access the Application</h3> <p>Once the container is running, you can access the application through the mapped port on your machine’s IP address:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Open the application in your browser</span>
+http://&lt;your_server_ip&gt;:&lt;host_port&gt;/path_to_app
+</code></pre></div></div> <p>Replace `<your_server_ip>\` with the IP address of the machine where Docker is running (e.g., \`localhost\` for local development or the IP of a remote server).</your_server_ip></p>]]></content><author><name></name></author><category term="devops"/><category term="docker"/><category term="container"/><category term="tutorial"/><summary type="html"><![CDATA[A step-by-step guide to building and running a Docker image for consistent application deployment.]]></summary></entry><entry><title type="html">Adapting MiniGPT-4 (Vicuna 7B) for Tumor Detection with Bounding Box Prediction Using 4 MRI Modalities</title><link href="https://handsomeyun.github.io/blog/2024/HKUAD/" rel="alternate" type="text/html" title="Adapting MiniGPT-4 (Vicuna 7B) for Tumor Detection with Bounding Box Prediction Using 4 MRI Modalities"/><published>2024-09-11T16:00:00+00:00</published><updated>2024-09-11T16:00:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/HKUAD</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/HKUAD/"><![CDATA[<p>In this post, we will explain how to adapt <strong>MiniGPT-4</strong> with bounding box prediction capabilities to detect tumors across four MRI modalities. We’ll walk through the process of creating a custom dataloader, training the model, and evaluating it.</p> <hr/> <h3 id="fusion-model">Fusion Model</h3> <p>The goal is to train a Large Language Model (LLM) that accepts four MRI image inputs and predicts bounding box coordinates for tumor locations. Each image corresponds to a different MRI modality.</p> <p>For training, we will use prompts such as:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"&lt;Img1&gt;&lt;ImageHere&gt;&lt;/Img1&gt;&lt;Img2&gt;&lt;ImageHere&gt;&lt;/Img2&gt;&lt;Img3&gt;&lt;ImageHere&gt;&lt;/Img3&gt;&lt;Img4&gt;&lt;ImageHere&gt;&lt;/Img4&gt; where is the tumor?"
+</code></pre></div></div> <p>We will introduce the ‘<box>' token to predict the bounding box coordinates. The model will output the coordinates [maxx, maxy, minx, miny].</box></p> <p>Example ‘summary.jsonl’</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"t2f Sagittal_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BraTS-GLI-00000-000_2_0.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"t2w Sagittal_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BraTS-GLI-00000-000_2_2.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"t1n Sagittal_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BraTS-GLI-00000-000_2_3.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"t1c Sagittal_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BraTS-GLI-00000-000_2_4.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"box"</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mi">96</span><span class="p">,</span><span class="w"> </span><span class="mi">84</span><span class="p">,</span><span class="w"> </span><span class="mi">68</span><span class="p">,</span><span class="w"> </span><span class="mi">68</span><span class="p">]]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="a209a141-b168-4dd3-85f7-d45ba09ddd43" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="a209a141-b168-4dd3-85f7-d45ba09ddd43" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://handsomeyun.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://handsomeyun.github.io/blog/2024/typograms</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
-</span><span class="sb">+----+
-|    |---&gt; My first diagram!
-+----+</span>
+</span></code></pre></div></div> <p>This file links each modality image with the corresponding bounding box coordinates. —</p> <h3 id="code-implementation">Code Implementation</h3> <iframe src="/assets/pdf/Advance.pdf" width="100%" height="600px"> MiniGPT4 with Multimodality-Advance <a href="/assets/pdf/Advance.pdf">Download PDF</a> </iframe>]]></content><author><name></name></author><category term="machine-learning"/><category term="LLM"/><summary type="html"><![CDATA[A detailed guide to adapting MiniGPT-4 with bounding box prediction across four MRI modalities for tumor detection.]]></summary></entry><entry><title type="html">Getting Started with OpenSCENARIO for CARLA</title><link href="https://handsomeyun.github.io/blog/2024/OpenSCENARIO/" rel="alternate" type="text/html" title="Getting Started with OpenSCENARIO for CARLA"/><published>2024-09-11T15:09:00+00:00</published><updated>2024-09-11T15:09:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/OpenSCENARIO</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/OpenSCENARIO/"><![CDATA[<h3 id="introduction">Introduction</h3> <p><strong>OpenSCENARIO</strong> is a flexible and powerful format for defining complex driving scenarios for testing autonomous vehicles. One of the key aspects of working with <strong>OpenSCENARIO</strong> is understanding how to position entities in the environment, which can be done in various coordinate systems. This guide will explain how to use geometry and positioning for scenarios in <strong>CARLA</strong>.</p> <hr/> <h3 id="understanding-positioning-in-openscenario">Understanding Positioning in OpenSCENARIO</h3> <p>In <strong>OpenSCENARIO</strong>, positioning refers to the placement and movement of entities within the simulation environment. There are multiple ways to define the positioning of an entity, depending on the reference system you want to use:</p> <h4 id="1-absoluterelative-in-the-world-coordinate-system">1. Absolute/Relative in the World Coordinate System</h4> <ul> <li><strong>Absolute</strong>: Specifies the exact position of an entity in the global world coordinates.</li> <li><strong>Relative</strong>: Positions an entity relative to the world coordinate system but based on a reference point.</li> </ul> <h4 id="2-absolute-in-the-geographic-coordinate-system">2. Absolute in the Geographic Coordinate System</h4> <ul> <li>Defines the entity’s position using geographic latitude, longitude, and altitude.</li> </ul> <h4 id="3-relative-to-another-entity">3. Relative to Another Entity</h4> <ul> <li>This allows the entity to be positioned based on the location of another entity. Useful for scenarios where entities interact, such as following or overtaking other vehicles.</li> </ul> <h4 id="4-absoluterelative-in-the-road-coordinate-system">4. Absolute/Relative in the Road Coordinate System</h4> <ul> <li><strong>Road Position</strong>: Positioning based on the road’s centerline (s-coordinate) and distance from the centerline (t-coordinate).</li> <li><strong>Relative Road Position</strong>: Specifies the position relative to a given road or path within the environment.</li> </ul> <h4 id="5-absoluterelative-in-the-lane-coordinate-system">5. Absolute/Relative in the Lane Coordinate System</h4> <ul> <li>Used to place vehicles in specific lanes on the road, making it easier to create lane-specific behaviors.</li> </ul> <h4 id="6-relative-to-a-route">6. Relative to a Route</h4> <ul> <li>Position entities along a pre-defined route, usually consisting of waypoints that form a path for entities to follow.</li> </ul> <h4 id="7-relative-to-a-trajectory">7. Relative to a Trajectory</h4> <ul> <li>Entities can follow a custom trajectory defined by a series of waypoints, useful for simulating dynamic movements like overtaking or evasive maneuvers.</li> </ul> <hr/> <h3 id="route-and-waypoint-definitions">Route and Waypoint Definitions</h3> <p>In <strong>OpenSCENARIO</strong>, routes and waypoints are essential components for defining paths that entities follow:</p> <h4 id="route">Route</h4> <ul> <li>A <strong>route</strong> defines a path for an entity to follow through the road network. It consists of waypoints, each connected to form a continuous directional path.</li> </ul> <h4 id="waypoint">Waypoint</h4> <ul> <li>A <strong>waypoint</strong> represents a specific location on a route that an entity should pass through. It consists of the coordinates and route strategy.</li> </ul> <h4 id="position">Position</h4> <ul> <li>A waypoint’s <strong>position</strong> specifies the coordinates in the road network, determining where the entity should be located at that point.</li> </ul> <hr/> <h3 id="global-setting-defining-the-towns-and-parameters">Global Setting (Defining the Towns and Parameters)</h3> <p>To set up global settings like towns and road networks, use the following structure:</p> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;OpenSCENARIO&gt;</span>
+  <span class="nt">&lt;FileHeader</span> <span class="na">revMajor=</span><span class="s">"1"</span> <span class="na">revMinor=</span><span class="s">"0"</span> <span class="na">date=</span><span class="s">"${Date}"</span> <span class="na">description=</span><span class="s">"CARLA: SynchronizeIntersectionEntry"</span> <span class="na">author=</span><span class="s">"YourName"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;ParameterDeclarations/&gt;</span>
+  <span class="nt">&lt;CatalogLocations/&gt;</span>
+  <span class="nt">&lt;RoadNetwork&gt;</span>
+    <span class="nt">&lt;LogicFile</span> <span class="na">filepath=</span><span class="s">"${Town}"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;SceneGraphFile</span> <span class="na">filepath=</span><span class="s">""</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/RoadNetwork&gt;</span>
+<span class="nt">&lt;/OpenSCENARIO&gt;</span>
+</code></pre></div></div> <h4 id="example">Example</h4> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;OpenSCENARIO&gt;</span>
+  <span class="nt">&lt;FileHeader</span> <span class="na">revMajor=</span><span class="s">"1"</span> <span class="na">revMinor=</span><span class="s">"0"</span> <span class="na">date=</span><span class="s">"2020-03-24T12:00:00"</span> <span class="na">description=</span><span class="s">"CARLA: SynchronizeIntersectionEntry"</span> <span class="na">author=</span><span class="s">"YourName"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;ParameterDeclarations/&gt;</span>
+  <span class="nt">&lt;CatalogLocations/&gt;</span>
+  <span class="nt">&lt;RoadNetwork&gt;</span>
+    <span class="nt">&lt;LogicFile</span> <span class="na">filepath=</span><span class="s">"Town06"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;SceneGraphFile</span> <span class="na">filepath=</span><span class="s">""</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/RoadNetwork&gt;</span>
+<span class="nt">&lt;/OpenSCENARIO&gt;</span>
+</code></pre></div></div> <h3 id="defining-entities">Defining Entities</h3> <p>The category and model for vehicles can be found at <a href="https://carla.readthedocs.io/en/latest/catalogue_vehicles/">CARLA Vehicle Catalogue</a>. Properties like <strong><em>BoundingBox</em></strong> and <strong><em>Axles</em></strong> can be consistent across different vehicle models. Here’s the general structure for defining entities:</p> <p>Type:</p> <ul> <li><strong><em>Type == “ego_vehicle”</em></strong> Indicates this is the car that you want to drive in default when you run manual_control.py.</li> <li><strong><em>Type == “simulation”</em></strong> indicates this is the car for simulation. You can also drive them when run manual_control.py with –filter=${modelName}</li> </ul> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Entities&gt;</span>
+  <span class="nt">&lt;ScenarioObject</span> <span class="na">name=</span><span class="s">"${EntityName}"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Vehicle</span> <span class="na">name=</span><span class="s">"${VehicleModelInCarla}"</span> <span class="na">vehicleCategory=</span><span class="s">"${VehicleCategoryInCarla}"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ParameterDeclarations/&gt;</span>
+      <span class="nt">&lt;Performance</span> <span class="na">maxSpeed=</span><span class="s">"${maxSpeed}"</span> <span class="na">maxAcceleration=</span><span class="s">"${maxAcceleration}"</span> <span class="na">maxDeceleration=</span><span class="s">"${maxDeceleration}"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;BoundingBox&gt;</span>
+        <span class="nt">&lt;Center</span> <span class="na">x=</span><span class="s">"${x}"</span> <span class="na">y=</span><span class="s">"${y}"</span> <span class="na">z=</span><span class="s">"${z}"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Dimensions</span> <span class="na">width=</span><span class="s">"${width}"</span> <span class="na">length=</span><span class="s">"${length}"</span> <span class="na">height=</span><span class="s">"${height}"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/BoundingBox&gt;</span>
+      <span class="nt">&lt;Axles&gt;</span>
+        <span class="nt">&lt;FrontAxle</span> <span class="na">maxSteering=</span><span class="s">"${maxSteering}"</span> <span class="na">wheelDiameter=</span><span class="s">"${wheelDiameter}"</span> <span class="na">trackWidth=</span><span class="s">"${trackWidth}"</span> <span class="na">positionX=</span><span class="s">"${positionX}"</span> <span class="na">positionZ=</span><span class="s">"${positionZ}"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;RearAxle</span> <span class="na">maxSteering=</span><span class="s">"${maxSteering}"</span> <span class="na">wheelDiameter=</span><span class="s">"${wheelDiameter}"</span> <span class="na">trackWidth=</span><span class="s">"${trackWidth}"</span> <span class="na">positionX=</span><span class="s">"${positionX}"</span> <span class="na">positionZ=</span><span class="s">"${positionZ}"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/Axles&gt;</span>
+      <span class="nt">&lt;Properties&gt;</span>
+        <span class="nt">&lt;Property</span> <span class="na">name=</span><span class="s">"type"</span> <span class="na">value=</span><span class="s">"${type}"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/Properties&gt;</span>
+    <span class="nt">&lt;/Vehicle&gt;</span>
+  <span class="nt">&lt;/ScenarioObject&gt;</span>
+<span class="nt">&lt;/Entities&gt;</span>
+</code></pre></div></div> <h4 id="example-for-an-ego-vehicle">Example for an Ego Vehicle</h4> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Entities&gt;</span>
+  <span class="nt">&lt;ScenarioObject</span> <span class="na">name=</span><span class="s">"hero"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Vehicle</span> <span class="na">name=</span><span class="s">"vehicle.tesla.model3"</span> <span class="na">vehicleCategory=</span><span class="s">"car"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ParameterDeclarations/&gt;</span>
+      <span class="nt">&lt;Performance</span> <span class="na">maxSpeed=</span><span class="s">"69.444"</span> <span class="na">maxAcceleration=</span><span class="s">"200"</span> <span class="na">maxDeceleration=</span><span class="s">"10.0"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;BoundingBox&gt;</span>
+        <span class="nt">&lt;Center</span> <span class="na">x=</span><span class="s">"1.5"</span> <span class="na">y=</span><span class="s">"0.0"</span> <span class="na">z=</span><span class="s">"0.9"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Dimensions</span> <span class="na">width=</span><span class="s">"2.1"</span> <span class="na">length=</span><span class="s">"4.5"</span> <span class="na">height=</span><span class="s">"1.8"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/BoundingBox&gt;</span>
+      <span class="nt">&lt;Axles&gt;</span>
+        <span class="nt">&lt;FrontAxle</span> <span class="na">maxSteering=</span><span class="s">"0.5"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"3.1"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;RearAxle</span> <span class="na">maxSteering=</span><span class="s">"0.0"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"0.0"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/Axles&gt;</span>
+      <span class="nt">&lt;Properties&gt;</span>
+        <span class="nt">&lt;Property</span> <span class="na">name=</span><span class="s">"type"</span> <span class="na">value=</span><span class="s">"ego_vehicle"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/Properties&gt;</span>
+    <span class="nt">&lt;/Vehicle&gt;</span>
+  <span class="nt">&lt;/ScenarioObject&gt;</span>
+<span class="nt">&lt;/Entities&gt;</span>
+</code></pre></div></div> <h3 id="storyboard-structure">Storyboard Structure</h3> <p>Starting the Scenario</p> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Storyboard&gt;</span>
+   <span class="nt">&lt;Init&gt;</span>
+       <span class="nt">&lt;Actions&gt;</span>
+			"a. Setting Environment"
+			“b. Spawn Entity”
+       <span class="nt">&lt;/Actions&gt;</span>
+   <span class="nt">&lt;/Init&gt;</span>
+<span class="nt">&lt;Story</span> <span class="na">name=</span><span class="s">"Story Name"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;Act</span> <span class="na">name=</span><span class="s">"ActName"</span><span class="nt">&gt;</span>
+			“c. Act”
+	<span class="nt">&lt;/Act&gt;</span>
+<span class="nt">&lt;/Story&gt;</span>
+			“d. Stop trigger for story”
+ <span class="nt">&lt;/Storyboard&gt;</span>
+<span class="nt">&lt;/OpenSCENARIO&gt;</span>
+</code></pre></div></div> <h3 id="setting-your-weather">Setting your weather</h3> <ul> <li>cloudState: “overcast”, “free”…</li> <li>PrecipitationType: “rain”/”snow”</li> <li>Can change other weather component with any number you want. The elevation are in radians.</li> </ul> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Storyboard&gt;</span>
+  <span class="nt">&lt;Init&gt;</span>
+    <span class="nt">&lt;Actions&gt;</span>
+      <span class="nt">&lt;GlobalAction&gt;</span>
+        <span class="nt">&lt;EnvironmentAction&gt;</span>
+          <span class="nt">&lt;Environment</span> <span class="na">name=</span><span class="s">"${SetEnvironmentName}"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;TimeOfDay</span> <span class="na">animation=</span><span class="s">"${true/false}"</span> <span class="na">dateTime=</span><span class="s">"${DateTime}"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Weather</span> <span class="na">cloudState=</span><span class="s">"rain"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;Sun</span> <span class="na">intensity=</span><span class="s">"0.30"</span> <span class="na">azimuth=</span><span class="s">"0"</span> <span class="na">elevation=</span><span class="s">"1.31"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;Fog</span> <span class="na">visualRange=</span><span class="s">"100000.0"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;Precipitation</span> <span class="na">precipitationType=</span><span class="s">"rain"</span> <span class="na">intensity=</span><span class="s">"0.2"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/Weather&gt;</span>
+            <span class="nt">&lt;RoadCondition</span> <span class="na">frictionScaleFactor=</span><span class="s">"1.0"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;/Environment&gt;</span>
+        <span class="nt">&lt;/EnvironmentAction&gt;</span>
+      <span class="nt">&lt;/GlobalAction&gt;</span>
+    <span class="nt">&lt;/Actions&gt;</span>
+  <span class="nt">&lt;/Init&gt;</span>
+<span class="nt">&lt;/Storyboard&gt;</span>
+</code></pre></div></div> <h4 id="spawning-entities">Spawning Entities</h4> <p>Entity positioning can be defined using RoadPosition or WorldPosition:</p> <p><strong><em>Road Position Example</em></strong>:</p> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;RoadPosition</span> <span class="na">roadId=</span><span class="s">"${roadId}"</span> <span class="na">s=</span><span class="s">"${s}"</span> <span class="na">t=</span><span class="s">"${t}"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;Orientation</span> <span class="na">h=</span><span class="s">"0.0"</span> <span class="na">p=</span><span class="s">"0.0"</span> <span class="na">r=</span><span class="s">"0"</span> <span class="na">type=</span><span class="s">"relative"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/RoadPosition&gt;</span>
+</code></pre></div></div> <p><strong><em>Road Position Example</em></strong>:</p> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;RoadPosition</span> <span class="na">roadId=</span><span class="s">"${roadId}"</span> <span class="na">s=</span><span class="s">"${s}"</span> <span class="na">t=</span><span class="s">"${t}"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;Orientation</span> <span class="na">h=</span><span class="s">"0.0"</span> <span class="na">p=</span><span class="s">"0.0"</span> <span class="na">r=</span><span class="s">"0"</span> <span class="na">type=</span><span class="s">"relative"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/RoadPosition&gt;</span>
+</code></pre></div></div> <p><strong><em>World Position Example</em></strong>:</p> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;WorldPosition</span> <span class="na">x=</span><span class="s">"2"</span> <span class="na">y=</span><span class="s">"68.03"</span> <span class="na">z=</span><span class="s">"0.3"</span> <span class="na">h=</span><span class="s">"-1.57"</span><span class="nt">/&gt;</span>
+</code></pre></div></div> <p><strong><em>Road Position Example</em></strong>:</p> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;RoadPosition</span> <span class="na">roadId=</span><span class="s">"${roadId}"</span> <span class="na">s=</span><span class="s">"${s}"</span> <span class="na">t=</span><span class="s">"${t}"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;Orientation</span> <span class="na">h=</span><span class="s">"0.0"</span> <span class="na">p=</span><span class="s">"0.0"</span> <span class="na">r=</span><span class="s">"0"</span> <span class="na">type=</span><span class="s">"relative"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/RoadPosition&gt;</span>
+</code></pre></div></div> <h4 id="teleporting-non-ego-vehicles">Teleporting Non-Ego Vehicles</h4> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Private</span> <span class="na">entityRef=</span><span class="s">"${EntityName}"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;PrivateAction&gt;</span>
+    <span class="nt">&lt;TeleportAction&gt;</span>
+      <span class="nt">&lt;Position&gt;</span>
+        <span class="nt">&lt;RoadPosition</span> <span class="na">roadId=</span><span class="s">"1"</span> <span class="na">s=</span><span class="s">"10"</span> <span class="na">t=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;Orientation</span> <span class="na">h=</span><span class="s">"0.0"</span> <span class="na">p=</span><span class="s">"0.0"</span> <span class="na">r=</span><span class="s">"0"</span> <span class="na">type=</span><span class="s">"relative"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/RoadPosition&gt;</span>
+      <span class="nt">&lt;/Position&gt;</span>
+    <span class="nt">&lt;/TeleportAction&gt;</span>
+  <span class="nt">&lt;/PrivateAction&gt;</span>
+<span class="nt">&lt;/Private&gt;</span>
+</code></pre></div></div> <p><strong><em>Example Storyboard for Ego Vehicle</em></strong>:</p> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Private</span> <span class="na">entityRef=</span><span class="s">"hero"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;PrivateAction&gt;</span>
+    <span class="nt">&lt;TeleportAction&gt;</span>
+      <span class="nt">&lt;Position&gt;</span>
+        <span class="nt">&lt;RoadPosition</span> <span class="na">roadId=</span><span class="s">"1"</span> <span class="na">s=</span><span class="s">"2"</span> <span class="na">t=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;Orientation</span> <span class="na">h=</span><span class="s">"0.0"</span> <span class="na">p=</span><span class="s">"0.0"</span> <span class="na">r=</span><span class="s">"0"</span> <span class="na">type=</span><span class="s">"relative"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/RoadPosition&gt;</span>
+      <span class="nt">&lt;/Position&gt;</span>
+    <span class="nt">&lt;/TeleportAction&gt;</span>
+  <span class="nt">&lt;/PrivateAction&gt;</span>
+  <span class="nt">&lt;PrivateAction&gt;</span>
+    <span class="nt">&lt;ControllerAction&gt;</span>
+      <span class="nt">&lt;AssignControllerAction&gt;</span>
+        <span class="nt">&lt;Controller</span> <span class="na">name=</span><span class="s">"HeroAgent"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;Properties&gt;</span>
+            <span class="nt">&lt;Property</span> <span class="na">name=</span><span class="s">"module"</span> <span class="na">value=</span><span class="s">"external_control"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;/Properties&gt;</span>
+        <span class="nt">&lt;/Controller&gt;</span>
+      <span class="nt">&lt;/AssignControllerAction&gt;</span>
+      <span class="nt">&lt;OverrideControllerValueAction&gt;</span>
+        <span class="nt">&lt;Throttle</span> <span class="na">value=</span><span class="s">"0"</span> <span class="na">active=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Brake</span> <span class="na">value=</span><span class="s">"0"</span> <span class="na">active=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Clutch</span> <span class="na">value=</span><span class="s">"0"</span> <span class="na">active=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;ParkingBrake</span> <span class="na">value=</span><span class="s">"0"</span> <span class="na">active=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;SteeringWheel</span> <span class="na">value=</span><span class="s">"0"</span> <span class="na">active=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Gear</span> <span class="na">number=</span><span class="s">"0"</span> <span class="na">active=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/OverrideControllerValueAction&gt;</span>
+    <span class="nt">&lt;/ControllerAction&gt;</span>
+  <span class="nt">&lt;/PrivateAction&gt;</span>
+<span class="nt">&lt;/Private&gt;</span>
+</code></pre></div></div> <h4 id="defining-acts-and-maneuvers">Defining Acts and Maneuvers</h4> <p>An <strong><em>Act</em></strong> groups <strong><em>Maneuvers</em></strong>, which are further broken down into <strong><em>Events</em></strong>. Each event can have <strong><em>Actions</em></strong>, and conditions are used to start or stop these actions.</p> <p><strong><em>Maneuver</em></strong>: used to group two instances of Event. Two instances of Maneuver may also be used, each hosting one Event. Both alternatives yield the same simulation outcome, as long as each Event retain its startTrigger.</p> <p>You can organize <strong><em>Acts</em></strong> and <strong><em>Maneuvers</em></strong> in different ways, but the outcome remains the same as long as the <strong><em>startTrigger</em></strong> conditions for each event are maintained.</p> <ul> <li><strong><em>Start Trigger</em></strong>: Defines when the event or act should begin. This is a required part of each event or act.</li> <li><strong><em>Stop Trigger</em></strong>: Optional. Defines when the event or act should end.</li> </ul> <p><strong><em>General Structure</em></strong>:</p> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Story</span> <span class="na">name=</span><span class="s">"StoryName"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;Act</span> <span class="na">name=</span><span class="s">"YourActName"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ManeuverGroup</span> <span class="na">name=</span><span class="s">"YourGroupName"</span> <span class="na">maximumExecutionCount=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;Actors</span> <span class="na">selectTriggeringEntities=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;EntityRef</span> <span class="na">entityRef=</span><span class="s">"ActorReference"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/Actors&gt;</span>
+      <span class="nt">&lt;Maneuver</span> <span class="na">name=</span><span class="s">"ManeuverName"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Event</span> <span class="na">name=</span><span class="s">"EventName"</span> <span class="na">priority=</span><span class="s">"overwrite"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">"ActionName"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Define the action here --&gt;</span>
+          <span class="nt">&lt;/Action&gt;</span>
+          <span class="nt">&lt;StartTrigger&gt;</span>
+            <span class="nt">&lt;ConditionGroup&gt;</span>
+              <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ConditionName"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+                <span class="c">&lt;!-- Define the start condition here --&gt;</span>
+              <span class="nt">&lt;/Condition&gt;</span>
+            <span class="nt">&lt;/ConditionGroup&gt;</span>
+          <span class="nt">&lt;/StartTrigger&gt;</span>
+          <span class="c">&lt;!-- Optionally add a stop trigger --&gt;</span>
+        <span class="nt">&lt;/Event&gt;</span>
+      <span class="nt">&lt;/Maneuver&gt;</span>
+    <span class="nt">&lt;/ManeuverGroup&gt;</span>
+    <span class="c">&lt;!-- Start trigger for the entire act --&gt;</span>
+    <span class="nt">&lt;StartTrigger&gt;</span>
+      <span class="nt">&lt;ConditionGroup&gt;</span>
+        <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ActStartCondition"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+          <span class="c">&lt;!-- Define the condition to start the act --&gt;</span>
+        <span class="nt">&lt;/Condition&gt;</span>
+      <span class="nt">&lt;/ConditionGroup&gt;</span>
+    <span class="nt">&lt;/StartTrigger&gt;</span>
+  <span class="nt">&lt;/Act&gt;</span>
+<span class="nt">&lt;/Story&gt;</span>
+</code></pre></div></div> <hr/> <p>Example: A Straight-Driving Scenario Below is an example of a simple Act where a vehicle starts driving straight based on a simulation time condition.</p> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Act</span> <span class="na">name=</span><span class="s">"DriveStraightAct"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ManeuverGroup</span> <span class="na">name=</span><span class="s">"DriveStraightGroup"</span> <span class="na">maximumExecutionCount=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Actors</span> <span class="na">selectTriggeringEntities=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;EntityRef</span> <span class="na">entityRef=</span><span class="s">"audi"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/Actors&gt;</span>
+    <span class="nt">&lt;Maneuver</span> <span class="na">name=</span><span class="s">"DriveStraightManeuver"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;Event</span> <span class="na">name=</span><span class="s">"StartDriving"</span> <span class="na">priority=</span><span class="s">"overwrite"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">"DriveAction"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;PrivateAction&gt;</span>
+            <span class="nt">&lt;LongitudinalAction&gt;</span>
+              <span class="nt">&lt;SpeedAction&gt;</span>
+                <span class="nt">&lt;SpeedActionDynamics</span> <span class="na">dynamicsShape=</span><span class="s">"step"</span> <span class="na">value=</span><span class="s">"1000.0"</span> <span class="na">dynamicsDimension=</span><span class="s">"time"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;SpeedActionTarget&gt;</span>
+                  <span class="nt">&lt;AbsoluteTargetSpeed</span> <span class="na">value=</span><span class="s">"13.89"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;/SpeedActionTarget&gt;</span>
+              <span class="nt">&lt;/SpeedAction&gt;</span>
+            <span class="nt">&lt;/LongitudinalAction&gt;</span>
+          <span class="nt">&lt;/PrivateAction&gt;</span>
+        <span class="nt">&lt;/Action&gt;</span>
+        <span class="nt">&lt;StartTrigger&gt;</span>
+          <span class="nt">&lt;ConditionGroup&gt;</span>
+            <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;ByValueCondition&gt;</span>
+                <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;/ByValueCondition&gt;</span>
+            <span class="nt">&lt;/Condition&gt;</span>
+          <span class="nt">&lt;/ConditionGroup&gt;</span>
+        <span class="nt">&lt;/StartTrigger&gt;</span>
+      <span class="nt">&lt;/Event&gt;</span>
+    <span class="nt">&lt;/Maneuver&gt;</span>
+  <span class="nt">&lt;/ManeuverGroup&gt;</span>
+  <span class="nt">&lt;StartTrigger&gt;</span>
+    <span class="nt">&lt;ConditionGroup&gt;</span>
+      <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateActStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ByValueCondition&gt;</span>
+          <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/ByValueCondition&gt;</span>
+      <span class="nt">&lt;/Condition&gt;</span>
+    <span class="nt">&lt;/ConditionGroup&gt;</span>
+  <span class="nt">&lt;/StartTrigger&gt;</span>
+<span class="nt">&lt;/Act&gt;</span>
+</code></pre></div></div> <h4 id="triggers-and-conditions">Triggers and Conditions</h4> <p>There are two main types of conditions that determine when actions and events start or stop:</p> <ul> <li><strong><em>ByEntityCondition</em></strong>: These conditions evaluate entity-related states like position, speed, or distance from other entities. They help in defining interactions between entities.</li> <li><strong><em>ByValueCondition</em></strong>: Logical expressions based on simulation parameters such as time, traffic signal states, or other non-entity values.</li> </ul> <p><strong><em>Stop Triggers for Stories</em></strong></p> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;StopTrigger&gt;</span>
+  <span class="nt">&lt;ConditionGroup&gt;</span>
+    <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"StopCondition"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ByValueCondition&gt;</span>
+        <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"10.0"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/ByValueCondition&gt;</span>
+    <span class="nt">&lt;/Condition&gt;</span>
+  <span class="nt">&lt;/ConditionGroup&gt;</span>
+<span class="nt">&lt;/StopTrigger&gt;</span>
+</code></pre></div></div> <p><strong><em>Private Actions</em></strong> Private actions apply to specific entities and can be used in the init section or during a <strong><em>Maneuver</em></strong>. Some commonly used private actions include:</p> <ul> <li><strong><em>LongitudinalAction</em></strong>: Controls the speed of the entity. LateralAction: Controls lane changes or turning.</li> <li><strong><em>VisibilityAction</em></strong>: Modifies visibility conditions for the entity. SynchronizeAction: Synchronizes the behavior of multiple entities.</li> </ul> <p>You can explore more about private actions and conditions in the ASAM <a href="https://www.asam.net/index.php?eID=dumpFile&amp;t=f&amp;f=4092&amp;token=d3b6a55e911b22179e3c0895fe2caae8f5492467#_maneuvergroups_maneuvers_events_and_actions">OpenSCENARIO documentation</a>.</p> <hr/> <h3 id="complete-example">Complete Example</h3> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;OpenSCENARIO&gt;</span>
+ <span class="nt">&lt;FileHeader</span> <span class="na">revMajor=</span><span class="s">"1"</span> <span class="na">revMinor=</span><span class="s">"0"</span> <span class="na">date=</span><span class="s">"2020-03-24T12:00:00"</span> <span class="na">description=</span><span class="s">"CARLA:SynchronizeIntersectionEntry"</span> <span class="na">author=</span><span class="s">""</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;ParameterDeclarations/&gt;</span>
+ <span class="nt">&lt;CatalogLocations/&gt;</span>
+ <span class="nt">&lt;RoadNetwork&gt;</span>
+   <span class="nt">&lt;LogicFile</span> <span class="na">filepath=</span><span class="s">"Town06"</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;SceneGraphFile</span> <span class="na">filepath=</span><span class="s">""</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;/RoadNetwork&gt;</span>
+ <span class="nt">&lt;Entities&gt;</span>
+   <span class="nt">&lt;ScenarioObject</span> <span class="na">name=</span><span class="s">"hero"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;Vehicle</span> <span class="na">name=</span><span class="s">"vehicle.tesla.model3"</span> <span class="na">vehicleCategory=</span><span class="s">"car"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;ParameterDeclarations/&gt;</span>
+       <span class="nt">&lt;Performance</span> <span class="na">maxSpeed=</span><span class="s">"69.444"</span> <span class="na">maxAcceleration=</span><span class="s">"200"</span> <span class="na">maxDeceleration=</span><span class="s">"10.0"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;BoundingBox&gt;</span>
+         <span class="nt">&lt;Center</span> <span class="na">x=</span><span class="s">"1.5"</span> <span class="na">y=</span><span class="s">"0.0"</span> <span class="na">z=</span><span class="s">"0.9"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;Dimensions</span> <span class="na">width=</span><span class="s">"2.1"</span> <span class="na">length=</span><span class="s">"4.5"</span> <span class="na">height=</span><span class="s">"1.8"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/BoundingBox&gt;</span>
+       <span class="nt">&lt;Axles&gt;</span>
+         <span class="nt">&lt;FrontAxle</span> <span class="na">maxSteering=</span><span class="s">"0.5"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"3.1"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;RearAxle</span> <span class="na">maxSteering=</span><span class="s">"0.0"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"0.0"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Axles&gt;</span>
+       <span class="nt">&lt;Properties&gt;</span>
+         <span class="nt">&lt;Property</span> <span class="na">name=</span><span class="s">"type"</span> <span class="na">value=</span><span class="s">"ego_vehicle"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Properties&gt;</span>
+     <span class="nt">&lt;/Vehicle&gt;</span>
+   <span class="nt">&lt;/ScenarioObject&gt;</span>
+
+
+   <span class="nt">&lt;ScenarioObject</span> <span class="na">name=</span><span class="s">"audi"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;Vehicle</span> <span class="na">name=</span><span class="s">"vehicle.audi.tt"</span> <span class="na">vehicleCategory=</span><span class="s">"car"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;ParameterDeclarations/&gt;</span>
+       <span class="nt">&lt;Performance</span> <span class="na">maxSpeed=</span><span class="s">"69.444"</span> <span class="na">maxAcceleration=</span><span class="s">"200"</span> <span class="na">maxDeceleration=</span><span class="s">"10.0"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;BoundingBox&gt;</span>
+         <span class="nt">&lt;Center</span> <span class="na">x=</span><span class="s">"1.5"</span> <span class="na">y=</span><span class="s">"0.0"</span> <span class="na">z=</span><span class="s">"0.9"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;Dimensions</span> <span class="na">width=</span><span class="s">"2.1"</span> <span class="na">length=</span><span class="s">"4.5"</span> <span class="na">height=</span><span class="s">"1.8"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/BoundingBox&gt;</span>
+       <span class="nt">&lt;Axles&gt;</span>
+         <span class="nt">&lt;FrontAxle</span> <span class="na">maxSteering=</span><span class="s">"0.5"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"3.1"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;RearAxle</span> <span class="na">maxSteering=</span><span class="s">"0.0"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"0.0"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Axles&gt;</span>
+       <span class="nt">&lt;Properties&gt;</span>
+         <span class="nt">&lt;Property</span> <span class="na">name=</span><span class="s">"type"</span> <span class="na">value=</span><span class="s">"simulation"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Properties&gt;</span>
+     <span class="nt">&lt;/Vehicle&gt;</span>
+   <span class="nt">&lt;/ScenarioObject&gt;</span>
+
+
+   <span class="nt">&lt;ScenarioObject</span> <span class="na">name=</span><span class="s">"Lincoln"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;Vehicle</span> <span class="na">name=</span><span class="s">"vehicle.lincoln.mkz_2017"</span> <span class="na">vehicleCategory=</span><span class="s">"car"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;ParameterDeclarations/&gt;</span>
+       <span class="nt">&lt;Performance</span> <span class="na">maxSpeed=</span><span class="s">"69.444"</span> <span class="na">maxAcceleration=</span><span class="s">"200"</span> <span class="na">maxDeceleration=</span><span class="s">"10.0"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;BoundingBox&gt;</span>
+         <span class="nt">&lt;Center</span> <span class="na">x=</span><span class="s">"1.5"</span> <span class="na">y=</span><span class="s">"0.0"</span> <span class="na">z=</span><span class="s">"0.9"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;Dimensions</span> <span class="na">width=</span><span class="s">"2.1"</span> <span class="na">length=</span><span class="s">"4.5"</span> <span class="na">height=</span><span class="s">"1.8"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/BoundingBox&gt;</span>
+       <span class="nt">&lt;Axles&gt;</span>
+         <span class="nt">&lt;FrontAxle</span> <span class="na">maxSteering=</span><span class="s">"0.5"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"3.1"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;RearAxle</span> <span class="na">maxSteering=</span><span class="s">"0.0"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"0.0"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Axles&gt;</span>
+       <span class="nt">&lt;Properties&gt;</span>
+         <span class="nt">&lt;Property</span> <span class="na">name=</span><span class="s">"type"</span> <span class="na">value=</span><span class="s">"simulation"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Properties&gt;</span>
+     <span class="nt">&lt;/Vehicle&gt;</span>
+   <span class="nt">&lt;/ScenarioObject&gt;</span>
+
+
+   <span class="nt">&lt;ScenarioObject</span> <span class="na">name=</span><span class="s">"Mercedes"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;Vehicle</span> <span class="na">name=</span><span class="s">"vehicle.mercedes.coupe"</span> <span class="na">vehicleCategory=</span><span class="s">"car"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;ParameterDeclarations/&gt;</span>
+       <span class="nt">&lt;Performance</span> <span class="na">maxSpeed=</span><span class="s">"69.444"</span> <span class="na">maxAcceleration=</span><span class="s">"200"</span> <span class="na">maxDeceleration=</span><span class="s">"10.0"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;BoundingBox&gt;</span>
+         <span class="nt">&lt;Center</span> <span class="na">x=</span><span class="s">"1.5"</span> <span class="na">y=</span><span class="s">"0.0"</span> <span class="na">z=</span><span class="s">"0.9"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;Dimensions</span> <span class="na">width=</span><span class="s">"2.1"</span> <span class="na">length=</span><span class="s">"4.5"</span> <span class="na">height=</span><span class="s">"1.8"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/BoundingBox&gt;</span>
+       <span class="nt">&lt;Axles&gt;</span>
+         <span class="nt">&lt;FrontAxle</span> <span class="na">maxSteering=</span><span class="s">"0.5"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"3.1"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;RearAxle</span> <span class="na">maxSteering=</span><span class="s">"0.0"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"0.0"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Axles&gt;</span>
+       <span class="nt">&lt;Properties&gt;</span>
+         <span class="nt">&lt;Property</span> <span class="na">name=</span><span class="s">"type"</span> <span class="na">value=</span><span class="s">"simulation"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Properties&gt;</span>
+     <span class="nt">&lt;/Vehicle&gt;</span>
+   <span class="nt">&lt;/ScenarioObject&gt;</span>
+
+
+   <span class="nt">&lt;ScenarioObject</span> <span class="na">name=</span><span class="s">"Mini"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;Vehicle</span> <span class="na">name=</span><span class="s">"vehicle.mini.cooper_s_2021"</span> <span class="na">vehicleCategory=</span><span class="s">"car"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;ParameterDeclarations/&gt;</span>
+       <span class="nt">&lt;Performance</span> <span class="na">maxSpeed=</span><span class="s">"69.444"</span> <span class="na">maxAcceleration=</span><span class="s">"200"</span> <span class="na">maxDeceleration=</span><span class="s">"10.0"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;BoundingBox&gt;</span>
+         <span class="nt">&lt;Center</span> <span class="na">x=</span><span class="s">"1.5"</span> <span class="na">y=</span><span class="s">"0.0"</span> <span class="na">z=</span><span class="s">"0.9"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;Dimensions</span> <span class="na">width=</span><span class="s">"2.1"</span> <span class="na">length=</span><span class="s">"4.5"</span> <span class="na">height=</span><span class="s">"1.8"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/BoundingBox&gt;</span>
+       <span class="nt">&lt;Axles&gt;</span>
+         <span class="nt">&lt;FrontAxle</span> <span class="na">maxSteering=</span><span class="s">"0.5"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"3.1"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;RearAxle</span> <span class="na">maxSteering=</span><span class="s">"0.0"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"0.0"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Axles&gt;</span>
+       <span class="nt">&lt;Properties&gt;</span>
+         <span class="nt">&lt;Property</span> <span class="na">name=</span><span class="s">"type"</span> <span class="na">value=</span><span class="s">"simulation"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Properties&gt;</span>
+     <span class="nt">&lt;/Vehicle&gt;</span>
+   <span class="nt">&lt;/ScenarioObject&gt;</span>
+
+
+   <span class="nt">&lt;ScenarioObject</span> <span class="na">name=</span><span class="s">"Mercedes2"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;Vehicle</span> <span class="na">name=</span><span class="s">"vehicle.mercedes.coupe"</span> <span class="na">vehicleCategory=</span><span class="s">"car"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;ParameterDeclarations/&gt;</span>
+       <span class="nt">&lt;Performance</span> <span class="na">maxSpeed=</span><span class="s">"69.444"</span> <span class="na">maxAcceleration=</span><span class="s">"200"</span> <span class="na">maxDeceleration=</span><span class="s">"10.0"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;BoundingBox&gt;</span>
+         <span class="nt">&lt;Center</span> <span class="na">x=</span><span class="s">"1.5"</span> <span class="na">y=</span><span class="s">"0.0"</span> <span class="na">z=</span><span class="s">"0.9"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;Dimensions</span> <span class="na">width=</span><span class="s">"2.1"</span> <span class="na">length=</span><span class="s">"4.5"</span> <span class="na">height=</span><span class="s">"1.8"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/BoundingBox&gt;</span>
+       <span class="nt">&lt;Axles&gt;</span>
+         <span class="nt">&lt;FrontAxle</span> <span class="na">maxSteering=</span><span class="s">"0.5"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"3.1"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;RearAxle</span> <span class="na">maxSteering=</span><span class="s">"0.0"</span> <span class="na">wheelDiameter=</span><span class="s">"0.6"</span> <span class="na">trackWidth=</span><span class="s">"1.8"</span> <span class="na">positionX=</span><span class="s">"0.0"</span> <span class="na">positionZ=</span><span class="s">"0.3"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Axles&gt;</span>
+       <span class="nt">&lt;Properties&gt;</span>
+         <span class="nt">&lt;Property</span> <span class="na">name=</span><span class="s">"type"</span> <span class="na">value=</span><span class="s">"simulation"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Properties&gt;</span>
+     <span class="nt">&lt;/Vehicle&gt;</span>
+   <span class="nt">&lt;/ScenarioObject&gt;</span>
+
+
+   <span class="nt">&lt;ScenarioObject</span> <span class="na">name=</span><span class="s">"pedestrian_1"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;Pedestrian</span> <span class="na">model=</span><span class="s">"walker.pedestrian.0001"</span> <span class="na">mass=</span><span class="s">"90.0"</span> <span class="na">name=</span><span class="s">"walker.pedestrian.0001"</span> <span class="na">pedestrianCategory=</span><span class="s">"pedestrian"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;BoundingBox&gt;</span>
+         <span class="nt">&lt;Center</span> <span class="na">x=</span><span class="s">"1.5"</span> <span class="na">y=</span><span class="s">"0.0"</span> <span class="na">z=</span><span class="s">"0.9"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;Dimensions</span> <span class="na">width=</span><span class="s">"0.5"</span> <span class="na">length=</span><span class="s">"0.5"</span> <span class="na">height=</span><span class="s">"1.7"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/BoundingBox&gt;</span>
+       <span class="nt">&lt;Properties&gt;</span>
+         <span class="nt">&lt;Property</span> <span class="na">name=</span><span class="s">"type"</span> <span class="na">value=</span><span class="s">"pedestrian"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/Properties&gt;</span>
+     <span class="nt">&lt;/Pedestrian&gt;</span>
+   <span class="nt">&lt;/ScenarioObject&gt;</span>
+ <span class="nt">&lt;/Entities&gt;</span>
+
+
+ <span class="nt">&lt;Storyboard&gt;</span>
+   <span class="nt">&lt;Init&gt;</span>
+       <span class="nt">&lt;Actions&gt;</span>
+         <span class="nt">&lt;GlobalAction&gt;</span>
+           <span class="nt">&lt;EnvironmentAction&gt;</span>
+             <span class="nt">&lt;Environment</span> <span class="na">name=</span><span class="s">"Environment1"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;TimeOfDay</span> <span class="na">animation=</span><span class="s">"false"</span> <span class="na">dateTime=</span><span class="s">"2019-06-25T12:00:00"</span><span class="nt">/&gt;</span>
+               <span class="nt">&lt;Weather</span> <span class="na">cloudState=</span><span class="s">"overcast"</span><span class="nt">&gt;</span>
+                 <span class="nt">&lt;Sun</span> <span class="na">intensity=</span><span class="s">"0.30"</span> <span class="na">azimuth=</span><span class="s">"0"</span> <span class="na">elevation=</span><span class="s">"1.31"</span><span class="nt">/&gt;</span>
+                 <span class="nt">&lt;Fog</span> <span class="na">visualRange=</span><span class="s">"100000.0"</span><span class="nt">/&gt;</span>
+                 <span class="nt">&lt;Precipitation</span> <span class="na">precipitationType=</span><span class="s">"rain"</span> <span class="na">intensity=</span><span class="s">"0.2"</span><span class="nt">/&gt;</span>
+               <span class="nt">&lt;/Weather&gt;</span>
+               <span class="nt">&lt;RoadCondition</span> <span class="na">frictionScaleFactor=</span><span class="s">"1.0"</span><span class="nt">/&gt;</span>
+             <span class="nt">&lt;/Environment&gt;</span>
+           <span class="nt">&lt;/EnvironmentAction&gt;</span>
+         <span class="nt">&lt;/GlobalAction&gt;</span>
+           <span class="nt">&lt;Private</span> <span class="na">entityRef=</span><span class="s">"hero"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;PrivateAction&gt;</span>
+                   <span class="nt">&lt;TeleportAction&gt;</span>
+                       <span class="nt">&lt;Position&gt;</span>
+                           <span class="nt">&lt;WorldPosition</span> <span class="na">x=</span><span class="s">"9"</span> <span class="na">y=</span><span class="s">"68.03"</span> <span class="na">z=</span><span class="s">"0.3"</span> <span class="na">h=</span><span class="s">"-1.57"</span><span class="nt">/&gt;</span>
+                       <span class="nt">&lt;/Position&gt;</span>
+                   <span class="nt">&lt;/TeleportAction&gt;</span>
+               <span class="nt">&lt;/PrivateAction&gt;</span>
+               <span class="nt">&lt;PrivateAction&gt;</span>
+                 <span class="nt">&lt;ControllerAction&gt;</span>
+                   <span class="nt">&lt;AssignControllerAction&gt;</span>
+                     <span class="nt">&lt;Controller</span> <span class="na">name=</span><span class="s">"HeroAgent"</span><span class="nt">&gt;</span>
+                       <span class="nt">&lt;Properties&gt;</span>
+                         <span class="nt">&lt;Property</span> <span class="na">name=</span><span class="s">"module"</span> <span class="na">value=</span><span class="s">"external_control"</span><span class="nt">/&gt;</span>
+                       <span class="nt">&lt;/Properties&gt;</span>
+                     <span class="nt">&lt;/Controller&gt;</span>
+                   <span class="nt">&lt;/AssignControllerAction&gt;</span>
+                   <span class="nt">&lt;OverrideControllerValueAction&gt;</span>
+                     <span class="nt">&lt;Throttle</span> <span class="na">value=</span><span class="s">"0"</span> <span class="na">active=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+                     <span class="nt">&lt;Brake</span> <span class="na">value=</span><span class="s">"0"</span> <span class="na">active=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+                     <span class="nt">&lt;Clutch</span> <span class="na">value=</span><span class="s">"0"</span> <span class="na">active=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+                     <span class="nt">&lt;ParkingBrake</span> <span class="na">value=</span><span class="s">"0"</span> <span class="na">active=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+                     <span class="nt">&lt;SteeringWheel</span> <span class="na">value=</span><span class="s">"0"</span> <span class="na">active=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+                     <span class="nt">&lt;Gear</span> <span class="na">number=</span><span class="s">"0"</span> <span class="na">active=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+                   <span class="nt">&lt;/OverrideControllerValueAction&gt;</span>
+                 <span class="nt">&lt;/ControllerAction&gt;</span>
+               <span class="nt">&lt;/PrivateAction&gt;</span>
+           <span class="nt">&lt;/Private&gt;</span>
+           <span class="nt">&lt;Private</span> <span class="na">entityRef=</span><span class="s">"audi"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;PrivateAction&gt;</span>
+                   <span class="nt">&lt;TeleportAction&gt;</span>
+                       <span class="nt">&lt;Position&gt;</span>
+                           <span class="nt">&lt;WorldPosition</span> <span class="na">x=</span><span class="s">"2"</span> <span class="na">y=</span><span class="s">"68.03"</span> <span class="na">z=</span><span class="s">"0.3"</span> <span class="na">h=</span><span class="s">"-1.57"</span><span class="nt">/&gt;</span>
+                       <span class="nt">&lt;/Position&gt;</span>
+                   <span class="nt">&lt;/TeleportAction&gt;</span>
+               <span class="nt">&lt;/PrivateAction&gt;</span>
+           <span class="nt">&lt;/Private&gt;</span>
+           <span class="nt">&lt;Private</span> <span class="na">entityRef=</span><span class="s">"Mercedes"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;PrivateAction&gt;</span>
+                   <span class="nt">&lt;TeleportAction&gt;</span>
+                       <span class="nt">&lt;Position&gt;</span>
+                           <span class="nt">&lt;WorldPosition</span> <span class="na">x=</span><span class="s">"5.31"</span> <span class="na">y=</span><span class="s">"68.03"</span> <span class="na">z=</span><span class="s">"0.3"</span> <span class="na">h=</span><span class="s">"-1.57"</span><span class="nt">/&gt;</span>
+                       <span class="nt">&lt;/Position&gt;</span>
+                   <span class="nt">&lt;/TeleportAction&gt;</span>
+               <span class="nt">&lt;/PrivateAction&gt;</span>
+           <span class="nt">&lt;/Private&gt;</span>
+           <span class="nt">&lt;Private</span> <span class="na">entityRef=</span><span class="s">"Lincoln"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;PrivateAction&gt;</span>
+                   <span class="nt">&lt;TeleportAction&gt;</span>
+                       <span class="nt">&lt;Position&gt;</span>
+                           <span class="nt">&lt;WorldPosition</span> <span class="na">x=</span><span class="s">"6"</span> <span class="na">y=</span><span class="s">"75.03"</span> <span class="na">z=</span><span class="s">"0.3"</span> <span class="na">h=</span><span class="s">"-1.57"</span><span class="nt">/&gt;</span>
+                       <span class="nt">&lt;/Position&gt;</span>
+                   <span class="nt">&lt;/TeleportAction&gt;</span>
+               <span class="nt">&lt;/PrivateAction&gt;</span>
+           <span class="nt">&lt;/Private&gt;</span>
+            <span class="nt">&lt;Private</span> <span class="na">entityRef=</span><span class="s">"Mini"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;PrivateAction&gt;</span>
+                   <span class="nt">&lt;TeleportAction&gt;</span>
+                       <span class="nt">&lt;Position&gt;</span>
+                           <span class="nt">&lt;WorldPosition</span> <span class="na">x=</span><span class="s">"5.31"</span> <span class="na">y=</span><span class="s">"150.03"</span> <span class="na">z=</span><span class="s">"0.3"</span> <span class="na">h=</span><span class="s">"-1.57"</span><span class="nt">/&gt;</span>
+                       <span class="nt">&lt;/Position&gt;</span>
+                   <span class="nt">&lt;/TeleportAction&gt;</span>
+               <span class="nt">&lt;/PrivateAction&gt;</span>
+           <span class="nt">&lt;/Private&gt;</span>
+           <span class="nt">&lt;Private</span> <span class="na">entityRef=</span><span class="s">"Mercedes2"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;PrivateAction&gt;</span>
+                   <span class="nt">&lt;TeleportAction&gt;</span>
+                       <span class="nt">&lt;Position&gt;</span>
+                           <span class="nt">&lt;WorldPosition</span> <span class="na">x=</span><span class="s">"-5.31"</span> <span class="na">y=</span><span class="s">"33.03"</span> <span class="na">z=</span><span class="s">"0.3"</span> <span class="na">h=</span><span class="s">"1.57"</span><span class="nt">/&gt;</span>
+                       <span class="nt">&lt;/Position&gt;</span>
+                   <span class="nt">&lt;/TeleportAction&gt;</span>
+               <span class="nt">&lt;/PrivateAction&gt;</span>
+           <span class="nt">&lt;/Private&gt;</span>
+           <span class="nt">&lt;Private</span> <span class="na">entityRef=</span><span class="s">"pedestrian_1"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;PrivateAction&gt;</span>
+                   <span class="nt">&lt;TeleportAction&gt;</span>
+                       <span class="nt">&lt;Position&gt;</span>
+                           <span class="nt">&lt;WorldPosition</span> <span class="na">x=</span><span class="s">"15.31"</span> <span class="na">y=</span><span class="s">"33.03"</span> <span class="na">z=</span><span class="s">"0.3"</span> <span class="na">h =</span> <span class="s">"1.57"</span><span class="nt">/&gt;</span>
+                       <span class="nt">&lt;/Position&gt;</span>
+                   <span class="nt">&lt;/TeleportAction&gt;</span>
+               <span class="nt">&lt;/PrivateAction&gt;</span>
+           <span class="nt">&lt;/Private&gt;</span>
+       <span class="nt">&lt;/Actions&gt;</span>
+   <span class="nt">&lt;/Init&gt;</span>
+<span class="nt">&lt;Story</span> <span class="na">name=</span><span class="s">"DriveStraightStory"</span><span class="nt">&gt;</span>
+
+
+   <span class="nt">&lt;Act</span> <span class="na">name=</span><span class="s">"DriveStraightAct"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;ManeuverGroup</span> <span class="na">name=</span><span class="s">"DriveStraightManeuverGroup"</span> <span class="na">maximumExecutionCount=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;Actors</span> <span class="na">selectTriggeringEntities=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;EntityRef</span> <span class="na">entityRef=</span><span class="s">"audi"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;/Actors&gt;</span>
+           <span class="nt">&lt;Maneuver</span> <span class="na">name=</span><span class="s">"DriveStraightManeuver"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;Event</span> <span class="na">name=</span><span class="s">"StartDriving"</span> <span class="na">priority=</span><span class="s">"overwrite"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">"DriveAction"</span><span class="nt">&gt;</span>
+                       <span class="nt">&lt;PrivateAction&gt;</span>
+                           <span class="nt">&lt;LongitudinalAction&gt;</span>
+                               <span class="nt">&lt;SpeedAction&gt;</span>
+                                   <span class="nt">&lt;SpeedActionDynamics</span> <span class="na">dynamicsShape=</span><span class="s">"step"</span> <span class="na">value=</span><span class="s">"1000.0"</span> <span class="na">dynamicsDimension=</span><span class="s">"time"</span><span class="nt">/&gt;</span>
+                                   <span class="nt">&lt;SpeedActionTarget&gt;</span>
+                                     <span class="nt">&lt;AbsoluteTargetSpeed</span> <span class="na">value=</span><span class="s">"13.89"</span><span class="nt">/&gt;</span>
+                                 <span class="nt">&lt;/SpeedActionTarget&gt;</span>
+                               <span class="nt">&lt;/SpeedAction&gt;</span>
+                           <span class="nt">&lt;/LongitudinalAction&gt;</span>
+                       <span class="nt">&lt;/PrivateAction&gt;</span>
+                   <span class="nt">&lt;/Action&gt;</span>
+             <span class="nt">&lt;StartTrigger&gt;</span>
+               <span class="nt">&lt;ConditionGroup&gt;</span>
+                 <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;ByValueCondition&gt;</span>
+                     <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+                   <span class="nt">&lt;/ByValueCondition&gt;</span>
+                 <span class="nt">&lt;/Condition&gt;</span>
+               <span class="nt">&lt;/ConditionGroup&gt;</span>
+             <span class="nt">&lt;/StartTrigger&gt;</span>
+           <span class="nt">&lt;/Event&gt;</span>
+         <span class="nt">&lt;/Maneuver&gt;</span>
+       <span class="nt">&lt;/ManeuverGroup&gt;</span>
+       <span class="nt">&lt;StartTrigger&gt;</span>
+         <span class="nt">&lt;ConditionGroup&gt;</span>
+           <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+             <span class="nt">&lt;ByValueCondition&gt;</span>
+               <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+             <span class="nt">&lt;/ByValueCondition&gt;</span>
+           <span class="nt">&lt;/Condition&gt;</span>
+         <span class="nt">&lt;/ConditionGroup&gt;</span>
+       <span class="nt">&lt;/StartTrigger&gt;</span>
+     <span class="nt">&lt;/Act&gt;</span>
+
+
+     <span class="nt">&lt;Act</span> <span class="na">name=</span><span class="s">"DriveStraightAct"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;ManeuverGroup</span> <span class="na">name=</span><span class="s">"DriveStraightManeuverGroup"</span> <span class="na">maximumExecutionCount=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;Actors</span> <span class="na">selectTriggeringEntities=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;EntityRef</span> <span class="na">entityRef=</span><span class="s">"Mini"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;/Actors&gt;</span>
+           <span class="nt">&lt;Maneuver</span> <span class="na">name=</span><span class="s">"DriveStraightManeuver"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;Event</span> <span class="na">name=</span><span class="s">"StartDriving"</span> <span class="na">priority=</span><span class="s">"overwrite"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">"DriveAction"</span><span class="nt">&gt;</span>
+                       <span class="nt">&lt;PrivateAction&gt;</span>
+                           <span class="nt">&lt;LongitudinalAction&gt;</span>
+                               <span class="nt">&lt;SpeedAction&gt;</span>
+                                   <span class="nt">&lt;SpeedActionDynamics</span> <span class="na">dynamicsShape=</span><span class="s">"step"</span> <span class="na">value=</span><span class="s">"1000.0"</span> <span class="na">dynamicsDimension=</span><span class="s">"time"</span><span class="nt">/&gt;</span>
+                                   <span class="nt">&lt;SpeedActionTarget&gt;</span>
+                                     <span class="nt">&lt;AbsoluteTargetSpeed</span> <span class="na">value=</span><span class="s">"13.89"</span><span class="nt">/&gt;</span>
+                                 <span class="nt">&lt;/SpeedActionTarget&gt;</span>
+                               <span class="nt">&lt;/SpeedAction&gt;</span>
+                           <span class="nt">&lt;/LongitudinalAction&gt;</span>
+                       <span class="nt">&lt;/PrivateAction&gt;</span>
+                   <span class="nt">&lt;/Action&gt;</span>
+             <span class="nt">&lt;StartTrigger&gt;</span>
+               <span class="nt">&lt;ConditionGroup&gt;</span>
+                 <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;ByValueCondition&gt;</span>
+                     <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+                   <span class="nt">&lt;/ByValueCondition&gt;</span>
+                 <span class="nt">&lt;/Condition&gt;</span>
+               <span class="nt">&lt;/ConditionGroup&gt;</span>
+             <span class="nt">&lt;/StartTrigger&gt;</span>
+           <span class="nt">&lt;/Event&gt;</span>
+         <span class="nt">&lt;/Maneuver&gt;</span>
+       <span class="nt">&lt;/ManeuverGroup&gt;</span>
+       <span class="nt">&lt;StartTrigger&gt;</span>
+         <span class="nt">&lt;ConditionGroup&gt;</span>
+           <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+             <span class="nt">&lt;ByValueCondition&gt;</span>
+               <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+             <span class="nt">&lt;/ByValueCondition&gt;</span>
+           <span class="nt">&lt;/Condition&gt;</span>
+         <span class="nt">&lt;/ConditionGroup&gt;</span>
+       <span class="nt">&lt;/StartTrigger&gt;</span>
+     <span class="nt">&lt;/Act&gt;</span>
+
+
+     <span class="nt">&lt;Act</span> <span class="na">name=</span><span class="s">"DriveStraightAct"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;ManeuverGroup</span> <span class="na">name=</span><span class="s">"DriveStraightManeuverGroup"</span> <span class="na">maximumExecutionCount=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;Actors</span> <span class="na">selectTriggeringEntities=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;EntityRef</span> <span class="na">entityRef=</span><span class="s">"Mercedes2"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;/Actors&gt;</span>
+           <span class="nt">&lt;Maneuver</span> <span class="na">name=</span><span class="s">"DriveStraightManeuver"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;Event</span> <span class="na">name=</span><span class="s">"StartDriving"</span> <span class="na">priority=</span><span class="s">"overwrite"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">"DriveAction"</span><span class="nt">&gt;</span>
+                       <span class="nt">&lt;PrivateAction&gt;</span>
+                           <span class="nt">&lt;LongitudinalAction&gt;</span>
+                               <span class="nt">&lt;SpeedAction&gt;</span>
+                                   <span class="nt">&lt;SpeedActionDynamics</span> <span class="na">dynamicsShape=</span><span class="s">"step"</span> <span class="na">value=</span><span class="s">"1000.0"</span> <span class="na">dynamicsDimension=</span><span class="s">"time"</span><span class="nt">/&gt;</span>
+                                   <span class="nt">&lt;SpeedActionTarget&gt;</span>
+                                     <span class="nt">&lt;AbsoluteTargetSpeed</span> <span class="na">value=</span><span class="s">"13.89"</span><span class="nt">/&gt;</span>
+                                 <span class="nt">&lt;/SpeedActionTarget&gt;</span>
+                               <span class="nt">&lt;/SpeedAction&gt;</span>
+                           <span class="nt">&lt;/LongitudinalAction&gt;</span>
+                       <span class="nt">&lt;/PrivateAction&gt;</span>
+                   <span class="nt">&lt;/Action&gt;</span>
+             <span class="nt">&lt;StartTrigger&gt;</span>
+               <span class="nt">&lt;ConditionGroup&gt;</span>
+                 <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;ByValueCondition&gt;</span>
+                     <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+                   <span class="nt">&lt;/ByValueCondition&gt;</span>
+                 <span class="nt">&lt;/Condition&gt;</span>
+               <span class="nt">&lt;/ConditionGroup&gt;</span>
+             <span class="nt">&lt;/StartTrigger&gt;</span>
+           <span class="nt">&lt;/Event&gt;</span>
+         <span class="nt">&lt;/Maneuver&gt;</span>
+       <span class="nt">&lt;/ManeuverGroup&gt;</span>
+       <span class="nt">&lt;StartTrigger&gt;</span>
+         <span class="nt">&lt;ConditionGroup&gt;</span>
+           <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+             <span class="nt">&lt;ByValueCondition&gt;</span>
+               <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+             <span class="nt">&lt;/ByValueCondition&gt;</span>
+           <span class="nt">&lt;/Condition&gt;</span>
+         <span class="nt">&lt;/ConditionGroup&gt;</span>
+       <span class="nt">&lt;/StartTrigger&gt;</span>
+     <span class="nt">&lt;/Act&gt;</span>
+
+
+     <span class="nt">&lt;Act</span> <span class="na">name=</span><span class="s">"DriveStraightAct"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;ManeuverGroup</span> <span class="na">name=</span><span class="s">"DriveStraightManeuverGroup"</span> <span class="na">maximumExecutionCount=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;Actors</span> <span class="na">selectTriggeringEntities=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;EntityRef</span> <span class="na">entityRef=</span><span class="s">"Mercedes"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;/Actors&gt;</span>
+           <span class="nt">&lt;Maneuver</span> <span class="na">name=</span><span class="s">"DriveStraightManeuver"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;Event</span> <span class="na">name=</span><span class="s">"StartDriving"</span> <span class="na">priority=</span><span class="s">"overwrite"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">"DriveAction"</span><span class="nt">&gt;</span>
+                       <span class="nt">&lt;PrivateAction&gt;</span>
+                           <span class="nt">&lt;LongitudinalAction&gt;</span>
+                               <span class="nt">&lt;SpeedAction&gt;</span>
+                                   <span class="nt">&lt;SpeedActionDynamics</span> <span class="na">dynamicsShape=</span><span class="s">"step"</span> <span class="na">value=</span><span class="s">"1000.0"</span> <span class="na">dynamicsDimension=</span><span class="s">"time"</span><span class="nt">/&gt;</span>
+                                   <span class="nt">&lt;SpeedActionTarget&gt;</span>
+                                     <span class="nt">&lt;AbsoluteTargetSpeed</span> <span class="na">value=</span><span class="s">"13.89"</span><span class="nt">/&gt;</span>
+                                 <span class="nt">&lt;/SpeedActionTarget&gt;</span>
+                               <span class="nt">&lt;/SpeedAction&gt;</span>
+                           <span class="nt">&lt;/LongitudinalAction&gt;</span>
+                       <span class="nt">&lt;/PrivateAction&gt;</span>
+                   <span class="nt">&lt;/Action&gt;</span>
+             <span class="nt">&lt;StartTrigger&gt;</span>
+               <span class="nt">&lt;ConditionGroup&gt;</span>
+                 <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;ByValueCondition&gt;</span>
+                     <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+                   <span class="nt">&lt;/ByValueCondition&gt;</span>
+                 <span class="nt">&lt;/Condition&gt;</span>
+               <span class="nt">&lt;/ConditionGroup&gt;</span>
+           <span class="nt">&lt;/StartTrigger&gt;</span>
+           <span class="nt">&lt;/Event&gt;</span>
+         <span class="nt">&lt;/Maneuver&gt;</span>
+       <span class="nt">&lt;/ManeuverGroup&gt;</span>
+       <span class="nt">&lt;StartTrigger&gt;</span>
+         <span class="nt">&lt;ConditionGroup&gt;</span>
+           <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+             <span class="nt">&lt;ByValueCondition&gt;</span>
+               <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+             <span class="nt">&lt;/ByValueCondition&gt;</span>
+           <span class="nt">&lt;/Condition&gt;</span>
+         <span class="nt">&lt;/ConditionGroup&gt;</span>
+       <span class="nt">&lt;/StartTrigger&gt;</span>
+     <span class="nt">&lt;/Act&gt;</span>
+
+
+     <span class="nt">&lt;Act</span> <span class="na">name=</span><span class="s">"FollowMercedesAct"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;ManeuverGroup</span> <span class="na">name=</span><span class="s">"FollowMercedesManeuverGroup"</span> <span class="na">maximumExecutionCount=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+             <span class="nt">&lt;Actors</span> <span class="na">selectTriggeringEntities=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+                 <span class="nt">&lt;EntityRef</span> <span class="na">entityRef=</span><span class="s">"Lincoln"</span><span class="nt">/&gt;</span>
+             <span class="nt">&lt;/Actors&gt;</span>
+             <span class="nt">&lt;Maneuver</span> <span class="na">name=</span><span class="s">"FollowMercedesManeuver"</span><span class="nt">&gt;</span>
+                 <span class="nt">&lt;Event</span> <span class="na">name=</span><span class="s">"StartFollowing"</span> <span class="na">priority=</span><span class="s">"overwrite"</span><span class="nt">&gt;</span>
+                     <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">"FollowAction"</span><span class="nt">&gt;</span>
+                         <span class="nt">&lt;PrivateAction&gt;</span>
+                             <span class="nt">&lt;LongitudinalAction&gt;</span>
+                                 <span class="nt">&lt;SpeedAction&gt;</span>
+                                     <span class="nt">&lt;SpeedActionDynamics</span> <span class="na">dynamicsShape=</span><span class="s">"step"</span> <span class="na">value=</span><span class="s">"1000.0"</span> <span class="na">dynamicsDimension=</span><span class="s">"time"</span><span class="nt">/&gt;</span>
+                                     <span class="nt">&lt;SpeedActionTarget&gt;</span>
+                                         <span class="nt">&lt;AbsoluteTargetSpeed</span> <span class="na">value=</span><span class="s">"13.89"</span><span class="nt">/&gt;</span>
+                                     <span class="nt">&lt;/SpeedActionTarget&gt;</span>
+                                 <span class="nt">&lt;/SpeedAction&gt;</span>
+                             <span class="nt">&lt;/LongitudinalAction&gt;</span>
+                         <span class="nt">&lt;/PrivateAction&gt;</span>
+                     <span class="nt">&lt;/Action&gt;</span>
+                     <span class="nt">&lt;StartTrigger&gt;</span>
+                         <span class="nt">&lt;ConditionGroup&gt;</span>
+                             <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"1"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+                                 <span class="nt">&lt;ByValueCondition&gt;</span>
+                                     <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+                                 <span class="nt">&lt;/ByValueCondition&gt;</span>
+                             <span class="nt">&lt;/Condition&gt;</span>
+                         <span class="nt">&lt;/ConditionGroup&gt;</span>
+                     <span class="nt">&lt;/StartTrigger&gt;</span>
+                 <span class="nt">&lt;/Event&gt;</span>
+             <span class="nt">&lt;/Maneuver&gt;</span>
+         <span class="nt">&lt;/ManeuverGroup&gt;</span>
+         <span class="nt">&lt;StartTrigger&gt;</span>
+             <span class="nt">&lt;ConditionGroup&gt;</span>
+                 <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+                     <span class="nt">&lt;ByValueCondition&gt;</span>
+                         <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+                     <span class="nt">&lt;/ByValueCondition&gt;</span>
+                 <span class="nt">&lt;/Condition&gt;</span>
+             <span class="nt">&lt;/ConditionGroup&gt;</span>
+         <span class="nt">&lt;/StartTrigger&gt;</span>
+     <span class="nt">&lt;/Act&gt;</span>
+
+
+
+
+     <span class="nt">&lt;Act</span> <span class="na">name=</span><span class="s">"PedStraightAct"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;ManeuverGroup</span> <span class="na">name=</span><span class="s">"PedStraightManeuverGroup"</span> <span class="na">maximumExecutionCount=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;Actors</span> <span class="na">selectTriggeringEntities=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;EntityRef</span> <span class="na">entityRef=</span><span class="s">"pedestrian_1"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;/Actors&gt;</span>
+           <span class="nt">&lt;Maneuver</span> <span class="na">name=</span><span class="s">"WalkStraightManeuver"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;Event</span> <span class="na">name=</span><span class="s">"StartWalking"</span> <span class="na">priority=</span><span class="s">"overwrite"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;Action</span> <span class="na">name=</span><span class="s">"DriveAction"</span><span class="nt">&gt;</span>
+                       <span class="nt">&lt;PrivateAction&gt;</span>
+                           <span class="nt">&lt;LongitudinalAction&gt;</span>
+                               <span class="nt">&lt;SpeedAction&gt;</span>
+                                 <span class="nt">&lt;SpeedActionDynamics</span> <span class="na">dynamicsShape=</span><span class="s">"step"</span> <span class="na">value=</span><span class="s">"1.5"</span> <span class="na">dynamicsDimension=</span><span class="s">"time"</span><span class="nt">/&gt;</span>
+                                 <span class="nt">&lt;SpeedActionTarget&gt;</span>
+                                   <span class="nt">&lt;AbsoluteTargetSpeed</span> <span class="na">value=</span><span class="s">"1.5"</span><span class="nt">/&gt;</span>
+                                 <span class="nt">&lt;/SpeedActionTarget&gt;</span>
+                               <span class="nt">&lt;/SpeedAction&gt;</span>
+                           <span class="nt">&lt;/LongitudinalAction&gt;</span>
+                       <span class="nt">&lt;/PrivateAction&gt;</span>
+                   <span class="nt">&lt;/Action&gt;</span>
+             <span class="nt">&lt;StartTrigger&gt;</span>
+               <span class="nt">&lt;ConditionGroup&gt;</span>
+                 <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;ByValueCondition&gt;</span>
+                     <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+                   <span class="nt">&lt;/ByValueCondition&gt;</span>
+                 <span class="nt">&lt;/Condition&gt;</span>
+               <span class="nt">&lt;/ConditionGroup&gt;</span>
+             <span class="nt">&lt;/StartTrigger&gt;</span>
+           <span class="nt">&lt;/Event&gt;</span>
+         <span class="nt">&lt;/Maneuver&gt;</span>
+       <span class="nt">&lt;/ManeuverGroup&gt;</span>
+       <span class="nt">&lt;StartTrigger&gt;</span>
+         <span class="nt">&lt;ConditionGroup&gt;</span>
+           <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"ImmediateStart"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+             <span class="nt">&lt;ByValueCondition&gt;</span>
+               <span class="nt">&lt;SimulationTimeCondition</span> <span class="na">rule=</span><span class="s">"greaterThan"</span> <span class="na">value=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+             <span class="nt">&lt;/ByValueCondition&gt;</span>
+           <span class="nt">&lt;/Condition&gt;</span>
+         <span class="nt">&lt;/ConditionGroup&gt;</span>
+       <span class="nt">&lt;/StartTrigger&gt;</span>
+     <span class="nt">&lt;/Act&gt;</span>
+    
+   <span class="nt">&lt;/Story&gt;</span>
+   <span class="nt">&lt;StopTrigger&gt;</span>
+     <span class="nt">&lt;ConditionGroup&gt;</span>
+         <span class="nt">&lt;Condition</span> <span class="na">name=</span><span class="s">"criteria_CollisionTest"</span> <span class="na">delay=</span><span class="s">"0"</span> <span class="na">conditionEdge=</span><span class="s">"rising"</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;ByValueCondition&gt;</span>
+             <span class="nt">&lt;ParameterCondition</span> <span class="na">parameterRef=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span> <span class="na">rule=</span><span class="s">"lessThan"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;/ByValueCondition&gt;</span>
+       <span class="nt">&lt;/Condition&gt;</span>
+     <span class="nt">&lt;/ConditionGroup&gt;</span>
+ <span class="nt">&lt;/StopTrigger&gt;</span>
+ <span class="nt">&lt;/Storyboard&gt;</span>
+<span class="nt">&lt;/OpenSCENARIO&gt;</span>
+</code></pre></div></div>]]></content><author><name></name></author><category term="carla-posts"/><category term="carla"/><category term="openscenario"/><category term="tutorial"/><summary type="html"><![CDATA[A comprehensive guide to understanding geometry and positioning in OpenSCENARIO for creating driving scenarios in CARLA.]]></summary></entry><entry><title type="html">Training a Large Language Model (LLM) for Tumor Segmentation using Concatenation</title><link href="https://handsomeyun.github.io/blog/2024/HK/" rel="alternate" type="text/html" title="Training a Large Language Model (LLM) for Tumor Segmentation using Concatenation"/><published>2024-08-11T16:00:00+00:00</published><updated>2024-08-11T16:00:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/HK</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/HK/"><![CDATA[<p>In this post, we’ll walk through how to train a Large Language Model (LLM) for tumor segmentation using concatenation. The model will accept four MRI images (from different modalities) and output bounding box coordinates that specify the tumor’s location. We’ll define how to process the images and train the model with the appropriate bounding box outputs.</p> <h3 id="dataset-structure-and-input-format">Dataset Structure and Input Format</h3> <p>We will use a prompt-based input where the model is given four MRI images, and the task is to predict the bounding box coordinates of the tumor. The prompt will look like this:</p> <p>Each image is represented by a placeholder (<code class="language-plaintext highlighter-rouge">&lt;ImageHere&gt;</code>) and the model will need to predict the coordinates of a bounding box around the tumor.</p> <pre><code class="language-plain">"&lt;Img1&gt;&lt;ImageHere&gt;&lt;/Img1&gt;&lt;Img2&gt;&lt;ImageHere&gt;&lt;/Img2&gt;&lt;Img3&gt;&lt;ImageHere&gt;&lt;/Img3&gt;&lt;Img4&gt;&lt;ImageHere&gt;&lt;/Img4&gt; where is the tumor? &lt;box&gt;"
+</code></pre> <h3 id="data-preparation">Data Preparation</h3> <p>The dataset will consist of MRI images from four modalities and a summary file (<code class="language-plaintext highlighter-rouge">summary.jsonl</code>) containing the ground truth bounding box coordinates.</p> <p>Example structure of <code class="language-plaintext highlighter-rouge">summary.jsonl</code>:</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"t2f Sagittal_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BraTS-GLI-00000-000_2_0.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"t2w Sagittal_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BraTS-GLI-00000-000_2_2.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"t1n Sagittal_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BraTS-GLI-00000-000_2_3.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"t1c Sagittal_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BraTS-GLI-00000-000_2_4.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"box"</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mi">96</span><span class="p">,</span><span class="w"> </span><span class="mi">84</span><span class="p">,</span><span class="w"> </span><span class="mi">68</span><span class="p">,</span><span class="w"> </span><span class="mi">68</span><span class="p">]]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>This JSON contains the paths to the four MRI modalities and the ground truth bounding box coordinates.</p> <h3 id="code-implementation">Code Implementation</h3> <iframe src="/assets/pdf/Concatenation.pdf" width="100%" height="600px"> MiniGPT4 with Multimodality-Concatenation <a href="/assets/pdf/Concatenation.pdf">Download PDF</a> </iframe> <h3 id="conclusion">Conclusion</h3> <p>This post walks you through the process of training an LLM to predict bounding boxes for tumor segmentation using concatenated MRI inputs. With the correct setup and dataset, you can fine-tune the model to perform well on your specific medical imaging tasks.</p>]]></content><author><name></name></author><category term="machine-learning"/><category term="LLM"/><summary type="html"><![CDATA[A guide to training an LLM for image segmentation tasks using bounding box predictions with multiple MRI modalities.]]></summary></entry><entry><title type="html">nnUNetV2 with Bounding Box Prediction for 2D Data</title><link href="https://handsomeyun.github.io/blog/2024/nnUNet/" rel="alternate" type="text/html" title="nnUNetV2 with Bounding Box Prediction for 2D Data"/><published>2024-06-15T14:00:00+00:00</published><updated>2024-06-15T14:00:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/nnUNet</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/nnUNet/"><![CDATA[<p>In this post, we’ll walk you through the installation and setup process for <strong>nnUNetV2</strong> with bounding box prediction, specifically focusing on <strong>2D data</strong>. nnUNetV2 is a powerful framework for biomedical image segmentation, and this guide will help you get started with installing, organizing your data, and training the model.</p> <hr/> <h3 id="installation">Installation</h3> <ol> <li> <p><strong>Create and activate a virtual environment</strong>:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> conda create <span class="nt">-n</span> SRP
+ conda activate SRP
+</code></pre></div> </div> </li> <li> <p><strong>Install compatible versions of PyTorch, CUDA, and cuDNN</strong>:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> conda <span class="nb">install </span><span class="nv">pytorch</span><span class="o">==</span>2.1.0 <span class="nv">torchvision</span><span class="o">==</span>0.16.0 <span class="nv">torchaudio</span><span class="o">==</span>2.1.0 pytorch-cuda<span class="o">=</span>11.8 <span class="nt">-c</span> pytorch <span class="nt">-c</span> nvidia
+</code></pre></div> </div> </li> <li> <p><strong>Install nnUNet</strong>:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone https://github.com/MIC-DKFZ/nnUNet.git
+ <span class="nb">cd </span>nnUNet
+ pip <span class="nb">install</span> <span class="nt">-e</span> <span class="nb">.</span>
+</code></pre></div> </div> </li> </ol> <hr/> <h3 id="setup-folder-structure">Setup Folder Structure</h3> <p>Next, you’ll need to organize the folder structure for <strong>nnUNet</strong> to handle your data. Follow the steps below:</p> <ol> <li><strong>Create a directory named <code class="language-plaintext highlighter-rouge">nnUNetFrame</code> inside the <code class="language-plaintext highlighter-rouge">nnUNet</code> folder</strong>.</li> <li><strong>Inside <code class="language-plaintext highlighter-rouge">nnUNetFrame</code>, create a directory named <code class="language-plaintext highlighter-rouge">DATASET</code></strong>.</li> <li><strong>Create three subfolders within <code class="language-plaintext highlighter-rouge">DATASET</code></strong>: <ul> <li><code class="language-plaintext highlighter-rouge">nnUNet_raw</code></li> <li><code class="language-plaintext highlighter-rouge">nnUNet_preprocessed</code></li> <li><code class="language-plaintext highlighter-rouge">nnUNet_trained_models</code></li> </ul> <p>Run the following commands:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">mkdir </span>nnUNetFrame
+ <span class="nb">cd </span>nnUNetFrame
+ <span class="nb">mkdir </span>DATASET
+ <span class="nb">cd </span>DATASET
+ <span class="nb">mkdir </span>nnUNet_raw
+ <span class="nb">mkdir </span>nnUNet_preprocessed
+ <span class="nb">mkdir </span>nnUNet_trained_models
+</code></pre></div> </div> </li> </ol> <hr/> <h3 id="import-data">Import Data</h3> <p>For each dataset, follow this structure:</p> <ol> <li><strong>Create a folder for each dataset</strong>: <code class="language-plaintext highlighter-rouge">Dataset00x_Name</code> (where <code class="language-plaintext highlighter-rouge">x</code> is the task number).</li> <li><strong>Inside each dataset folder, create three folders</strong>: <ul> <li><code class="language-plaintext highlighter-rouge">imagesTr</code>: For training images</li> <li><code class="language-plaintext highlighter-rouge">labelsTr</code>: For training labels</li> <li><code class="language-plaintext highlighter-rouge">imagesTs</code>: For testing images</li> </ul> </li> <li> <p><strong>Create a <code class="language-plaintext highlighter-rouge">dataset.json</code> file</strong> that includes metadata about the dataset. The format should look like this:</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="p">{</span><span class="w">
+   </span><span class="nl">"channel_names"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"0"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FLAIR"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T1w"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T1gd"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T2w"</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"background"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"tumor"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"numTraining"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"file_ending"</span><span class="p">:</span><span class="w"> </span><span class="s2">".nii.gz"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"overwrite_image_reader_writer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SimpleITKIO"</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span></code></pre></div> </div> </li> </ol> <h3 id="folder-structure-example">Folder Structure Example</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nnUNet/
+├── nnUNetFrame/
+│   ├── DATASET/
+│   │   ├── nnUNet_raw/
+│   │   │   ├── Dataset001_MEN/
+│   │   │   │   ├── imagesTr/
+│   │   │   │   │   ├── BRATS_001_0000.nii.gz
+│   │   │   │   │   ├── BRATS_001_0001.nii.gz
+│   │   │   │   │   ├── BRATS_001_0002.nii.gz
+│   │   │   │   │   ├── BRATS_001_0003.nii.gz
+│   │   │   │   ├── labelsTr/
+│   │   │   │   │   ├── BRATS_001.nii.gz
+│   │   │   ├── Dataset002_MET/
+│   │   │   ├── Dataset003_GLI/
+│   ├── nnUNet_preprocessed/
+│   └── nnUNet_trained_models/
+</code></pre></div></div> <hr/> <h3 id="setting-up-the-environment-variables">Setting Up the Environment Variables</h3> <ol> <li>Edit your bash configuration:</li> </ol> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim ~/.bashrc
+</code></pre></div></div> <ol> <li>Add the following lines at the end:</li> </ol> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">nnUNet_raw</span><span class="o">=</span><span class="s2">"/path/to/nnUNetFrame/DATASET/nnUNet_raw"</span>
+<span class="nb">export </span><span class="nv">nnUNet_preprocessed</span><span class="o">=</span><span class="s2">"/path/to/nnUNetFrame/DATASET/nnUNet_preprocessed"</span>
+<span class="nb">export </span><span class="nv">nnUNet_results</span><span class="o">=</span><span class="s2">"/path/to/nnUNetFrame/DATASET/nnUNet_trained_models"</span>
+Source the updated .bashrc:
+</code></pre></div></div> <ol> <li> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.bashrc
+</code></pre></div> </div> </li> </ol> <hr/> <p>You can verify the data integrity with the following command:</p> <h3 id="verify-data-integrity">Verify Data Integrity</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nnUNetv2_plan_and_preprocess <span class="nt">-d</span> <span class="o">[</span>DATASET_ID] <span class="nt">--verify_dataset_integrity</span>
+</code></pre></div></div> <hr/> <h3 id="training-the-model">Training the Model</h3> <p>To train the model, run:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nnUNetv2_train <span class="o">[</span>DATASET_ID] 2d <span class="o">[</span>FOLD]
+</code></pre></div></div> <p>Where:</p> <ul> <li><code class="language-plaintext highlighter-rouge">DATASET_ID</code>: Identifier for the dataset (e.g., 4).</li> <li><code class="language-plaintext highlighter-rouge">UNET_CONFIGURATION</code>: Configuration of the U-Net model (e.g., 2d or 3d_fullres).</li> <li><code class="language-plaintext highlighter-rouge">FOLD</code>: Fold number for cross-validation (from 0 to 4).</li> </ul> <hr/> <h3 id="multi-gpu-training">Multi-GPU Training</h3> <p>If you have multiple GPUs, you can run multiple folds in parallel:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span>0 nnUNetv2_train 4 2d 0 <span class="nt">--npz</span> &amp;
+<span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span>1 nnUNetv2_train 4 2d 1 <span class="nt">--npz</span> &amp;
+<span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span>2 nnUNetv2_train 4 2d 2 <span class="nt">--npz</span> &amp;
+<span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span>3 nnUNetv2_train 4 2d 3 <span class="nt">--npz</span> &amp;
+<span class="nb">wait</span>
+</code></pre></div></div> <hr/> <h3 id="running-inference-on-test-data">Running Inference on Test Data</h3> <p>Once the training is complete, you can run inference on the test data:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nnUNetv2_predict <span class="nt">-i</span> /path/to/test_data <span class="nt">-o</span> /path/to/output <span class="nt">-tr</span> nnUNetTrainerV2 <span class="nt">-c</span> 2d <span class="nt">-p</span> nnUNetPlans
+</code></pre></div></div> <p>Example</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nnUNetv2_predict <span class="nt">-i</span> /home/Intern1/Yun_SRP/nnUNet/nnUNetFrame/DATASET/nnUNet_raw/Dataset004_ALL/imagesTs <span class="nt">-o</span> /home/Intern1/Yun_SRP/nnUNet/nnUNetFrame/DATASET/nnUNet_raw/nnUNet_raw_data/inferTs <span class="nt">-d</span> 4 <span class="nt">-c</span> 2d <span class="nt">-f</span> 0
+</code></pre></div></div> <hr/> <h3 id="checking-gpu-memory">Checking GPU Memory</h3> <p>To check the available GPU memory, use:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvidia-smi
+</code></pre></div></div> <hr/> <p>This guide should help you get started with nnUNetV2 for 2D data segmentation. Make sure to follow the steps carefully, from setting up the environment to training and inference.</p>]]></content><author><name></name></author><category term="machine-learning"/><category term="nnUNet"/><category term="segmentation"/><category term="2D-data"/><summary type="html"><![CDATA[A step-by-step guide to setting up nnUNetV2 for 2D data segmentation with bounding box prediction.]]></summary></entry><entry><title type="html">Getting Started with Scenario Runner for CARLA</title><link href="https://handsomeyun.github.io/blog/2024/ScenarioRunner/" rel="alternate" type="text/html" title="Getting Started with Scenario Runner for CARLA"/><published>2024-05-11T15:09:00+00:00</published><updated>2024-05-11T15:09:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/ScenarioRunner</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/ScenarioRunner/"><![CDATA[<p>In this post, I’ll walk you through setting up <strong>Scenario Runner</strong> for <strong>CARLA</strong>, a popular autonomous driving simulator. Scenario Runner allows you to run complex scenarios using the OpenSCENARIO standard and extend CARLA’s capabilities.</p> <h3 id="preparation-installing-scenario-runner">Preparation: Installing Scenario Runner</h3> <p>First, ensure you install the version of Scenario Runner that matches your CARLA version. You can find the relevant release on GitHub:</p> <p><a href="https://github.com/carla-simulator/scenario_runner/releases">Scenario Runner Releases</a></p> <p>For example, if you’re using <strong>CARLA 0.9.12</strong>, download the matching version:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">bash
+</span><span class="c"># Example for CARLA 0.9.12</span>
+https://github.com/carla-simulator/scenario_runner/releases/tag/0.9.12
 <span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-typograms">+----+
-|    |---&gt; My first diagram!
-+----+
-</code></pre> <p>Another example:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
-</span><span class="sb">.------------------------.
-|.----------------------.|
-||"https://example.com" ||
-|'----------------------'|
-| ______________________ |
-||                      ||
-||   Welcome!           ||
-||                      ||
-||                      ||
-||  .----------------.  ||
-||  | username       |  ||
-||  '----------------'  ||
-||  .----------------.  ||
-||  |"*******"       |  ||
-||  '----------------'  ||
-||                      ||
-||  .----------------.  ||
-||  |   "Sign-up"    |  ||
-||  '----------------'  ||
-||                      ||
-|+----------------------+|
-.------------------------.</span>
+</code></pre></div></div> <h3 id="setting-up-a-virtual-environment">Setting Up a Virtual Environment</h3> <p>CARLA and Scenario Runner work best with Python 3.7, so we’ll create a virtual environment using Conda:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">bash
+</span><span class="c"># Create a virtual environment for Scenario Runner</span>
+<span class="nv">$ </span>conda create <span class="nt">--name</span> scrun <span class="nv">python</span><span class="o">=</span>3.7
+
+<span class="c"># Activate the virtual environment</span>
+<span class="nv">$ </span>conda activate scrun
 <span class="p">```</span>
-</code></pre></div></div> <p>which generates:</p> <pre><code class="language-typograms">.------------------------.
-|.----------------------.|
-||"https://example.com" ||
-|'----------------------'|
-| ______________________ |
-||                      ||
-||   Welcome!           ||
-||                      ||
-||                      ||
-||  .----------------.  ||
-||  | username       |  ||
-||  '----------------'  ||
-||  .----------------.  ||
-||  |"*******"       |  ||
-||  '----------------'  ||
-||                      ||
-||  .----------------.  ||
-||  |   "Sign-up"    |  ||
-||  '----------------'  ||
-||                      ||
-|+----------------------+|
-.------------------------.
-</code></pre> <p>For more examples, check out the <a href="https://google.github.io/typograms/#examples">typograms documentation</a>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="diagrams"/><summary type="html"><![CDATA[this is what included typograms code could look like]]></summary></entry><entry><title type="html">a post that can be cited</title><link href="https://handsomeyun.github.io/blog/2024/post-citation/" rel="alternate" type="text/html" title="a post that can be cited"/><published>2024-04-28T15:06:00+00:00</published><updated>2024-04-28T15:06:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/post-citation</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/post-citation/"><![CDATA[<p>This is an example post that can be cited. The content of the post ends here, while the citation information is automatically provided below. The only thing needed is for you to set the <code class="language-plaintext highlighter-rouge">citation</code> key in the front matter to <code class="language-plaintext highlighter-rouge">true</code>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="citation"/><summary type="html"><![CDATA[this is what a post that can be cited looks like]]></summary></entry><entry><title type="html">a post with pseudo code</title><link href="https://handsomeyun.github.io/blog/2024/pseudocode/" rel="alternate" type="text/html" title="a post with pseudo code"/><published>2024-04-15T00:01:00+00:00</published><updated>2024-04-15T00:01:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/pseudocode</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/pseudocode/"><![CDATA[<p>This is an example post with some pseudo code rendered by <a href="https://github.com/SaswatPadhi/pseudocode.js">pseudocode</a>. The example presented here is the same as the one in the <a href="https://saswat.padhi.me/pseudocode.js/">pseudocode.js</a> documentation, with only one simple but important change: everytime you would use <code class="language-plaintext highlighter-rouge">$</code>, you should use <code class="language-plaintext highlighter-rouge">$$</code> instead. Also, note that the <code class="language-plaintext highlighter-rouge">pseudocode</code> key in the front matter is set to <code class="language-plaintext highlighter-rouge">true</code> to enable the rendering of pseudo code. As an example, using this code:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">pseudocode
-</span><span class="sb">% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\PROCEDURE{Quicksort}{$$A, p, r$$}
-    \IF{$$p &lt; r$$}
-        \STATE $$q = $$ \CALL{Partition}{$$A, p, r$$}
-        \STATE \CALL{Quicksort}{$$A, p, q - 1$$}
-        \STATE \CALL{Quicksort}{$$A, q + 1, r$$}
-    \ENDIF
-\ENDPROCEDURE
-\PROCEDURE{Partition}{$$A, p, r$$}
-    \STATE $$x = A[r]$$
-    \STATE $$i = p - 1$$
-    \FOR{$$j = p$$ \TO $$r - 1$$}
-        \IF{$$A[j] &lt; x$$}
-            \STATE $$i = i + 1$$
-            \STATE exchange
-            $$A[i]$$ with $$A[j]$$
-        \ENDIF
-        \STATE exchange $$A[i]$$ with $$A[r]$$
-    \ENDFOR
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}</span>
+</code></pre></div></div> <p>Next, install the required dependencies:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">bash
+</span><span class="c"># Navigate to your Scenario Runner folder and install dependencies</span>
+<span class="nv">$ </span><span class="nb">cd</span> ~/path_to_scenario_runner
+<span class="nv">$ </span>pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
 <span class="p">```</span>
-</code></pre></div></div> <p>Generates:</p> <pre><code class="language-pseudocode">% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\PROCEDURE{Quicksort}{$$A, p, r$$}
-    \IF{$$p &lt; r$$}
-        \STATE $$q = $$ \CALL{Partition}{$$A, p, r$$}
-        \STATE \CALL{Quicksort}{$$A, p, q - 1$$}
-        \STATE \CALL{Quicksort}{$$A, q + 1, r$$}
-    \ENDIF
-\ENDPROCEDURE
-\PROCEDURE{Partition}{$$A, p, r$$}
-    \STATE $$x = A[r]$$
-    \STATE $$i = p - 1$$
-    \FOR{$$j = p$$ \TO $$r - 1$$}
-        \IF{$$A[j] &lt; x$$}
-            \STATE $$i = i + 1$$
-            \STATE exchange
-            $$A[i]$$ with $$A[j]$$
-        \ENDIF
-        \STATE exchange $$A[i]$$ with $$A[r]$$
-    \ENDFOR
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included pseudo code could look like]]></summary></entry><entry><title type="html">a post with code diff</title><link href="https://handsomeyun.github.io/blog/2024/code-diff/" rel="alternate" type="text/html" title="a post with code diff"/><published>2024-01-27T19:22:00+00:00</published><updated>2024-01-27T19:22:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/code-diff</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/code-diff/"><![CDATA[<p>You can display diff code by using the regular markdown syntax:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff
-</span><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")</span>
+</code></pre></div></div> <p>Setting Up Environment Variables You need to set environment variables for CARLA and Scenario Runner so Python can find the appropriate libraries.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">bash
+</span><span class="c"># Set the CARLA installation directory</span>
+<span class="nv">$ </span><span class="nb">export </span><span class="nv">CARLA_ROOT</span><span class="o">=</span>/path/to/your/carla/installation
+
+<span class="c"># Set the Scenario Runner installation directory</span>
+<span class="nv">$ </span><span class="nb">export </span><span class="nv">SCENARIO_RUNNER_ROOT</span><span class="o">=</span>/path/to/your/scenario/runner
+
+<span class="c"># Set the Python path for CARLA</span>
+<span class="nv">$ </span><span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:<span class="k">${</span><span class="nv">CARLA_ROOT</span><span class="k">}</span>/PythonAPI/carla/dist/carla-0.9.12-py3.7-linux-x86_64.egg
+<span class="nv">$ </span><span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:<span class="k">${</span><span class="nv">CARLA_ROOT</span><span class="k">}</span>/PythonAPI/carla
 <span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")
-</span></code></pre></div></div> <p>But this is difficult to read, specially if you have a large diff. You can use <a href="https://diff2html.xyz/">diff2html</a> to display a more readable version of the diff. For this, just use <code class="language-plaintext highlighter-rouge">diff2html</code> instead of <code class="language-plaintext highlighter-rouge">diff</code> for the code block language:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff2html
-</span><span class="sb">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
---- a/sample.js
-+++ b/sample.js
-@@ -1 +1 @@
--console.log("Hello World!")
-+console.log("Hello from Diff2Html!")</span>
+</code></pre></div></div> <p>Optional: Add to .bashrc To avoid setting these environment variables every time, you can add them to your .bashrc file:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">bash
+</span><span class="nv">$ </span>gedit ~/.bashrc
 <span class="p">```</span>
-</code></pre></div></div> <p>If we use a longer example, for example <a href="https://github.com/rtfpessoa/diff2html/commit/c2c253d3e3f8b8b267f551e659f72b44ca2ac927">this commit from diff2html</a>, it will generate the following output:</p> <pre><code class="language-diff2html">From 2aaae31cc2a37bfff83430c2c914b140bee59b6a Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sun, 9 Oct 2016 16:41:54 +0100
-Subject: [PATCH 1/2] Initial template override support
-
----
- scripts/hulk.js                    |  4 ++--
- src/diff2html.js                   |  3 +--
- src/file-list-printer.js           | 11 ++++++++---
- src/hoganjs-utils.js               | 29 +++++++++++++++++------------
- src/html-printer.js                |  6 ++++++
- src/line-by-line-printer.js        |  6 +++++-
- src/side-by-side-printer.js        |  6 +++++-
- test/file-list-printer-tests.js    |  2 +-
- test/hogan-cache-tests.js          | 18 +++++++++++++++---
- test/line-by-line-tests.js         |  3 +--
- test/side-by-side-printer-tests.js |  3 +--
- 11 files changed, 62 insertions(+), 29 deletions(-)
-
-diff --git a/scripts/hulk.js b/scripts/hulk.js
-index 5a793c18..a4b1a4d5 100755
---- a/scripts/hulk.js
-+++ b/scripts/hulk.js
-@@ -173,11 +173,11 @@ function namespace(name) {
- // write a template foreach file that matches template extension
- templates = extractFiles(options.argv.remain)
-   .map(function(file) {
--    var openedFile = fs.readFileSync(file, 'utf-8');
-+    var openedFile = fs.readFileSync(file, 'utf-8').trim();
-     var name;
-     if (!openedFile) return;
-     name = namespace(path.basename(file).replace(/\..*$/, ''));
--    openedFile = removeByteOrderMark(openedFile.trim());
-+    openedFile = removeByteOrderMark(openedFile);
-     openedFile = wrap(file, name, openedFile);
-     if (!options.outputdir) return openedFile;
-     fs.writeFileSync(path.join(options.outputdir, name + '.js')
-diff --git a/src/diff2html.js b/src/diff2html.js
-index 21b0119e..64e138f5 100644
---- a/src/diff2html.js
-+++ b/src/diff2html.js
-@@ -7,7 +7,6 @@
-
- (function() {
-   var diffParser = require('./diff-parser.js').DiffParser;
--  var fileLister = require('./file-list-printer.js').FileListPrinter;
-   var htmlPrinter = require('./html-printer.js').HtmlPrinter;
-
-   function Diff2Html() {
-@@ -43,7 +42,7 @@
-
-     var fileList = '';
-     if (configOrEmpty.showFiles === true) {
--      fileList = fileLister.generateFileList(diffJson, configOrEmpty);
-+      fileList = htmlPrinter.generateFileListSummary(diffJson, configOrEmpty);
-     }
-
-     var diffOutput = '';
-diff --git a/src/file-list-printer.js b/src/file-list-printer.js
-index e408d9b2..1e0a2c61 100644
---- a/src/file-list-printer.js
-+++ b/src/file-list-printer.js
-@@ -8,11 +8,16 @@
- (function() {
-   var printerUtils = require('./printer-utils.js').PrinterUtils;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var baseTemplatesPath = 'file-summary';
-   var iconsBaseTemplatesPath = 'icon';
-
--  function FileListPrinter() {
-+  function FileListPrinter(config) {
-+    this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   FileListPrinter.prototype.generateFileList = function(diffFiles) {
-@@ -38,5 +43,5 @@
-     });
-   };
-
--  module.exports.FileListPrinter = new FileListPrinter();
-+  module.exports.FileListPrinter = FileListPrinter;
- })();
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 9949e5fa..0dda08d7 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -8,18 +8,19 @@
- (function() {
-   var fs = require('fs');
-   var path = require('path');
--
-   var hogan = require('hogan.js');
-
-   var hoganTemplates = require('./templates/diff2html-templates.js');
-
--  var templatesPath = path.resolve(__dirname, 'templates');
-+  var extraTemplates;
-
--  function HoganJsUtils() {
-+  function HoganJsUtils(configuration) {
-+    this.config = configuration || {};
-+    extraTemplates = this.config.templates || {};
-   }
-
--  HoganJsUtils.prototype.render = function(namespace, view, params, configuration) {
--    var template = this.template(namespace, view, configuration);
-+  HoganJsUtils.prototype.render = function(namespace, view, params) {
-+    var template = this.template(namespace, view);
-     if (template) {
-       return template.render(params);
-     }
-@@ -27,17 +28,16 @@
-     return null;
-   };
-
--  HoganJsUtils.prototype.template = function(namespace, view, configuration) {
--    var config = configuration || {};
-+  HoganJsUtils.prototype.template = function(namespace, view) {
-     var templateKey = this._templateKey(namespace, view);
-
--    return this._getTemplate(templateKey, config);
-+    return this._getTemplate(templateKey);
-   };
-
--  HoganJsUtils.prototype._getTemplate = function(templateKey, config) {
-+  HoganJsUtils.prototype._getTemplate = function(templateKey) {
-     var template;
-
--    if (!config.noCache) {
-+    if (!this.config.noCache) {
-       template = this._readFromCache(templateKey);
-     }
-
-@@ -53,6 +53,7 @@
-
-     try {
-       if (fs.readFileSync) {
-+        var templatesPath = path.resolve(__dirname, 'templates');
-         var templatePath = path.join(templatesPath, templateKey);
-         var templateContent = fs.readFileSync(templatePath + '.mustache', 'utf8');
-         template = hogan.compile(templateContent);
-@@ -66,12 +67,16 @@
-   };
-
-   HoganJsUtils.prototype._readFromCache = function(templateKey) {
--    return hoganTemplates[templateKey];
-+    return extraTemplates[templateKey] || hoganTemplates[templateKey];
-   };
-
-   HoganJsUtils.prototype._templateKey = function(namespace, view) {
-     return namespace + '-' + view;
-   };
-
--  module.exports.HoganJsUtils = new HoganJsUtils();
-+  HoganJsUtils.prototype.compile = function(templateStr) {
-+    return hogan.compile(templateStr);
-+  };
-+
-+  module.exports.HoganJsUtils = HoganJsUtils;
- })();
-diff --git a/src/html-printer.js b/src/html-printer.js
-index 585d5b66..13f83047 100644
---- a/src/html-printer.js
-+++ b/src/html-printer.js
-@@ -8,6 +8,7 @@
- (function() {
-   var LineByLinePrinter = require('./line-by-line-printer.js').LineByLinePrinter;
-   var SideBySidePrinter = require('./side-by-side-printer.js').SideBySidePrinter;
-+  var FileListPrinter = require('./file-list-printer.js').FileListPrinter;
-
-   function HtmlPrinter() {
-   }
-@@ -22,5 +23,10 @@
-     return sideBySidePrinter.generateSideBySideJsonHtml(diffFiles);
-   };
-
-+  HtmlPrinter.prototype.generateFileListSummary = function(diffJson, config) {
-+    var fileListPrinter = new FileListPrinter(config);
-+    return fileListPrinter.generateFileList(diffJson);
-+  };
-+
-   module.exports.HtmlPrinter = new HtmlPrinter();
- })();
-diff --git a/src/line-by-line-printer.js b/src/line-by-line-printer.js
-index b07eb53c..d230bedd 100644
---- a/src/line-by-line-printer.js
-+++ b/src/line-by-line-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'line-by-line';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -19,6 +20,9 @@
-
-   function LineByLinePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   LineByLinePrinter.prototype.makeFileDiffHtml = function(file, diffs) {
-diff --git a/src/side-by-side-printer.js b/src/side-by-side-printer.js
-index bbf1dc8d..5e3033b3 100644
---- a/src/side-by-side-printer.js
-+++ b/src/side-by-side-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'side-by-side';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -26,6 +27,9 @@
-
-   function SideBySidePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   SideBySidePrinter.prototype.makeDiffHtml = function(file, diffs) {
-diff --git a/test/file-list-printer-tests.js b/test/file-list-printer-tests.js
-index a502a46f..60ea3208 100644
---- a/test/file-list-printer-tests.js
-+++ b/test/file-list-printer-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
-
--var fileListPrinter = require('../src/file-list-printer.js').FileListPrinter;
-+var fileListPrinter = new (require('../src/file-list-printer.js').FileListPrinter)();
-
- describe('FileListPrinter', function() {
-   describe('generateFileList', function() {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 190bf6f8..3bb754ac 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
-
--var HoganJsUtils = require('../src/hoganjs-utils.js').HoganJsUtils;
-+var HoganJsUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)();
- var diffParser = require('../src/diff-parser.js').DiffParser;
-
- describe('HoganJsUtils', function() {
-@@ -21,16 +21,28 @@ describe('HoganJsUtils', function() {
-       });
-       assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should render view without cache', function() {
-       var result = HoganJsUtils.render('generic', 'empty-diff', {
-         contentClass: 'd2h-code-line',
-         diffParser: diffParser
-       }, {noCache: true});
--      assert.equal(emptyDiffHtml + '\n', result);
-+      assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should return null if template is missing', function() {
--      var result = HoganJsUtils.render('generic', 'missing-template', {}, {noCache: true});
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)({noCache: true});
-+      var result = hoganUtils.render('generic', 'missing-template', {});
-       assert.equal(null, result);
-     });
-+
-+    it('should allow templates to be overridden', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+
-+      var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-diff --git a/test/line-by-line-tests.js b/test/line-by-line-tests.js
-index 1cd92073..8869b3df 100644
---- a/test/line-by-line-tests.js
-+++ b/test/line-by-line-tests.js
-@@ -14,7 +14,7 @@ describe('LineByLinePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
-
-       assert.equal(expected, fileHtml);
-     });
-@@ -422,7 +422,6 @@ describe('LineByLinePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                &lt;/tbody&gt;\n' +
-         '            &lt;/table&gt;\n' +
-         '        &lt;/div&gt;\n' +
-diff --git a/test/side-by-side-printer-tests.js b/test/side-by-side-printer-tests.js
-index 76625f8e..771daaa5 100644
---- a/test/side-by-side-printer-tests.js
-+++ b/test/side-by-side-printer-tests.js
-@@ -14,7 +14,7 @@ describe('SideBySidePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
-
-       assert.equal(expectedRight, fileHtml.right);
-       assert.equal(expectedLeft, fileHtml.left);
-@@ -324,7 +324,6 @@ describe('SideBySidePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                    &lt;/tbody&gt;\n' +
-         '                &lt;/table&gt;\n' +
-         '            &lt;/div&gt;\n' +
-
-From f3cadb96677d0eb82fc2752dc3ffbf35ca9b5bdb Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sat, 15 Oct 2016 13:21:22 +0100
-Subject: [PATCH 2/2] Allow uncompiled templates
-
----
- README.md                 |  3 +++
- src/hoganjs-utils.js      |  7 +++++++
- test/hogan-cache-tests.js | 24 +++++++++++++++++++++++-
- 3 files changed, 33 insertions(+), 1 deletion(-)
-
-diff --git a/README.md b/README.md
-index 132c8a28..46909f25 100644
---- a/README.md
-+++ b/README.md
-@@ -98,6 +98,9 @@ The HTML output accepts a Javascript object with configuration. Possible options
-   - `synchronisedScroll`: scroll both panes in side-by-side mode: `true` or `false`, default is `false`
-   - `matchWordsThreshold`: similarity threshold for word matching, default is 0.25
-   - `matchingMaxComparisons`: perform at most this much comparisons for line matching a block of changes, default is `2500`
-+  - `templates`: object with previously compiled templates to replace parts of the html
-+  - `rawTemplates`: object with raw not compiled templates to replace parts of the html
-+  &gt; For more information regarding the possible templates look into [src/templates](https://github.com/rtfpessoa/diff2html/tree/master/src/templates)
-
- ## Diff2HtmlUI Helper
-
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 0dda08d7..b2e9c275 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -17,6 +17,13 @@
-   function HoganJsUtils(configuration) {
-     this.config = configuration || {};
-     extraTemplates = this.config.templates || {};
-+
-+    var rawTemplates = this.config.rawTemplates || {};
-+    for (var templateName in rawTemplates) {
-+      if (rawTemplates.hasOwnProperty(templateName)) {
-+        if (!extraTemplates[templateName]) extraTemplates[templateName] = this.compile(rawTemplates[templateName]);
-+      }
-+    }
-   }
-
-   HoganJsUtils.prototype.render = function(namespace, view, params) {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 3bb754ac..a34839c0 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -36,7 +36,7 @@ describe('HoganJsUtils', function() {
-       assert.equal(null, result);
-     });
-
--    it('should allow templates to be overridden', function() {
-+    it('should allow templates to be overridden with compiled templates', function() {
-       var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-
-       var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-@@ -44,5 +44,27 @@ describe('HoganJsUtils', function() {
-       var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-       assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-     });
-+
-+    it('should allow templates to be overridden with uncompiled templates', function() {
-+      var emptyDiffTemplate = '&lt;p&gt;&lt;/p&gt;';
-+
-+      var config = {rawTemplates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-+
-+    it('should allow templates to be overridden giving priority to compiled templates', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+      var emptyDiffTemplateUncompiled = '&lt;p&gt;Not used!&lt;/p&gt;';
-+
-+      var config = {
-+        templates: {'generic-empty-diff': emptyDiffTemplate},
-+        rawTemplates: {'generic-empty-diff': emptyDiffTemplateUncompiled}
-+      };
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is how you can display code diffs]]></summary></entry><entry><title type="html">a post with advanced image components</title><link href="https://handsomeyun.github.io/blog/2024/advanced-images/" rel="alternate" type="text/html" title="a post with advanced image components"/><published>2024-01-27T11:46:00+00:00</published><updated>2024-01-27T11:46:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/advanced-images</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/advanced-images/"><![CDATA[<p>This is an example post with advanced image components.</p> <h2 id="image-slider">Image Slider</h2> <p>This is a simple image slider. It uses the <a href="https://swiperjs.com/">Swiper</a> library. Check the <a href="https://swiperjs.com/demos">examples page</a> for more information of what you can achieve with it.</p> <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true"> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/9-480.webp 480w,/assets/img/9-800.webp 800w,/assets/img/9-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/9.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/7-480.webp 480w,/assets/img/7-800.webp 800w,/assets/img/7-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/7.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/8-480.webp 480w,/assets/img/8-800.webp 800w,/assets/img/8-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/8.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/10-480.webp 480w,/assets/img/10-800.webp 800w,/assets/img/10-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/10.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/12-480.webp 480w,/assets/img/12-800.webp 800w,/assets/img/12-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/12.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> </swiper-container> <h2 id="image-comparison-slider">Image Comparison Slider</h2> <p>This is a simple image comparison slider. It uses the <a href="https://img-comparison-slider.sneas.io/">img-comparison-slider</a> library. Check the <a href="https://img-comparison-slider.sneas.io/examples.html">examples page</a> for more information of what you can achieve with it.</p> <img-comparison-slider> <figure slot="first"> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/prof_pic.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> <figure slot="second"> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic_color-480.webp 480w,/assets/img/prof_pic_color-800.webp 800w,/assets/img/prof_pic_color-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/prof_pic_color.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </img-comparison-slider>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="images"/><summary type="html"><![CDATA[this is what advanced image components could look like]]></summary></entry><entry><title type="html">a post with vega lite</title><link href="https://handsomeyun.github.io/blog/2024/vega-lite/" rel="alternate" type="text/html" title="a post with vega lite"/><published>2024-01-27T00:20:00+00:00</published><updated>2024-01-27T00:20:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/vega-lite</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/vega-lite/"><![CDATA[<p>This is an example post with some <a href="https://vega.github.io/vega-lite/">vega lite</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">vega_lite
-</span><span class="sb">{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A dot plot showing each movie in the database, and the difference from the average movie rating. The display is sorted by year to visualize everything in sequential order. The graph is for all Movies before 2019.",
-  "data": {
-    "url": "https://raw.githubusercontent.com/vega/vega/main/docs/data/movies.json"
-  },
-  "transform": [
-    {"filter": "datum['IMDB Rating'] != null"},
-    {"filter": {"timeUnit": "year", "field": "Release Date", "range": [null, 2019]}},
-    {
-      "joinaggregate": [{
-        "op": "mean",
-        "field": "IMDB Rating",
-        "as": "AverageRating"
-      }]
-    },
-    {
-      "calculate": "datum['IMDB Rating'] - datum.AverageRating",
-      "as": "RatingDelta"
-    }
-  ],
-  "mark": "point",
-  "encoding": {
-    "x": {
-      "field": "Release Date",
-      "type": "temporal"
-    },
-    "y": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "title": "Rating Delta"
-    },
-    "color": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "scale": {"domainMid": 0},
-      "title": "Rating Delta"
-    }
-  }
-}</span>
+</code></pre></div></div> <p>Paste the following lines at the end of the file:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">bash
+</span><span class="nb">export </span><span class="nv">CARLA_ROOT</span><span class="o">=</span>/path/to/your/carla/installation
+<span class="nb">export </span><span class="nv">SCENARIO_RUNNER_ROOT</span><span class="o">=</span>/path/to/your/scenario/runner
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:<span class="k">${</span><span class="nv">CARLA_ROOT</span><span class="k">}</span>/PythonAPI/carla/dist/carla-0.9.12-py3.7-linux-x86_64.egg
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:<span class="k">${</span><span class="nv">CARLA_ROOT</span><span class="k">}</span>/PythonAPI/carla
 <span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-vega_lite">{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A dot plot showing each movie in the database, and the difference from the average movie rating. The display is sorted by year to visualize everything in sequential order. The graph is for all Movies before 2019.",
-  "data": {
-    "url": "https://raw.githubusercontent.com/vega/vega/main/docs/data/movies.json"
-  },
-  "transform": [
-    {"filter": "datum['IMDB Rating'] != null"},
-    {"filter": {"timeUnit": "year", "field": "Release Date", "range": [null, 2019]}},
-    {
-      "joinaggregate": [{
-        "op": "mean",
-        "field": "IMDB Rating",
-        "as": "AverageRating"
-      }]
-    },
-    {
-      "calculate": "datum['IMDB Rating'] - datum.AverageRating",
-      "as": "RatingDelta"
-    }
-  ],
-  "mark": "point",
-  "encoding": {
-    "x": {
-      "field": "Release Date",
-      "type": "temporal"
-    },
-    "y": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "title": "Rating Delta"
-    },
-    "color": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "scale": {"domainMid": 0},
-      "title": "Rating Delta"
-    }
-  }
-}
-</code></pre> <p>This plot supports both light and dark themes.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included vega lite code could look like]]></summary></entry><entry><title type="html">a post with geojson</title><link href="https://handsomeyun.github.io/blog/2024/geojson-map/" rel="alternate" type="text/html" title="a post with geojson"/><published>2024-01-26T17:57:00+00:00</published><updated>2024-01-26T17:57:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/geojson-map</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/geojson-map/"><![CDATA[<p>This is an example post with some <a href="https://geojson.org/">geojson</a> code. The support is provided thanks to <a href="https://leafletjs.com/">Leaflet</a>. To create your own visualization, go to <a href="https://geojson.io/">geojson.io</a>.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">geojson
-</span><span class="sb">{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    }
-  ]
-}</span>
+</code></pre></div></div> <p>You can also create an alias for quickly navigating to the Scenario Runner folder:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">bash
+</span><span class="nb">alias </span><span class="nv">open_scenario_runner</span><span class="o">=</span><span class="s2">"cd /path_to_scenario_runner"</span>
 <span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-geojson">{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    }
-  ]
-}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><category term="maps"/><summary type="html"><![CDATA[this is what included geojson code could look like]]></summary></entry><entry><title type="html">a post with echarts</title><link href="https://handsomeyun.github.io/blog/2024/echarts/" rel="alternate" type="text/html" title="a post with echarts"/><published>2024-01-26T16:03:00+00:00</published><updated>2024-01-26T16:03:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/echarts</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/echarts/"><![CDATA[<p>This is an example post with some <a href="https://echarts.apache.org/">echarts</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">echarts
-</span><span class="sb">{
-  "title": {
-    "text": "ECharts Getting Started Example"
-  },
-  "responsive": true,
-  "tooltip": {},
-  "legend": {
-    "top": "30px",
-    "data": ["sales"]
-  },
-  "xAxis": {
-    "data": ["Shirts", "Cardigans", "Chiffons", "Pants", "Heels", "Socks"]
-  },
-  "yAxis": {},
-  "series": [
-    {
-      "name": "sales",
-      "type": "bar",
-      "data": [5, 20, 36, 10, 10, 20]
-    }
-  ]
-}</span>
+</code></pre></div></div> <h3 id="running-scenario-runner">Running Scenario Runner</h3> <p>Once everything is set up, you can start using Scenario Runner. Open a terminal and run:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">bash
+</span><span class="c"># Example for running a traditional scenario</span>
+<span class="nv">$ </span>python scenario_runner.py <span class="nt">--scenario</span> FollowLeadingVehicle_1 <span class="nt">--reloadWorld</span>
 <span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-echarts">{
-  "title": {
-    "text": "ECharts Getting Started Example"
-  },
-  "responsive": true,
-  "tooltip": {},
-  "legend": {
-    "top": "30px",
-    "data": ["sales"]
-  },
-  "xAxis": {
-    "data": ["Shirts", "Cardigans", "Chiffons", "Pants", "Heels", "Socks"]
-  },
-  "yAxis": {},
-  "series": [
-    {
-      "name": "sales",
-      "type": "bar",
-      "data": [5, 20, 36, 10, 10, 20]
-    }
-  ]
-}
-</code></pre> <p>Note that this library offer support for both light and dark themes. You can switch between them using the theme switcher in the top right corner of the page.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included echarts code could look like]]></summary></entry></feed>
+</code></pre></div></div> <p>You can also run custom scenarios using OpenSCENARIO files:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">bash
+</span><span class="c"># Running an OpenSCENARIO file</span>
+<span class="nv">$ </span>python scenario_runner.py <span class="nt">--openscenario</span> /path/to/openscenario.xosc <span class="nt">--reloadWorld</span>
+<span class="p">```</span>
+</code></pre></div></div> <h3 id="running-manual-control">Running Manual Control</h3> <p>To interact manually with the CARLA environment, open another terminal and use the manual_control.py script:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">bash
+</span><span class="c"># Install pygame first, if you haven't</span>
+<span class="nv">$ </span>pip <span class="nb">install </span>pygame
+
+<span class="c"># Run the manual control script</span>
+<span class="nv">$ </span>python manual_control.py
+<span class="p">```</span>
+</code></pre></div></div> <h3 id="listing-available-scenarios">Listing Available Scenarios</h3> <p>To see the full list of available scenarios, run the following command:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">bash
+</span><span class="nv">$ </span>python scenario_runner.py <span class="nt">--list</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>This will display all predefined scenarios available in Scenario Runner.</p> <h3 id="conclusion">Conclusion</h3> <p>Scenario Runner adds significant flexibility to the CARLA simulator, allowing you to run complex scenarios. By following this guide, you should now be able to set up Scenario Runner and explore different scenarios. Stay tuned for more advanced usage and tips!</p> <p>For additional documentation, visit the Scenario Runner Documentation.</p>]]></content><author><name></name></author><category term="carla-posts"/><category term="carla"/><category term="scenario-runner"/><category term="tutorial"/><summary type="html"><![CDATA[A detailed guide on setting up and using Scenario Runner with CARLA simulator.]]></summary></entry><entry><title type="html">Working with OPV2V and V2V4Real Datasets for Autonomous Driving</title><link href="https://handsomeyun.github.io/blog/2024/OPV2V/" rel="alternate" type="text/html" title="Working with OPV2V and V2V4Real Datasets for Autonomous Driving"/><published>2024-04-11T10:00:00+00:00</published><updated>2024-04-11T10:00:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/OPV2V</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/OPV2V/"><![CDATA[<p>In this post, we’ll explore the <strong>OPV2V</strong> and <strong>V2V4Real</strong> datasets, which are designed for vehicle-to-vehicle (V2V) cooperative perception in autonomous driving. We’ll also go over how to visualize the datasets and format your own data for machine learning applications.</p> <h3 id="dataset-overview">Dataset Overview</h3> <p><strong>Dataset</strong> refers to a structured collection of data points that can be used for a specific purpose, such as training or testing machine learning models. Datasets can be stored in various formats, including:</p> <ul> <li><strong>Tabular</strong> (CSV, Excel)</li> <li><strong>Images</strong> (PNG, JPG)</li> <li><strong>Point Cloud Data</strong> (PCD)</li> </ul> <hr/> <h3 id="opv2v-open-benchmark-for-vehicle-to-vehicle-perception">OPV2V: Open Benchmark for Vehicle-to-Vehicle Perception</h3> <p><strong>OPV2V</strong> is an open benchmark dataset and fusion pipeline designed to facilitate vehicle-to-vehicle (V2V) perception. The dataset is collected using <strong>OPENCDA</strong> in the <strong>CARLA simulator</strong>, making it an essential resource for researchers working on autonomous driving.</p> <ul> <li><a href="https://mobility-lab.seas.ucla.edu/opv2v/">OPV2V Official Website</a></li> <li> <p><a href="https://github.com/DerrickXuNu/OpenCOOD">OPV2V GitHub Repository</a></p> <p><strong>Key Features</strong>:</p> <ul> <li>A dataset and pipeline for <strong>V2V cooperative perception</strong>.</li> <li>Data collected using the <strong>CARLA simulator</strong> with <strong>OPENCDA</strong>.</li> </ul> <p>To get a feel for how the dataset looks, you can download a smaller scenario (less than 1GB) for testing:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="p">```</span><span class="nl">bash
+</span>  <span class="c"># Download small dataset</span>
+  wget https://mobility-lab.seas.ucla.edu/opv2v/small_dataset.zip
+  <span class="p">```</span>
+</code></pre></div> </div> <p>To run the OPV2V pipeline, you can follow the instructions in the OpenCOOD repository.</p> <p>## V2V4Real: Real-World Vehicle-to-Vehicle Dataset V2V4Real is the first large-scale real-world dataset for vehicle-to-vehicle cooperative perception in autonomous driving. Unlike OPV2V, which is simulated, V2V4Real offers real-world data for training and evaluation.</p> <ul> <li> <p><strong><a href="https://mobility-lab.seas.ucla.edu/v2v4real/">V2V4Real Official Website</a></strong>: Visit the official V2V4Real website for more details on the dataset and its use in autonomous driving research.</p> </li> <li> <p><strong><a href="https://github.com/ucla-mobility/v2v4real">V2V4Real GitHub Repository</a></strong>: Access the official GitHub repository for V2V4Real to explore the code, dataset, and installation instructions.</p> </li> <li> <p><strong><a href="https://arxiv.org/abs/2303.07601">Research Paper</a></strong>: Read the research paper on V2V4Real, which provides in-depth insights into the dataset and its applications in cooperative vehicle-to-vehicle perception.</p> </li> </ul> </li> </ul> <p><strong>Key Features</strong>: Real-world vehicle-to-vehicle dataset. Large-scale data for cooperative perception.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Here’s how you can access the dataset:
+````markdown
+```bash
+# Clone V2V4Real GitHub repository
+git clone https://github.com/ucla-mobility/v2v4real.git
+```
+````
+</code></pre></div></div> <p><strong>Dataset Use Cases</strong>： Use1: Visualizing a Single Frame To visualize a single frame of point cloud data (PCD), you can use the pcl_viewer tool. Here’s how you can install and use it on Ubuntu: ````markdown ```bash # Install pcl_viewer on Ubuntu sudo apt install pcl-tools</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Visualize a specific PCD file (e.g., 000000.pcd)
+pcl_viewer 000000.pcd
+```
+````
+This tool will allow you to inspect individual frames from the dataset, making it easier to understand the data structure and visualize 3D point clouds.
+</code></pre></div></div> <hr/> <h3 id="how-to-visualize-data-from-opv2v">How to Visualize Data from OPV2V</h3> <p>To visualize data from <strong>OPV2V</strong>, follow these steps:</p> <ol> <li><strong>Install OpenCOOD</strong>: <ul> <li>Clone the <a href="https://github.com/DerrickXuNu/OpenCOOD">OpenCOOD GitHub repository</a>.</li> <li>Follow the installation instructions provided in the repository.</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```bash
+# Clone the OpenCOOD repository
+git clone https://github.com/DerrickXuNu/OpenCOOD.git
+
+# Navigate to the directory
+cd OpenCOOD
+
+# Install required packages
+pip install -r requirements.txt
+```
+</code></pre></div> </div> </li> <li><strong>Set Up a Python Virtual EnvironmentD</strong>: Install PyTorch CPU version in a Python virtual environment: <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ```bash
+ conda create --name open-cood python=3.7
+ conda activate open-cood
+ pip install torch==2.3.0+cpu torchvision==0.15.2+cpu -f https://download.pytorch.org/whl/torch_stable.html
+ ```
+</code></pre></div> </div> </li> <li><strong>Extract the Dataset:</strong>: Download and extract the OPV2V dataset Move the extracted dataset into the OpenCOOD directory: <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="p">```</span><span class="nl">bash
+</span> <span class="c"># Move the extracted dataset to the test folder</span>
+ <span class="nb">mv </span>2021_opv2v_data /path/to/OpenCOOD/opv2v_data_dumping/test/
+ <span class="p">```</span>
+</code></pre></div> </div> </li> <li><strong>Modify the Visualization Configuration</strong>: Update the visualization.yaml file in the OpenCOOD repository to specify the correct visualization mode. <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="p">```</span><span class="nl">bash
+</span> visualize:
+ mode: lidar  <span class="c"># Set the mode to visualize LIDAR data</span>
+ show: True   <span class="c"># Enable visualization</span>
+ <span class="p">```</span>
+</code></pre></div> </div> </li> <li><strong>Run the Visualization Tool</strong>: Finally, run the visualization tool: <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="p">```</span><span class="nl">bash
+</span> python opencood/tools/visualize.py
+ <span class="p">```</span>
+</code></pre></div> </div> <hr/> </li> </ol> <h4 id="how-to-format-your-own-data">How to Format Your Own Data</h4> <p>When creating your own dataset for use in autonomous driving models, it’s essential to format it correctly for machine learning purposes. The data can be structured in several ways:</p> <ul> <li>Tabular format (e.g., CSV, Excel) for structured data like timestamps, sensor readings, or metadata.</li> <li>Images stored in directories, such as /images/train/ or /images/test/.</li> <li>Point cloud data (PCD) for LIDAR, stored in directories such as /pointclouds/.</li> </ul> <p>Make sure the dataset format aligns with the model or framework you’re using. For example, OpenCOOD expects specific folder structures for different sensor inputs.#</p> <h3 id="conclusion">Conclusion</h3> <p>Both OPV2V and V2V4Real datasets provide valuable data for researching cooperative perception in autonomous driving. OPV2V gives you the flexibility of simulated data, while V2V4Real offers large-scale real-world data. Whether you’re visualizing point clouds or training models, these datasets can help push forward research in autonomous vehicle communication.</p> <p>To get started, make sure to visit the following resources: OPV2V Official Site V2V4Real Official Site OpenCOOD GitHub</p>]]></content><author><name></name></author><category term="datasets"/><category term="opv2v"/><category term="v2v4real"/><category term="dataset"/><category term="autonomous-driving"/><summary type="html"><![CDATA[A guide to using OPV2V and V2V4Real datasets for vehicle-to-vehicle perception and cooperative perception in autonomous driving.]]></summary></entry><entry><title type="html">Packaging pyHFO from GitHub into a macOS App</title><link href="https://handsomeyun.github.io/blog/2024/packaging/" rel="alternate" type="text/html" title="Packaging pyHFO from GitHub into a macOS App"/><published>2024-01-11T16:00:00+00:00</published><updated>2024-01-11T16:00:00+00:00</updated><id>https://handsomeyun.github.io/blog/2024/packaging</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2024/packaging/"><![CDATA[<p>In this post, we will walk you through packaging the <strong>pyHFO</strong> project from GitHub into a macOS app using <strong>py2app</strong>. This guide assumes you have access to the pyHFO repository and outlines the steps from setting up the project environment to creating a distributable <code class="language-plaintext highlighter-rouge">.dmg</code> file for users.</p> <h3 id="step-1-clone-the-pyhfo-repository">Step 1: Clone the pyHFO Repository</h3> <ol> <li> <p><strong>Clone the pyHFO repository</strong> from GitHub:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone https://github.com/HandsomeYun/pyHFO.git
+ <span class="nb">cd </span>pyHFO
+</code></pre></div> </div> </li> </ol> <h3 id="step-2-set-up-a-virtual-environment">Step 2: Set Up a Virtual Environment</h3> <ol> <li> <p><strong>Create and activate a virtual environment</strong> with Python 3.7:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> conda create <span class="nt">-n</span> pyhfo <span class="nv">python</span><span class="o">=</span>3.7
+ conda activate pyhfo
+</code></pre></div> </div> </li> </ol> <h3 id="step-3-modify-requirementstxt">Step 3: Modify <code class="language-plaintext highlighter-rouge">requirements.txt</code></h3> <ol> <li> <p><strong>Update the <code class="language-plaintext highlighter-rouge">requirements.txt</code> file</strong> to the following versions to ensure compatibility with the pyHFO project:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> HFODetector==0.0.21
+ matplotlib==3.7.1
+ mne==1.4.2
+ numpy==1.25.0
+ p_tqdm==1.4.0
+ pandas==2.0.3
+ openpyxl==3.1.2
+ PyQt5==5.15.10
+ PyQt5_sip==12.13
+ pyqtgraph==0.13.3
+ scipy==1.11.1
+ scikit-image==0.21.0
+ torch==2.0.1
+ torchvision==0.15.2
+ tqdm==4.65.0
+</code></pre></div> </div> </li> <li> <p><strong>Install the dependencies</strong> listed in <code class="language-plaintext highlighter-rouge">requirements.txt</code>:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+ pip <span class="nb">install </span>wheel
+</code></pre></div> </div> </li> </ol> <h3 id="step-4-package-pyhfo-with-py2app">Step 4: Package pyHFO with py2app</h3> <ol> <li> <p><strong>Run py2app to package the project</strong>:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> python setup.py py2app
+</code></pre></div> </div> </li> <li> <p><strong>Rename the app</strong> to <code class="language-plaintext highlighter-rouge">pyHFO</code>:</p> <p>After the app is created in the <code class="language-plaintext highlighter-rouge">dist/</code> directory, rename it to <code class="language-plaintext highlighter-rouge">pyHFO.app</code> for consistency.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">mv </span>dist/your_app_name.app dist/pyHFO.app
+</code></pre></div> </div> </li> </ol> <h3 id="step-5-copy-additional-resources">Step 5: Copy Additional Resources</h3> <ol> <li> <p><strong>Copy additional resources (e.g., model checkpoints)</strong> to the app’s resources directory:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cp</span> <span class="nt">-r</span> /path/to/pyHFO/ckpt/ /path/to/pyHFO/dist/pyHFO.app/Contents/Resources/lib/python3.11/ckpt
+</code></pre></div> </div> </li> </ol> <h3 id="step-6-create-a-dmg-installer">Step 6: Create a DMG Installer</h3> <ol> <li> <p><strong>Create a disk image (.dmg) for easy distribution</strong>:</p> <ol> <li>Create an empty folder.</li> <li>Drag both the <strong>Applications folder alias</strong> and <strong>pyHFO.app</strong> into the folder.</li> <li>Run the following command to create a compressed DMG file:</li> </ol> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> hdiutil create <span class="nt">-volname</span> <span class="s2">"pyHFO"</span> <span class="nt">-srcfolder</span> /path/to/pyHFO/DownloadFolder <span class="nt">-ov</span> <span class="nt">-format</span> UDZO <span class="nt">-size</span> 1000m /path/to/pyHFO.dmg
+</code></pre></div> </div> </li> </ol> <h3 id="step-7-finalizing-the-app-installation-on-user-machines">Step 7: Finalizing the App Installation on User Machines</h3> <ol> <li> <p><strong>Important for macOS users</strong>: After dragging the app to the Applications folder, run the following command to make macOS recognize the app as safe:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>xattr <span class="nt">-cr</span> /Applications/pyHFO.app
+</code></pre></div> </div> </li> </ol> <p>This will remove quarantine attributes and allow the app to run without security warnings.</p> <hr/> <h3 id="conclusion">Conclusion</h3> <p>With these steps, you’ve successfully packaged the <strong>pyHFO</strong> project from GitHub into a macOS app, created a distributable <code class="language-plaintext highlighter-rouge">.dmg</code> file, and ensured that users can install and run the app securely. This guide provides a robust process for converting Python projects into standalone macOS applications.</p>]]></content><author><name></name></author><category term="packaging"/><category term="pyHFO"/><category term="packaging"/><category term="macOS"/><category term="py2app"/><category term="tutorial"/><summary type="html"><![CDATA[A step-by-step guide to packaging the pyHFO project from GitHub into a macOS app using py2app.]]></summary></entry><entry><title type="html">Docker Understanding</title><link href="https://handsomeyun.github.io/blog/2023/dockerunderstanding/" rel="alternate" type="text/html" title="Docker Understanding"/><published>2023-09-11T16:00:00+00:00</published><updated>2023-09-11T16:00:00+00:00</updated><id>https://handsomeyun.github.io/blog/2023/dockerunderstanding</id><content type="html" xml:base="https://handsomeyun.github.io/blog/2023/dockerunderstanding/"><![CDATA[<h1 id="what-is-docker">What is Docker?</h1> <p>The word “Docker” in English means “dockworker,” which implies the idea of transporting things. This meaning aligns perfectly with Docker’s functionality, which provides a way to containerize and transport our software and applications. Docker itself is a software program running on an operating system, providing a container environment that allows our programs to run independently within the container. The official name “Docker” is indeed very fitting.</p> <p>In simple terms, when we set up our web application in a distributed manner, we need to add servers and configure the necessary components for the web, such as databases, web servers, and runtimes, on each server. Only then can our website run properly. However, every time we add a server, we have to reconfigure everything, which is cumbersome. With Docker, we can package our website and all necessary configurations into an image (Docker image), then install Docker on the server, pull the packaged image using Docker, and directly run it (as a container). This approach eliminates the need for manual configuration, making it very convenient and easier to manage. If we update the configurations within the image, all the containers will be updated as well, and so will our website—this is particularly convenient.</p> <h2 id="so-what-exactly-is-docker">So, What Exactly is Docker?</h2> <p>Docker is a platform for building, testing, deploying, and publishing containerized applications. It is referred to as a platform because Docker is actually a suite of tools for managing all things related to containers.</p> <h2 id="features-of-docker">Features of Docker</h2> <ol> <li><strong>Build, Ship, and Run</strong></li> <li><strong>Build Once, Run Anywhere</strong></li> </ol> <h2 id="docker-vs-virtual-machines">Docker vs. Virtual Machines</h2> <p>Docker is similar to virtual machines (VMs). A virtual machine is essentially a virtual computer running on your operating system, where you can install and run various software just like on a real computer. You can take this virtual computer (which is essentially a file) and run it on any other computer with a virtual machine installed, without having to reinstall or configure anything—it’s very convenient.</p> <p>Docker provides a similar technology, but with higher efficiency, faster startup times, and lower resource consumption compared to virtual machines. Virtual machines are more cumbersome because there is a fundamental difference in the way VMs and Docker work.</p> <h3 id="how-virtual-machines-operate">How Virtual Machines Operate:</h3> <p>Virtual machines virtualize hardware resources, dividing them up and creating multiple operating systems, essentially creating a complete virtual computer.</p> <h3 id="how-docker-operates">How Docker Operates:</h3> <p>Docker virtualizes software resources, dividing the computer’s network, storage, etc., into separate containers. Our software runs within these containers, each container only using a portion of the computer’s resources—not a complete virtual computer. Therefore, from an operational standpoint, Docker is more lightweight, whereas virtual machines are more cumbersome. Docker also starts up much faster and is easier to deploy, which is why more and more people are adopting Docker. Docker itself is not a container but a tool for creating containers, while a virtual machine is just that—a virtual machine.</p>]]></content><author><name></name></author><category term="devops"/><category term="docker"/><summary type="html"><![CDATA[A step-by-step guide to understand docker.]]></summary></entry></feed>
