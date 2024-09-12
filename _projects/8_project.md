@@ -8,7 +8,6 @@ category: work
 giscus_comments: false
 ---
 
-
 Peach Party is a fast-paced, two-player arcade-style game where Peach and Yoshi compete to collect the most stars and coins within 99 seconds while navigating a dynamic game board filled with obstacles and enemies like Bowser and Boo. Players roll a virtual die to move across the board, encountering squares with special powers such as granting coins or teleporting them to new locations. The game is interactive, allowing players to use projectiles and strategically choose paths at forks to outmaneuver their opponent.
 
 Each player controls their character using distinct keyboard inputs, with Peach and Yoshi having separate keys for rolling the die, navigating forks, and firing projectiles. The game features nine unique boards, each offering different challenges and layouts, encouraging both competitive and strategic gameplay. The winner is determined based on who collects the most stars and coins by the end of the timer, with ties broken based on coins or randomized if still tied. Peach Party combines luck and strategy, providing an engaging experience for both players.

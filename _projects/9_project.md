@@ -19,4 +19,3 @@ Additionally, I investigated the influence of dimensionality reduction on cluste
 <div class="caption">
     Most and least discriminative pairs of face images
 </div>
-

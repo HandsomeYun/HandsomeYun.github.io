@@ -25,7 +25,7 @@
       "endDate": "2025-06-15",
       "score": "10",
       "courses": ["Dean's Honors List (Fall 2021, Winter/Spring/Fall 2022, Winter/Spring 2023)"]
-    }, 
+    },
     {
       "institution": "American Community School of Athens (ACS Athens)",
       "location": "Athens, Greece",
@@ -120,82 +120,45 @@
       "url": "",
       "summary": "Fourth author, this paper examines how AI-generated personalized emails influence voter behavior in political campaigns. The paper has been submitted to American Political Science."
     }
-  ], 
+  ],
   "skills": [
-  {
-    "name": "Programming Languages",
-    "level": "Advanced",
-    "icon": "fa-solid fa-hashtag",
-    "keywords": [
-      "Python",
-      "C++",
-      "JavaScript",
-      "C#",
-      "R",
-      "LaTeX",
-      "Bash/Shell Scripting"
-    ]
-  },
-  {
-    "name": "Machine Learning & Data Science",
-    "level": "Advanced",
-    "icon": "fa-solid fa-brain",
-    "keywords": [
-      "Pytorch",
-      "TensorFlow",
-      "Scikit-learn",
-      "Pandas",
-      "NumPy",
-      "MATLAB",
-      "Jupyter Notebooks"
-    ]
-  },
-  {
-    "name": "Autonomous Systems & Simulation",
-    "level": "Advanced",
-    "icon": "fa-solid fa-car",
-    "keywords": [
-      "CARLA",
-      "OpenCDA",
-      "OpenSCENARIO Documentation"
-    ]
-  },
-  {
-    "name": "Medical Imaging & Biomedical Analysis",
-    "level": "Advanced",
-    "icon": "fa-solid fa-x-ray",
-    "keywords": [
-      "Segment Anything Model (SAM)",
-      "nnUNet",
-      "BraTS",
-      "Image Segmentation"
-    ]
-  }, 
-  {
-    "name": "DevOps & Cloud Computing",
-    "level": "Intermediate",
-    "icon": "fa-solid fa-cloud",
-    "keywords": [
-      "Docker",
-      "AWS",
-      "Git",
-      "GitKraken"
-    ]
-  }, 
-  {
-    "name": "Web Development & Frontend Technologies",
-    "level": "Intermediate",
-    "icon": "fa-solid fa-code",
-    "keywords": [
-      "React",
-      "Node.js",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Tableau"
-    ]
-  }
-], 
+    {
+      "name": "Programming Languages",
+      "level": "Advanced",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": ["Python", "C++", "JavaScript", "C#", "R", "LaTeX", "Bash/Shell Scripting"]
+    },
+    {
+      "name": "Machine Learning & Data Science",
+      "level": "Advanced",
+      "icon": "fa-solid fa-brain",
+      "keywords": ["Pytorch", "TensorFlow", "Scikit-learn", "Pandas", "NumPy", "MATLAB", "Jupyter Notebooks"]
+    },
+    {
+      "name": "Autonomous Systems & Simulation",
+      "level": "Advanced",
+      "icon": "fa-solid fa-car",
+      "keywords": ["CARLA", "OpenCDA", "OpenSCENARIO Documentation"]
+    },
+    {
+      "name": "Medical Imaging & Biomedical Analysis",
+      "level": "Advanced",
+      "icon": "fa-solid fa-x-ray",
+      "keywords": ["Segment Anything Model (SAM)", "nnUNet", "BraTS", "Image Segmentation"]
+    },
+    {
+      "name": "DevOps & Cloud Computing",
+      "level": "Intermediate",
+      "icon": "fa-solid fa-cloud",
+      "keywords": ["Docker", "AWS", "Git", "GitKraken"]
+    },
+    {
+      "name": "Web Development & Frontend Technologies",
+      "level": "Intermediate",
+      "icon": "fa-solid fa-code",
+      "keywords": ["React", "Node.js", "HTML", "CSS", "JavaScript", "Tableau"]
+    }
+  ],
   "languages": [
     {
       "language": "Chinese",
