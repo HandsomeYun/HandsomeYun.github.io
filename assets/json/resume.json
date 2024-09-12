@@ -20,22 +20,22 @@
       "institution": "University of California, Los Angeles (UCLA)",
       "location": "Los Angeles, United States",
       "url": "https://www.ucla.edu/",
+      "studyType": "Undergraduate",
       "area": "B.S. in Computational Mathematics, B.S. in Statistics and Data Science",
       "startDate": "2021-09-01",
       "endDate": "2025-06-15",
       "score": "10",
-      "courses": ["Dean's Honors List (Fall 2021, Winter/Spring/Fall 2022, Winter/Spring 2023)"]
+      "courses": ["Cumulative GPA: 3.823/4.0", "Dean's Honors List (Fall 2021, Winter/Spring/Fall 2022, Winter/Spring 2023)"]
     },
     {
       "institution": "American Community School of Athens (ACS Athens)",
       "location": "Athens, Greece",
       "url": "https://www.acs.gr/",
-      "area": "Weighted Cumulative GPA: 4.886/4.0",
       "studyType": "High School",
       "startDate": "2015-09-01",
       "endDate": "2021-06-15",
       "score": "9",
-      "courses": ["Final IB Score: 44/45"]
+      "courses": ["Weighted Cumulative GPA: 4.886/4.0", "Final IB Score: 44/45"]
     }
   ],
   "research": [
@@ -138,7 +138,7 @@
       "name": "Autonomous Systems & Simulation",
       "level": "Advanced",
       "icon": "fa-solid fa-car",
-      "keywords": ["CARLA", "OpenCDA", "OpenSCENARIO Documentation"]
+      "keywords": ["CARLA", "OpenCDA", "OpenSCENARIO Documentation", "Scenario Runner"]
     },
     {
       "name": "Medical Imaging & Biomedical Analysis",
