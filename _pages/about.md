@@ -8,10 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>(310) 694-6791</p>
-    <p>10982 Roebling Avenue</p>
-    <p>Los Angeles, CA 90024</p>
+  more_info: 
 
 news: true # includes a list of news items
 selected_papers: false
