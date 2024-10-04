@@ -93,32 +93,32 @@
   ],
   "publications": [
     {
-      "name": "Analysis of Multi-Camera and LiDAR Sensor Placement at Intersections: Evaluating Configurations Under Varied Scenarios and Weather Conditions Using Surrogate Metrics",
-      "publisher": "ICRA",
+      "name": "Analysis of Multi-Camera and LiDAR Sensor Placement at Intersections: Evaluating Configurations",
+      "publisher": "IEEE Robotics and Automation Letters",
       "releaseDate": "2024-12-02",
       "url": "",
-      "summary": "Co-first author, this paper evaluates multi-camera and LiDAR sensor configurations under various scenarios and weather conditions, using surrogate metrics to optimize sensor placement for smart intersections. The paper will be submitted in September 2024 to ICRA."
+      "summary": "Co-first author, this paper evaluates multi-camera and LiDAR sensor configurations under various scenarios and weather conditions, using surrogate metrics to optimize sensor placement for smart intersections. The paper will be submitted in September 2024 to RA-L."
     },
     {
       "name": "Expanding the Utility of PyHFO: Lightweight Deep Learning-powered End-to-End High-Frequency Oscillations Analysis Application",
       "publisher": "Journal of Neural Engineering",
       "releaseDate": "2024-12-01",
       "url": "",
-      "summary": "Second author, this paper presents PyHFO, a lightweight deep learning-powered application designed for end-to-end analysis of high-frequency oscillations (HFOs) in EEG data. It will be submitted in December 2024 to the Journal of Neural Engineering."
+      "summary": "Second author, this paper presents a lightweight deep learning-powered application designed for end-to-end analysis of neuro biomarker. It will be submitted in December 2024 to the Journal of Neural Engineering."
     },
     {
-      "name": "Optimization Strategies for Sensor Placement in Multi-Camera and LiDAR-Camera Systems at Intersections: Tools, Models, and Adversarial Scene Enhancements",
-      "publisher": "RA-L",
-      "releaseDate": "2024-12-01",
+      "name": "Analysis of Multi-Camera and LiDAR Sensor Placement at Intersections: Evaluating Configurations",
+      "publisher": "CVPR",
+      "releaseDate": "2024-10-01",
       "url": "",
-      "summary": "Second author, this paper explores optimization techniques for sensor placement in multi-camera and LiDAR-camera systems at intersections, focusing on adversarial scene enhancements. It will be submitted in December 2024 to RA-L."
+      "summary": "This paper explores optimization techniques for multi-sensor multi-modal placement at intersections, focusing on adversarial scene enhancements. It will be submitted in Oct. 2024 to CVPR."
     },
     {
       "name": "Transforming Political Campaigns: The Impact of AI-Generated Personalized Emails on Voter Behavior",
       "publisher": "American Political Science",
       "releaseDate": "2024-12-01",
       "url": "",
-      "summary": "Fourth author, this paper examines how AI-generated personalized emails influence voter behavior in political campaigns. The paper has been submitted to American Political Science."
+      "summary": "Second author, this paper examines how AI-generated personalized emails influence voter behavior in political campaigns. The paper has been submitted to American Political Science."
     }
   ],
   "skills": [
