@@ -30,3 +30,5 @@ The **Trajectory Modification Tool** was developed as part of the <a href="https
 <div class="caption">
     Demo of trajectory modification tool used in the U.S. Department of Transportation Intersection Safety Challenge
 </div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GWEVjEMRPQI?si=ZBGWNHUy-JOlWIrF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
