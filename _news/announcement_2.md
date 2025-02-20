@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Excited to won the U.S. Department of Transportation’s <a href="https://its.dot.gov/isc/">Intersection Safety Challenge</a> as the lead UI developer. Recieving $750,000 cash prize.
+Excited to won the U.S. Department of Transportation’s <a href="https://its.dot.gov/isc/">Intersection Safety Challenge</a> as core developer. Recieving $750,000 cash prize.
