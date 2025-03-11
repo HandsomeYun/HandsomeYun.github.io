@@ -72,10 +72,15 @@ nav_order: 5
 <!-- Image Gallery -->
 <div class="gallery">
   {% for image in site.static_files %}
-    {% if image.path contains '/assets/img/cooking/chinese/' and image.extname == '.jpg' or image.extname == '.png' %}
-      <div class="filter chinese">
-        <img src="{{ site.baseurl }}{{ image.path }}" alt="Chinese Dish">
-      </div>
+    {% if image.path contains '/assets/img/cooking/chinese/' and (image.extname == '.jpg' or image.extname == '.png') %}
+      {% assign file_path = image.path | relative_url %}
+      
+      <!-- Skip rendering if file does not exist -->
+      {% if file_path != "" %}
+        <div class="filter chinese">
+          <img src="{{ file_path }}" alt="Chinese Dish">
+        </div>
+      {% endif %}
     {% endif %}
   {% endfor %}
 
