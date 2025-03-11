@@ -69,38 +69,6 @@ nav_order: 5
   <button class="filter-btn" onclick="filterSelection('western')">Western</button>
 </div>
 
-<!-- Image Gallery -->
-<div class="gallery">
-
-
-  <!-- Loop for Dessert Category -->
-  {% for image in site.static_files %}
-    {% if image.path contains '/assets/img/cooking/dessert/' and image.extname != '.webp' %}
-      <div class="filter dessert">
-        <img src="{{ image.path | relative_url }}" alt="Dessert" width="300px">
-      </div>
-    {% endif %}
-  {% endfor %}
-
-  <!-- Loop for Fusion Category -->
-  {% for image in site.static_files %}
-    {% if image.path contains '/assets/img/cooking/fusion/' and image.extname != '.webp' %}
-      <div class="filter fusion">
-        <img src="{{ image.path | relative_url }}" alt="Fusion Dish" width="300px">
-      </div>
-    {% endif %}
-  {% endfor %}
-
-  <!-- Loop for Western Category -->
-  {% for image in site.static_files %}
-    {% if image.path contains '/assets/img/cooking/western/' and image.extname != '.webp' %}
-      <div class="filter western">
-        <img src="{{ image.path | relative_url }}" alt="Western Dish" width="300px">
-      </div>
-    {% endif %}
-  {% endfor %}
-
-</div>
 
 <script>
   function filterSelection(category) {
