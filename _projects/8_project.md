@@ -3,18 +3,18 @@ layout: page
 title: Peach Party
 description: 2D Arcade Mario Party "clone"
 img: assets/img/peachParty.png
-importance: 5
-category: work
-giscus_comments: false
+importance: 6
+category: technical
 ---
 
 Peach Party is a fast-paced, two-player arcade-style game where Peach and Yoshi compete to collect the most stars and coins within 99 seconds while navigating a dynamic game board filled with obstacles and enemies like Bowser and Boo. Players roll a virtual die to move across the board, encountering squares with special powers such as granting coins or teleporting them to new locations. The game is interactive, allowing players to use projectiles and strategically choose paths at forks to outmaneuver their opponent.
 
 Each player controls their character using distinct keyboard inputs, with Peach and Yoshi having separate keys for rolling the die, navigating forks, and firing projectiles. The game features nine unique boards, each offering different challenges and layouts, encouraging both competitive and strategic gameplay. The winner is determined based on who collects the most stars and coins by the end of the timer, with ties broken based on coins or randomized if still tied. Peach Party combines luck and strategy, providing an engaging experience for both players.
 
-<div class="row">
+
+<div class="column">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="/assets/img/peachParty.png" title="flow chart" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/peachParty.png" title="Illustration of Sensor Placement Strategies" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
