@@ -1,40 +1,102 @@
 ---
 layout: page
-title: Multi-Modal Infrastructure Sensor Placement Evaluation
-description: A perception-driven framework for optimizing sensor placement at intersections using heterogeneous multi-modal sensing.
-img: assets/img/InSPE.png
-importance: 1
+title: Simulation & Benchmarking for Infrastructure-Based Sensor Placement
+description: A flexible benchmarking framework supporting any sensor configuration for optimizing infrastructure-based perception.
+img: assets/img/detection.png
+importance: 3
 category: technical
 ---
 
 ## Overview  
-The **InSPE** project introduces a framework for optimizing **multi-modal infrastructure sensor placement** at intersections, addressing challenges posed by **diverse intersection geometries, occlusions, and varying environmental conditions**. This research enhances **cooperative perception** by systematically evaluating sensor effectiveness.
+The **Simulation & Benchmarking framework** provides a scalable and adaptable approach for evaluating **infrastructure-based multi-modal sensor placement** in autonomous driving. Unlike traditional vehicle-mounted benchmarking frameworks, which assume fixed sensor setups, our framework **supports any sensor configuration** and **flexibly adapts to diverse infrastructure environments**.
 
-## Key Components  
-- **Perception Metrics**: Integrates **sensor coverage, perception occlusion, and information gain** to quantify sensor placement impact.  
-- **Infrastructure Dataset**: Introduces **Infra-Set**, a dataset covering diverse intersection types and environmental conditions.  
-- **Simulation & Benchmarking**: Performs large-scale evaluation using the **CARLA** simulator to assess sensor configurations.
+## Defining an Infrastructure Unit (IU)  
+We introduce the concept of an **Infrastructure Unit (IU)** to systematically model sensor groupings in heterogeneous environments. An IU is defined as:  
+
+$$ 
+\text{IU} = \left\{ s \in \mathcal{S} \ \middle|\ 
+\forall s_i, s_j \in \mathbf{IU}, \quad
+\sqrt{(x_i - x_j)^2 + (y_i - y_j)^2} \leq 2m, \quad
+|z_i - z_j| \leq 4m, \quad
+p_i = p_j
+\right\}
+$$
+  
+where:  
+- $$s$$ represents a sensor,  
+- $$\mathcal{S}$$ is the set of all sensors in the environment,  
+- Sensors within an IU have **spatial proximity constraints**:
+  - **Horizontal separation** ≤ **2 meters**  
+  - **Vertical separation** ≤ **4 meters**  
+  - **Identical sensor properties** $$(p_i = p_j)$$
+This IU-based formulation enables a structured approach for comparing different sensor deployments across diverse urban environments.
+
+## Illustration of Sensor Placement Strategies  
+To ensure comprehensive sensor placement evaluation, we analyze three types of sensor arrangements across various intersection designs:
+
+- **(a) Centralized Placement:** Sensors are concentrated near the intersection center, similar to **V2XSet**.
+- **(b) Semi-Distributed Placement:** Sensors are more evenly distributed, resembling **DAIR-V2X** and **RCooper**.
+- **(c) Fully Distributed Placement:** Sensors are spread across the entire intersection, aligning with **V2X-Real**.
 
 <div class="column">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/InSPE-1.png" title="Sensor Placement Evaluation Framework" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/InSPE.png" title="Illustration of Sensor Placement Strategies" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Sensor Placement Evaluation Framework: HM Perception framework refers to heterogeneous multi-modal perception framework.
+    Three types of sensor placements: (a) Centralized (b) Semi-Distributed (c) Fully Distributed. The **Field of View (FOV) direction** represents the camera orientation.
 </div>
 
-## Paper Submission  
-This research is submitted to **ICCV 2025** and presents a **scalable, cost-effective solution** for optimizing intelligent infrastructure sensor placement.
+## HM Perception Framework  
+Our benchmarking approach follows the **Heterogeneous Multi-Modal (HM) Perception Framework**, which integrates information from **distributed LiDAR and camera sensors** deployed at intersections. This framework is designed to **adaptively fuse data** from infrastructure sensors using a **heterogeneous 3D graph representation**, ensuring robust perception in urban environments.
 
-### **Abstract**  
-Infrastructure sensing is vital for **traffic monitoring at safety hotspots** (e.g., intersections) and serves as the **backbone of cooperative perception** in autonomous driving. While vehicle sensing has been extensively studied, **infrastructure sensing has received little attention**, especially given the unique challenges posed by **diverse intersection geometries, complex occlusions, varying traffic conditions, and environmental factors** such as lighting and weather.  
+<div class="column">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/benchmarking.png" title="HM Perception Framework" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The HM Perception Framework integrates heterogeneous sensor nodes in a 3D graph to facilitate cooperative multi-modal perception.
+</div>
 
-To address these issues and ensure **cost-effective sensor placement**, we propose **Heterogeneous Multi-Modal Infrastructure Sensor Placement Evaluation (InSPE)**, a **perception surrogate metric set** that rapidly assesses **perception effectiveness** across diverse infrastructure and environmental scenarios with **various multi-modal sensor combinations**.  
+**Framework Components:**
+1. **Heterogeneous 3D Graph Representation**: Models the relationship between **LiDAR and camera nodes**.
+2. **LiDAR Backbone**: Extracts **3D spatial features** and shares them across sensors.
+3. **Camera Backbone**: Performs **3D feature reconstruction** using multi-view information.
+4. **Feature Fusion Mechanism**: Combines sensor information to improve **object detection and tracking**.
 
-**InSPE systematically evaluates perception capabilities** by integrating three carefully designed metrics:  
-1. **Sensor Coverage**  
-2. **Perception Occlusion**  
-3. **Information Gain**  
+## Simulation & Benchmarking Framework  
+To evaluate sensor placement effectiveness, we leverage **large-scale simulations in CARLA**, generating diverse environmental scenarios including:  
+- **Intersection Types**: Urban, rural, and highway intersections.  
+- **Environmental Conditions**: Different lighting, weather, and traffic densities.  
+- **Infrastructure Sensor Layouts**: Supports **arbitrary sensor distributions**, including centralized, distributed, and adaptive configurations.
 
-To support **large-scale evaluation**, we develop a **data generation tool within the CARLA simulator** and introduce **Infra-Set**, a dataset that covers **diverse intersection types and environmental conditions**. Benchmarking experiments using **state-of-the-art perception algorithms** demonstrate that **InSPE enables efficient and scalable sensor placement analysis**, providing a robust solution for **optimizing intelligent intersection infrastructure**.
+
+## Benchmarking Results  
+We evaluated multiple perception models under **varying sensor distributions**, demonstrating:  
+- **Higher perception accuracy in heterogeneous sensor deployments** compared to traditional fixed setups.  
+- **Infrastructure-aware sensing significantly reduces occlusion and enhances detection rates** in complex intersections.  
+- **Flexible IU-based configurations improve sensor utilization** and enable adaptive sensor planning strategies.
+
+### **Quantitative Results (NuScenes mAP %)**  
+We tested various sensor arrangements in the **Infra-Set dataset**, benchmarking across different object categories:
+
+
+<div class="column">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/benchmarkresult.png" title="Infrastructure-Aware Benchmarking" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Benchmarking heterogeneous sensor placements across various intersection types in CARLA.
+</div>
+
+### **Key Takeaways**  
+- **Flexible IU-based sensor placement outperforms rigid setups** by dynamically adapting to different intersection structures.  
+- **Multi-modal sensor fusion (LiDAR + Camera) enhances object detection performance** in occluded environments.  
+- **Distributed and heterogeneous sensor configurations significantly improve pedestrian and cyclist detection**, critical for urban safety.  
+
+## Applications  
+- **Smart Intersection Planning**: Optimizing infrastructure sensor networks for **real-time traffic monitoring**.  
+- **Adaptive Perception Systems**: Deploying **dynamically reconfigurable sensor layouts** for improved V2X applications.  
+- **Scalable Benchmarking**: Providing a **standardized evaluation framework** for next-generation cooperative perception research.
