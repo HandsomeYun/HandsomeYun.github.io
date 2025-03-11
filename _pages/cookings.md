@@ -74,15 +74,16 @@ nav_order: 5
   {% for image in site.static_files %}
     {% if image.path contains '/assets/img/cooking/chinese/' and (image.extname == '.jpg' or image.extname == '.png') %}
       {% assign file_path = image.path | relative_url %}
-      
-      <!-- Skip rendering if file does not exist -->
-      {% if file_path != "" %}
+
+      <!-- Ensure file_path is not empty and does not contain problematic Liquid syntax -->
+      {% if file_path != "" and file_path contains "assets/img/cooking/chinese" %}
         <div class="filter chinese">
           <img src="{{ file_path }}" alt="Chinese Dish">
         </div>
       {% endif %}
     {% endif %}
   {% endfor %}
+
 
   {% for image in site.static_files %}
     {% if image.path contains '/assets/img/cooking/dessert/' and image.extname == '.jpg' or image.extname == '.png' %}
