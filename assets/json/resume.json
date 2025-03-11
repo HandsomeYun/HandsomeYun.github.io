@@ -1,14 +1,14 @@
 {
   "basics": {
     "name": "Yun Zhang",
-    "label": "Researcher",
-    "image": "",
+    "label": "Incomming PhD student at UCLA's Mobility Lab",
+    "image": "prof_pic.jpg",
     "email": "yun666@g.ucla.edu",
     "phone": "(310) 694-6791",
     "url": "https://HandsomeYun.github.io/",
-    "summary": "A highly motivated researcher with experience in computational mathematics, data science, and machine learning, with a particular interest in multi-modality medical imaging and sensor configurations at smart intersections.",
+    "summary": "Researcher in autonomous driving and intelligent transportation systems, specializing in multi-agent perception, sensor fusion, and cooperative perception.",
     "location": {
-      "address": "Midvale 527",
+      "address": "",
       "postalCode": "CA 90024",
       "city": "Los Angeles",
       "countryCode": "US",
@@ -18,7 +18,16 @@
   "education": [
     {
       "institution": "University of California, Los Angeles (UCLA)",
-      "location": "Los Angeles, United States",
+      "location": "United States",
+      "url": "https://www.ucla.edu/",
+      "studyType": "Incomming PhD",
+      "area": "Mobility Lab",
+      "startDate": "2025-09-01",
+      "score": "11"
+    },
+    {
+      "institution": "University of California, Los Angeles (UCLA)",
+      "location": "United States",
       "url": "https://www.ucla.edu/",
       "studyType": "Undergraduate",
       "area": "B.S. in Computational Mathematics, B.S. in Statistics and Data Science",
@@ -38,6 +47,41 @@
       "courses": ["Weighted Cumulative GPA: 4.886/4.0", "Final IB Score: 44/45"]
     }
   ],
+  "publications": [
+    {
+      "name": "V2X-ReaLO: An Open Online Framework and Dataset for Cooperative Perception in Reality",
+      "publisher": "Submitted to International Conference on Computer Vision",
+      "releaseDate": "2025-03-09",
+      "author": "Zhaoliang Zheng, Yun Zhang, Zonglin Meng, Johnson Liu, Xin Xia, Jiaqi Ma",
+      "summary": "Eighth Author. V2X-ReaLO is an open online cooperative perception framework that enables real-time V2X fusion in real-world urban environments, introducing a large-scale benchmark dataset and validating online intermediate fusion for practical deployment."
+    },
+    {
+      "name": "V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for Multi-Agent Perception and Prediction",
+      "publisher": "Submitted to International Conference on Computer Vision",
+      "releaseDate": "2025-03-09",
+      "url": "https://arxiv.org/abs/2412.01812",
+      "summary": "Sixth Author. V2XPnP proposes a spatio-temporal fusion framework for multi-agent perception and prediction, leveraging a Transformer-based architecture and a novel sequential dataset to benchmark when, what, and how to fuse information in V2X scenarios."
+    },
+    {
+      "name": "RelMap: Enhancing Online Map Construction with Class-Aware Spatial Relation and Semantic Priors",
+      "publisher": "Submitted to International Conference on Computer Vision",
+      "releaseDate": "2025-03-09",
+      "summary": "Second Author. RelMap is an online HD map construction framework that enhances vectorized map generation using class-aware spatial relations and semantic priors, significantly improving accuracy and data efficiency on nuScenes and Argoverse 2 datasets."
+    },
+    {
+      "name": "AgentAlign: Misalignment-Adapted Multi-Agent Perception for Resilient Inter-Agent Sensor Correlations",
+      "publisher": "Submitted to International Conference on Computer Vision",
+      "releaseDate": "2025-03-09",
+      "url": "https://arxiv.org/abs/2412.06142",
+      "summary": "Second Author. This work presents AgentAlign, a real-world multi-agent perception framework that mitigates multi-modality misalignment in cooperative autonomous systems using cross-modality feature alignment and introduces the V2XSet-Noise dataset for robust evaluation."
+    }, 
+    {
+      "name": "InSPE: Rapid Evaluation of Heterogeneous Multi-Modal Infrastructure Sensor Placement",
+      "publisher": "Submitted to International Conference on Computer Vision",
+      "releaseDate": "2025-03-09",
+      "summary": "Second Author. This paper introduces InSPE, a framework for evaluating heterogeneous multi-modal infrastructure sensor placement by integrating metrics like sensor coverage, occlusion, and information gain, supported by a new dataset and benchmarking experiments to optimize perception in intelligent intersections."
+    }
+  ],
   "research": [
     {
       "name": "Mobility Lab, UCLA",
@@ -45,9 +89,9 @@
       "url": "https://mobility-lab.seas.ucla.edu/",
       "startDate": "2023-02-01",
       "endDate": "Present",
-      "summary": "Utilized CARLA, OPENCDA, and ScenarioRunner for the Analysis of Multi-camera sensor configuration at smart intersections, including BEVFormer, SparseBEV, SOLOFusion, and our model. Conducted scenario design, database creation, and relationship analysis of multi-liDAR camera sensors configuration.",
+      "summary": "Contributed to multi-agent perception, sensor fusion, and infrastructure-aware autonomous driving, co-authoring five papers on multi-modal sensor placement (InSPE), misalignment adaptation in cooperative perception (AgentAlign), class-aware map construction (RelMap), spatio-temporal fusion for V2X perception (V2XPnP), and real-world cooperative perception datasets (V2X-ReaLO).",
       "highlights": [
-        "Participating in the U.S. DOT Intersection Safety Challenge and designed the trajectory modification tool for the manual improvement of road user and vehicle trajectories as an intermediate step between detection and prediction"
+        "Participating in the U.S. DOT Intersection Safety Challenge and won $750,000"
       ]
     },
     {
@@ -55,7 +99,7 @@
       "position": "Research Assistant",
       "url": "https://www.vwaniroychowdhury.com/",
       "startDate": "2023-01-01",
-      "endDate": "Present",
+      "endDate": "2024-12-01",
       "summary": "Contributed to the implementation and deep learning models of Hilbert (HIL) detector of PyHFO, a multi-window desktop application providing time-efficient HFO detection algorithms for artifact and HFO with spike classification",
       "highlights": ["Reduced the detection run-time by 50 times compared to state-of-the-art with comparative study to ensure correctness."]
     },
@@ -91,44 +135,19 @@
       ]
     }
   ],
-  "publications": [
-    {
-      "name": "AgentAlign: Misalignment-Adapted Multi-Agent Perception for Resilient Inter-Agent Sensor Correlations",
-      "publisher": "CVPR",
-      "releaseDate": "2024-10-01",
-      "url": "https://arxiv.org/abs/2412.01812",
-      "summary": "This paper explores optimization techniques for multi-sensor multi-modal placement at intersections, focusing on adversarial scene enhancements. It will be submitted in Oct. 2024 to CVPR."
-    },
-    {
-      "name": "V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for Multi-Agent Perception and Prediction",
-      "publisher": "CVPR",
-      "releaseDate": "2024-10-01",
-      "url": "https://arxiv.org/abs/2412.01812",
-      "summary": "This paper focus on temporal perception and prediction tasks in V2X scenarios and design one-step and multi-step communication strategies (when to transmit) as well as examine their integration with three fusion strategies - early, late, and intermediate (what to transmit)."
-    },
-    {
-      "name": "Analysis of Multi-Camera and LiDAR Sensor Placement at Intersections: Evaluating Configurations",
-      "publisher": "IEEE Robotics and Automation Letters",
-      "releaseDate": "2024-12-02",
-      "url": "",
-      "summary": "Co-first author, this paper evaluates multi-camera and LiDAR sensor configurations under various scenarios and weather conditions, using surrogate metrics to optimize sensor placement for smart intersections. The paper will be submitted in September 2024 to RA-L."
-    },
-    {
-      "name": "Expanding the Utility of PyHFO: Lightweight Deep Learning-powered End-to-End High-Frequency Oscillations Analysis Application",
-      "publisher": "Journal of Neural Engineering",
-      "releaseDate": "2024-12-01",
-      "url": "",
-      "summary": "Second author, this paper presents a lightweight deep learning-powered application designed for end-to-end analysis of neuro biomarker. It will be submitted in December 2024 to the Journal of Neural Engineering."
-    },
-    {
-      "name": "Transforming Political Campaigns: The Impact of AI-Generated Personalized Emails on Voter Behavior",
-      "publisher": "American Political Science",
-      "releaseDate": "2024-12-01",
-      "url": "",
-      "summary": "Second author, this paper examines how AI-generated personalized emails influence voter behavior in political campaigns. The paper has been submitted to American Political Science."
-    }
-  ],
   "skills": [
+    {
+      "name": "Autonomous Systems & Simulation",
+      "level": "Advanced",
+      "icon": "fa-solid fa-car",
+      "keywords": ["CARLA", "OpenCDA", "OpenSCENARIO Documentation", "Scenario Runner"]
+    },
+    {
+      "name": "Multi-Agent & Cooperative Perception",
+      "level": "Advanced",
+      "icon": "fa-solid fa-network-wired",
+      "keywords": ["V2X", "Cooperative Perception", "Sensor Fusion", "Multi-Agent Perception", "Intermediate Fusion", "Multi-Sensor Misalignment"]
+    },
     {
       "name": "Programming Languages",
       "level": "Advanced",
@@ -140,12 +159,6 @@
       "level": "Advanced",
       "icon": "fa-solid fa-brain",
       "keywords": ["Pytorch", "TensorFlow", "Scikit-learn", "Pandas", "NumPy", "MATLAB", "Jupyter Notebooks"]
-    },
-    {
-      "name": "Autonomous Systems & Simulation",
-      "level": "Advanced",
-      "icon": "fa-solid fa-car",
-      "keywords": ["CARLA", "OpenCDA", "OpenSCENARIO Documentation", "Scenario Runner"]
     },
     {
       "name": "Medical Imaging & Biomedical Analysis",

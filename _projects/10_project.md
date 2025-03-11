@@ -1,22 +1,40 @@
 ---
 layout: page
-title: V2X-Real Multi-Agent Multi-Modal Model Application
-description: Applying the multi-agent, multi-modal model trained on OPV2V simulation data to the V2X4Real real-world dataset.
-img: 
-importance: 4
+title: Multi-Modal Infrastructure Sensor Placement Evaluation
+description: A perception-driven framework for optimizing sensor placement at intersections using heterogeneous multi-modal sensing.
+img: assets/img/InSPE.png
+importance: 1
 category: technical
 ---
 
-The **V2X-Real Multi-Agent Multi-Modal Model Application** project involves transferring and adapting a multi-agent, multi-modal model—originally trained on the **OPV2V** simulation dataset—to the **V2X4Real** real-world dataset. This transition is essential to bridge the gap between simulation and real-world scenarios, enhancing the model’s performance in cooperative perception using vehicle-to-vehicle (V2V) communication.
+## Overview  
+The **InSPE** project introduces a framework for optimizing **multi-modal infrastructure sensor placement** at intersections, addressing challenges posed by **diverse intersection geometries, occlusions, and varying environmental conditions**. This research enhances **cooperative perception** by systematically evaluating sensor effectiveness.
 
-## Datasets:
-- **OPV2V**: An Open Benchmark Dataset and Fusion Pipeline for Perception with Vehicle-to-Vehicle Communication. This dataset provides a robust environment for training models in a simulated world.
-- **V2X4Real**: A Real-World Large-Scale Dataset for Vehicle-to-Vehicle Cooperation, designed to evaluate and implement cooperative perception models in actual driving environments.
+## Key Components  
+- **Perception Metrics**: Integrates **sensor coverage, perception occlusion, and information gain** to quantify sensor placement impact.  
+- **Infrastructure Dataset**: Introduces **Infra-Set**, a dataset covering diverse intersection types and environmental conditions.  
+- **Simulation & Benchmarking**: Performs large-scale evaluation using the **CARLA** simulator to assess sensor configurations.
 
-## Key Objectives:
-- **Model Transfer**: Applying the multi-agent, multi-modal model, which was fine-tuned using OPV2V simulation data, to the V2X4Real dataset.
-- **Adaptation to Real-World Data**: Adjusting the model to work with real-world sensor data, including LiDAR and camera inputs from V2X4Real, ensuring accurate perception and vehicle-to-vehicle cooperation.
-- **Data Integration & Validation**: Testing and validating the model's performance by comparing real-world results with simulated outcomes, making necessary corrections to the model’s training pipeline to ensure effective adaptation to real-world dynamics.
+<div class="column">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/InSPE-1.png" title="Sensor Placement Evaluation Framework" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Sensor Placement Evaluation Framework: HM Perception framework refers to heterogeneous multi-modal perception framework.
+</div>
 
-## Paper Submission
-This project will be documented in a paper to be submitted to **CVPR in October 2024**, showcasing the application of the multi-agent, multi-modal model from simulation to a large-scale real-world cooperative perception dataset.
+## Paper Submission  
+This research is submitted to **ICCV 2025** and presents a **scalable, cost-effective solution** for optimizing intelligent infrastructure sensor placement.
+
+### **Abstract**  
+Infrastructure sensing is vital for **traffic monitoring at safety hotspots** (e.g., intersections) and serves as the **backbone of cooperative perception** in autonomous driving. While vehicle sensing has been extensively studied, **infrastructure sensing has received little attention**, especially given the unique challenges posed by **diverse intersection geometries, complex occlusions, varying traffic conditions, and environmental factors** such as lighting and weather.  
+
+To address these issues and ensure **cost-effective sensor placement**, we propose **Heterogeneous Multi-Modal Infrastructure Sensor Placement Evaluation (InSPE)**, a **perception surrogate metric set** that rapidly assesses **perception effectiveness** across diverse infrastructure and environmental scenarios with **various multi-modal sensor combinations**.  
+
+**InSPE systematically evaluates perception capabilities** by integrating three carefully designed metrics:  
+1. **Sensor Coverage**  
+2. **Perception Occlusion**  
+3. **Information Gain**  
+
+To support **large-scale evaluation**, we develop a **data generation tool within the CARLA simulator** and introduce **Infra-Set**, a dataset that covers **diverse intersection types and environmental conditions**. Benchmarking experiments using **state-of-the-art perception algorithms** demonstrate that **InSPE enables efficient and scalable sensor placement analysis**, providing a robust solution for **optimizing intelligent intersection infrastructure**.
