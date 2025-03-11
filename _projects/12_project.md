@@ -17,7 +17,7 @@ To systematically evaluate the effectiveness of **infrastructure-based multi-mod
     </div>
 </div>
 
-This page details the design of **perception coverage, perception occlusion, and information gain metrics**, which serve as key performance indicators in **infrastructure-based perception evaluation**. For more details on the implementation and benchmarking framework, see [Simulation & Benchmarking for Infrastructure-Based Sensor Placement](_projects/10_project.md).
+This page details the design of **perception coverage, perception occlusion, and information gain metrics**, which serve as key performance indicators in **infrastructure-based perception evaluation**. For more details on the implementation and benchmarking framework, see [Simulation & Benchmarking for Infrastructure-Based Sensor Placement](/_projects/10_project.md).
 
 ---
 
@@ -125,4 +125,4 @@ This page introduces the **design of surrogate metrics** for infrastructure-base
 
 These metrics provide a structured approach for assessing sensor placement strategies. The benchmarking results validate that **higher perception surrogate scores correspond to improved object detection accuracy**.
 
-For a full evaluation of benchmarking experiments and sensor placement strategies, refer to [Simulation & Benchmarking for Infrastructure-Based Sensor Placement](_projects/10_project.md).
+For a full evaluation of benchmarking experiments and sensor placement strategies, refer to [Simulation & Benchmarking for Infrastructure-Based Sensor Placement](/_projects/10_project.md).
