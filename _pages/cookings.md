@@ -72,14 +72,6 @@ nav_order: 5
 <!-- Image Gallery -->
 <div class="gallery">
 
-  <!-- Loop for Chinese Category -->
-  {% for image in site.static_files %}
-    {% if image.path contains '/assets/img/cooking/chinese/' and image.extname != '.webp' %}
-      <div class="filter chinese">
-        <img src="{{ image.path | relative_url }}" alt="Chinese Dish" width="300px">
-      </div>
-    {% endif %}
-  {% endfor %}
 
   <!-- Loop for Dessert Category -->
   {% for image in site.static_files %}
