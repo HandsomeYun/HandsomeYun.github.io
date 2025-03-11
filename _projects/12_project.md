@@ -1,55 +1,124 @@
 ---
 layout: page
 title: Surrogate Metrics for Infrastructure-Based Perception Evaluation
-description: A perception-driven framework for optimizing sensor placement at intersections using heterogeneous multi-modal sensing.
+description: A structured approach for quantifying sensor effectiveness in infrastructure-based perception.
 img: assets/img/InSPE.png
 importance: 1
 category: technical
 ---
 
 ## Overview  
-The **InSPE** project introduces a framework for optimizing **multi-modal infrastructure sensor placement** at intersections, addressing challenges posed by **diverse intersection geometries, occlusions, and varying environmental conditions**. This research enhances **cooperative perception** by systematically evaluating sensor effectiveness.
+To systematically evaluate the effectiveness of **infrastructure-based multi-modal sensor placement**, we introduce **surrogate metrics** that quantify sensor perception performance. These metrics enable a structured assessment of different sensor configurations across diverse environmental conditions.
 
-## Key Components  
-- **Perception Metrics**: Integrates **sensor coverage, perception occlusion, and information gain** to quantify sensor placement impact.  
-- **Infrastructure Dataset**: Introduces **Infra-Set**, a dataset covering diverse intersection types and environmental conditions.  
-- **Simulation & Benchmarking**: Performs large-scale evaluation using the **CARLA** simulator to assess sensor configurations.
-
-<div class="column">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/InSPE-1.png" title="Sensor Placement Evaluation Framework" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Sensor Placement Evaluation Framework: HM Perception framework refers to heterogeneous multi-modal perception framework.
-</div>
-
-
-## Overview  
-The **Simulation & Benchmarking framework** evaluates the impact of **multi-modal sensor placement** strategies using large-scale simulations in **CARLA**. This framework provides a scalable method to analyze **sensor coverage, occlusion, and fusion strategies** in various intersection geometries and environmental conditions.
-
-## Simulation Environment  
-We use the **CARLA simulator** to generate a realistic urban environment for benchmarking infrastructure-based sensing strategies.  
-- **Intersection Diversity**: The dataset includes **10 unique intersections** across urban, rural, and highway settings.  
-- **Environmental Conditions**: Scenarios vary in **lighting, weather, and traffic densities**, ensuring realistic sensor evaluation.  
-- **Multi-Modal Sensor Configurations**: Different **camera and LiDAR placements** are tested to assess **cooperative perception effectiveness**.
-
-## Benchmarking Framework  
-We compare multiple **sensor placement strategies** using the following setups:
-
-- **Centralized Sensors (Cam-c, L-c)**: Sensors positioned at **a single fixed location**.
-- **Distributed Sensors (Cam-d1, Cam-d2, L-d1, L-d2)**: Sensors spread across **multiple locations** for better coverage.
-- **Hybrid Configurations (Cam-d1/L-d1, Cam-d2/L-d2)**: Combining **camera and LiDAR** for **multi-modal fusion**.
-
-## Results & Findings  
-Experiments demonstrate that:
-- **LiDAR-enhanced placements** outperform **camera-only setups**, especially in long-range perception.
-- **Distributed sensor networks** reduce occlusion by up to **40% compared to centralized setups**.
-- **Camera-LiDAR fusion models** improve detection accuracy in **high-density traffic conditions**.
-
-## Applications  
-- **Smart Intersection Deployment**: Improving **infrastructure planning** for **connected autonomous systems**.  
-- **Multi-Agent Perception**: Enhancing **real-time object detection** using **V2X communication**.  
-- **Scalable Sensor Benchmarking**: Providing a **standardized dataset** for **future cooperative perception research**.
+This page details the design of **perception coverage, perception occlusion, and information gain metrics**, which serve as key performance indicators in **infrastructure-based perception evaluation**. For more details on the implementation and benchmarking framework, see [Simulation & Benchmarking for Infrastructure-Based Sensor Placement](_projects/10_project.md).
 
 ---
+
+## Camera and LiDAR Sensing Modeling  
+To evaluate the sensing capability of multi-modal sensor placements at intersections, we introduce a **ray-cast sensing model** for camera and LiDAR. This approach builds upon prior work \cite{hu2022investigating,li2024influence} and employs the **Bresenham algorithm** \cite{bresenham1998algorithm} to efficiently compute the sensor’s **view frustum** or **sensing range** under a given placement $$ P_0 $$:
+
+$$
+    \Omega | P_0 = \{V_1^{P_0},V_2^{P_0},...,V_n^{P_0}, n \in N\}
+$$
+
+### **Camera Sensing Model**  
+We model the camera's **field of view (FoV)** as a frustum using the **pinhole camera model** \cite{hartley2003multiple}. Each pixel in the image corresponds to a **ray projection model**, linking real-world coordinates $$ P(p_x, p_y, p_z) $$, the image pixel $$ p(h_i, w_j) $$, and the camera principal point $$ O^C(c_x, c_y) $$. 
+
+The camera ray equation is defined as:
+
+$$
+    r_{ij}^{C}(\mu) = O^C + \mu \cdot d_{ij} = O^C + \mu \cdot 
+    \begin{bmatrix}
+    (w_{j} - c_x)/f \$$6pt]
+    (h_{i} - c_y)/f \$$6pt]
+    1
+    \end{bmatrix}
+$$
+
+where $$ \mu \geq 0 $$, and $$ d_{ij} $$ is the ray direction.
+
+### **LiDAR Sensing Model**  
+LiDAR sensing is modeled using **discrete beam emission**, where each beam is a ray emanating from the LiDAR origin $$ O^L $$, with direction defined by **horizontal scanning angle $$ \theta^L $$** and **vertical scanning angle $$ \psi^L $$**:
+
+$$
+    r^{L}_{ij}(t) = O^L + t\cdot d_{ij} = O^L + t
+    \begin{bmatrix}
+    \cos\psi^L_{i} \cos\theta^L_{j} \\
+    \cos\psi^L_{i} \sin\theta^L_{j} \\
+    \sin\psi^L_{i}
+    \end{bmatrix}
+$$
+
+where $$ 0 \le t \le t_{\max} $$.
+
+---
+
+## Surrogate Metric Design  
+
+### **Perception Coverage Metric**  
+We define a **perception coverage metric $$ C $$** to quantify the effective sensing region of sensors in an intersection. Using the ray-cast sensor model:
+
+$$
+    f(V_i) =
+    \begin{cases}
+    1, & \text{if sensor ray passes through } V_i, \\
+    0, & \text{otherwise}
+    \end{cases}
+$$
+
+The weighted perception coverage is computed as:
+
+$$
+$$
+
+where $$ w(V_i) $$ represents importance weights assigned to different intersection regions, following safety prioritization from \cite{gattis2010guide,mcmahon2002analysis,kim2024enhancing}.
+
+---
+
+### **Perception Occlusion Metric**  
+To measure the occlusion effect caused by objects (e.g., vehicles, pedestrians), we introduce an **occlusion probability metric $$ O $$**. This metric integrates a **waypoint-based bounding box traffic model**, defining occluded regions based on vehicle positions and trajectories.
+
+The occlusion ratio for a given waypoint frame $$ k $$ is:
+
+$$
+    O^{(k)} = \frac{|V_{\text{occ}}^{(k)}|}{|V_{\text{orig}}^{(k)}|}
+$$
+
+where $$ V_{\text{orig}}^{(k)} $$ represents the original visible region, and $$ V_{\text{occ}}^{(k)} $$ is the occluded subset. The total occlusion probability is then computed as:
+
+$$
+    O = \frac{1}{N} \sum_{k=1}^{N} 1 - \frac{|V_{\text{occ}}^{(k)}|}{|V_{\text{orig}}^{(k)}|}
+$$
+
+---
+
+## Illustration of Camera and LiDAR Sensing  
+To visually demonstrate the perception models, we present the following illustrations:
+
+\begin{figure}[t]
+\centering
+\begin{minipage}[b]{0.3\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{sections/figs/camera_sensing_model.png}
+  \subcaption{Camera View Frustum Model}
+  \label{fig:sensing_a}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{sections/figs/lidar_sensing_model.png}
+  \subcaption{Mechanical and Solid-State LiDAR Model}
+  \label{fig:sensing_b}
+\end{minipage}
+\caption{\textbf{Illustration of Camera and LiDAR Sensing Models.} The red dot represents the sensor center, and the orange lines indicate camera and LiDAR rays.}
+\label{fig:sensing}
+\end{figure}
+
+---
+
+## Summary  
+This page introduces the **design of surrogate metrics** for infrastructure-based perception evaluation, focusing on:  
+- **Perception Coverage**: Measuring sensor effectiveness in different spatial regions.  
+- **Perception Occlusion**: Capturing occlusion effects caused by dynamic objects.  
+
+These metrics provide a structured approach for assessing sensor placement strategies. For a full evaluation of benchmarking experiments and sensor placement strategies, refer to [Simulation & Benchmarking for Infrastructure-Based Sensor Placement](_projects/10_project.md).
