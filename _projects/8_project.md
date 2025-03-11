@@ -2,7 +2,7 @@
 layout: page
 title: Peach Party
 description: 2D Arcade Mario Party "clone"
-img: /assets/img/PeachParty.jpg
+img: assets/img/PeachParty.png
 importance: 5
 category: work
 giscus_comments: false
@@ -14,7 +14,7 @@ Each player controls their character using distinct keyboard inputs, with Peach 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="/assets/img/PeachParty.jpg" title="flow chart" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/PeachParty.png" title="flow chart" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

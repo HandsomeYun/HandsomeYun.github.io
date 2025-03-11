@@ -2,7 +2,7 @@
 layout: page
 title: Personalized Campaign Emails
 description: AI-Driven voter behavior analysis and personalized campaign strategies
-img: /assets/img/Greg.jpg
+img: assets/img/Greg.png
 importance: 5
 category: work
 related_publications: false
@@ -14,7 +14,7 @@ As part of a team, we utilized advanced Large Language Models (LLMs) to generate
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="/assets/img/FlowChart.jpg" title="flow chart" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/FlowChart.png" title="flow chart" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
