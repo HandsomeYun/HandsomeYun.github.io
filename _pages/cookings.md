@@ -85,36 +85,36 @@ nav_order: 5
 
 <!-- Loop for Dessert Category -->
 
-{% for image in site.static_files %}
+<!-- {% for image in site.static_files %}
 {% if image.path contains '/assets/img/cooking/dessert/' and image.extname != '.webp' %}
 
   <div class="filter dessert">
     <img src="{{ image.path }}" alt="Dessert" width="300px">
   </div>
   {% endif %}
-{% endfor %}
+{% endfor %} -->
 
 <!-- Loop for Fusion Category -->
 
-{% for image in site.static_files %}
+<!-- {% for image in site.static_files %}
 {% if image.path contains '/assets/img/cooking/fusion/' and image.extname != '.webp' %}
 
   <div class="filter fusion">
     <img src="{{ image.path }}" alt="Fusion Dish" width="300px">
   </div>
   {% endif %}
-{% endfor %}
+{% endfor %} -->
 
 <!-- Loop for Western Category -->
 
-{% for image in site.static_files %}
+<!-- {% for image in site.static_files %}
 {% if image.path contains '/assets/img/cooking/western/' and image.extname != '.webp' %}
 
   <div class="filter western">
     <img src="{{ image.path }}" alt="Western Dish" width="300px">
   </div>
   {% endif %}
-{% endfor %}
+{% endfor %} -->
 
 </div>
 
