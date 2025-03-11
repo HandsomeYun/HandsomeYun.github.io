@@ -75,11 +75,9 @@ nav_order: 5
   <!-- Loop for Chinese Category -->
 
 {% for image in site.static_files %}
-{% if image.path contains 'assets/img/cooking/chinese/' and image.extname != '.webp' %}
-
-
+{% if image.path contains '/assets/img/cooking/chinese/' and image.extname == '.jpg' or image.extname == '.png' %}
   <div class="filter chinese">
-    <img src="{{ image.path }}" alt="Chinese Dish" width="300px">
+    <img src="{{ site.baseurl }}{{ image.path }}" alt="Chinese Dish" width="300px">
   </div>
   {% endif %}
 {% endfor %}
