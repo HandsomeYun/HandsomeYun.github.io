@@ -17,8 +17,6 @@ This project introduces:
 - **V2XPnP Sequential Dataset**, a large-scale real-world dataset covering **vehicle-to-vehicle (V2V), vehicle-to-infrastructure (V2I), and infrastructure-to-infrastructure (I2I)** collaboration modes.
 - **Comprehensive benchmarks** across 11 fusion models for cooperative perception and prediction.
 
-For full details, refer to our publication.
-
 ---
 
 ## V2XPnP Framework
