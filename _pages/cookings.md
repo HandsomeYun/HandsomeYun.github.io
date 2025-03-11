@@ -73,7 +73,7 @@ nav_order: 5
 <div class="gallery">
 
 <!-- Loop for Chinese Category -->
-
+<!-- 
 {% for image in site.static_files %}
 {% if image.path contains '/assets/img/cooking/chinese/' and image.extname != '.webp' %}
 
@@ -81,7 +81,7 @@ nav_order: 5
     <img src="{{ image.path }}" alt="Chinese" width="300px">
   </div>
   {% endif %}
-{% endfor %}
+{% endfor %} -->
 
 <!-- Loop for Dessert Category -->
 
