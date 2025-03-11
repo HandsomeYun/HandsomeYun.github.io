@@ -3,7 +3,7 @@ layout: page
 title: Personalized Campaign Emails
 description: AI-Driven voter behavior analysis and personalized campaign strategies
 img: assets/img/Greg.jpg
-importance: 4
+importance: 5
 category: work
 related_publications: false
 ---

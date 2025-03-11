@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Simulation & Benchmarking for Infrastructure-Based Sensor Placement
+title: Benchmarking Infrastructure-Based Sensor Placement
 description: A flexible benchmarking framework supporting any sensor configuration for optimizing infrastructure-based perception.
 img: assets/img/detection.png
 importance: 3

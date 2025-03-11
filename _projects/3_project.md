@@ -3,7 +3,7 @@ layout: page
 title: pyHFO
 description: Multi-window desktop application providing time-efficient HFO detection algorithms for artifact and HFO with spike classification
 img: assets/img/pyHFO.jpg
-importance: 6
+importance: 5
 category: work
 ---
 
