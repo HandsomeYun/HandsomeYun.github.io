@@ -19,17 +19,17 @@ nav_order: 5
     margin: 10px;
     font-size: 1rem;
     font-family: var(--font-sans-serif); /* Match al-folio font */
-    background-color: #6a0dad; /* Set to a purple color */
-    color: white; /* Keep text color white */
-    border: 1px solid #6a0dad; /* Border to match the button background */
+    background-color: #6a0dad; /* Purple background */
+    color: white; /* White text */
+    border: 1px solid #6a0dad; /* Matching border */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
   }
 
   .filter-btn:hover {
-    background-color: #5e0bb0; /* Slightly darker purple on hover */
-    color: white; /* Keep the text white on hover */
+    background-color: #5e0bb0; /* Darker purple on hover */
+    color: white;
   }
 
   /* Image Gallery Styling */
@@ -41,7 +41,7 @@ nav_order: 5
   }
 
   .filter {
-    display: none; /* Hide all images by default */
+    display: none; /* Hide images by default */
     margin: 20px;
     text-align: center;
   }
@@ -55,8 +55,8 @@ nav_order: 5
   }
 
   .filter img:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 </style>
 
@@ -72,66 +72,56 @@ nav_order: 5
 <!-- Image Gallery -->
 <div class="gallery">
 
-<!-- Loop for Chinese Category -->
-<!-- 
-{% for image in site.static_files %}
-{% if image.path contains '/assets/img/cooking/chinese/' and image.extname != '.webp' %}
+  <!-- Loop for Chinese Category -->
+  {% for image in site.static_files %}
+    {% if image.path contains '/assets/img/cooking/chinese/' and image.extname != '.webp' %}
+      <div class="filter chinese">
+        <img src="{{ image.path | relative_url }}" alt="Chinese Dish" width="300px">
+      </div>
+    {% endif %}
+  {% endfor %}
 
-  <div class="filter chinese">
-    <img src="{{ image.path }}" alt="Chinese" width="300px">
-  </div>
-  {% endif %}
-{% endfor %} -->
+  <!-- Loop for Dessert Category -->
+  {% for image in site.static_files %}
+    {% if image.path contains '/assets/img/cooking/dessert/' and image.extname != '.webp' %}
+      <div class="filter dessert">
+        <img src="{{ image.path | relative_url }}" alt="Dessert" width="300px">
+      </div>
+    {% endif %}
+  {% endfor %}
 
-<!-- Loop for Dessert Category -->
+  <!-- Loop for Fusion Category -->
+  {% for image in site.static_files %}
+    {% if image.path contains '/assets/img/cooking/fusion/' and image.extname != '.webp' %}
+      <div class="filter fusion">
+        <img src="{{ image.path | relative_url }}" alt="Fusion Dish" width="300px">
+      </div>
+    {% endif %}
+  {% endfor %}
 
-<!-- {% for image in site.static_files %}
-{% if image.path contains '/assets/img/cooking/dessert/' and image.extname != '.webp' %}
-
-  <div class="filter dessert">
-    <img src="{{ image.path }}" alt="Dessert" width="300px">
-  </div>
-  {% endif %}
-{% endfor %} -->
-
-<!-- Loop for Fusion Category -->
-
-<!-- {% for image in site.static_files %}
-{% if image.path contains '/assets/img/cooking/fusion/' and image.extname != '.webp' %}
-
-  <div class="filter fusion">
-    <img src="{{ image.path }}" alt="Fusion Dish" width="300px">
-  </div>
-  {% endif %}
-{% endfor %} -->
-
-<!-- Loop for Western Category -->
-
-<!-- {% for image in site.static_files %}
-{% if image.path contains '/assets/img/cooking/western/' and image.extname != '.webp' %}
-
-  <div class="filter western">
-    <img src="{{ image.path }}" alt="Western Dish" width="300px">
-  </div>
-  {% endif %}
-{% endfor %} -->
+  <!-- Loop for Western Category -->
+  {% for image in site.static_files %}
+    {% if image.path contains '/assets/img/cooking/western/' and image.extname != '.webp' %}
+      <div class="filter western">
+        <img src="{{ image.path | relative_url }}" alt="Western Dish" width="300px">
+      </div>
+    {% endif %}
+  {% endfor %}
 
 </div>
 
 <script>
   function filterSelection(category) {
     var items = document.getElementsByClassName("filter");
-    
-    if (category == "all") category = "";
-    
+    if (category === "all") category = "";
     for (var i = 0; i < items.length; i++) {
-      items[i].style.display = "none"; // Hide all items by default
+      items[i].style.display = "none"; // Hide all images by default
       if (items[i].className.indexOf(category) > -1) {
-        items[i].style.display = "block"; // Show matching items
+        items[i].style.display = "block"; // Show matching images
       }
     }
   }
 
-  // Show all items by default on page load
+  // Show all images by default on page load
   filterSelection('all');
 </script>
