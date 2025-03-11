@@ -3,7 +3,7 @@ layout: page
 title: WhiteMatterWiki
 description: Web platform designed to help researchers explore biological data related to ligands, receptors, and cells
 img: assets/img/WhiteMatterWiki.jpg
-importance: 4
+importance: 5
 category: work
 giscus_comments: false
 ---
