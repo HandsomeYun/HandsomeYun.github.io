@@ -7,10 +7,12 @@ importance: 3
 category: research
 ---
 
-## Overview  
+## Overview
+
 **RelMap** introduces a **relation-aware learning approach** for enhancing **online map generation**. Traditional online mapping methods struggle with **noisy observations, missing information, and weak relational reasoning**. RelMap addresses these challenges by incorporating **spatial and contextual relationships** between detected objects, significantly improving **mapping accuracy and robustness**.
 
-## Key Contributions  
+## Key Contributions
+
 - **Relation-Aware Learning**: Integrates object-object and object-environment relationships to enhance **spatial reasoning**.
 - **Transformer-Based Architecture**: Utilizes **self-attention** to refine mapping predictions with contextual dependencies.
 - **Efficient Online Learning**: Demonstrates superior performance even with **limited training data**.
@@ -18,7 +20,8 @@ category: research
 
 ---
 
-## Model Architecture  
+## Model Architecture
+
 RelMap employs a **Transformer-based pipeline** to capture high-level **spatial dependencies** between scene elements. It consists of:
 
 1. **Feature Extraction** - Processing sensor data (LiDAR, cameras, radar).
@@ -36,10 +39,12 @@ RelMap employs a **Transformer-based pipeline** to capture high-level **spatial 
 
 ---
 
-## Benchmarking & Performance  
+## Benchmarking & Performance
+
 RelMap is evaluated on **multiple datasets** and achieves **state-of-the-art** performance compared to existing online mapping approaches.
 
-### **Quantitative Benchmark Results**  
+### **Quantitative Benchmark Results**
+
 The model achieves **higher mAP and F1 scores**, demonstrating significant improvements over baseline methods.
 
 <div class="column">
@@ -51,7 +56,8 @@ The model achieves **higher mAP and F1 scores**, demonstrating significant impro
     RelMap achieves state-of-the-art performance in mapping accuracy.
 </div>
 
-### **Data Efficiency Study**  
+### **Data Efficiency Study**
+
 RelMap maintains **high performance even with limited training data**, making it more robust than previous approaches.
 
 <div class="column">
@@ -65,7 +71,8 @@ RelMap maintains **high performance even with limited training data**, making it
 
 ---
 
-## Qualitative Results  
+## Qualitative Results
+
 The qualitative results highlight RelMap’s ability to **reduce noise, handle occlusions, and improve mapping clarity**.
 
 <div class="column">
@@ -79,14 +86,16 @@ The qualitative results highlight RelMap’s ability to **reduce noise, handle o
 
 ---
 
-## Applications  
+## Applications
+
 - **Autonomous Driving**: Enhancing **real-time map updates** for self-driving vehicles.
 - **Smart Cities**: Improving **urban infrastructure mapping** and navigation.
 - **Robotics**: Assisting robots in **environmental understanding** and path planning.
 
 ---
 
-## Summary  
+## Summary
+
 RelMap introduces a **relation-aware approach** to **online map generation**, demonstrating **improved accuracy, robustness, and data efficiency**. With **Transformer-based learning**, it outperforms existing methods in **mapping precision and generalization**.
 
 For more technical details, see the full **paper**.

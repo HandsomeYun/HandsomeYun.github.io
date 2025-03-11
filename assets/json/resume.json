@@ -74,7 +74,7 @@
       "releaseDate": "2025-03-09",
       "url": "https://arxiv.org/abs/2412.06142",
       "summary": "Second Author. This work presents AgentAlign, a real-world multi-agent perception framework that mitigates multi-modality misalignment in cooperative autonomous systems using cross-modality feature alignment and introduces the V2XSet-Noise dataset for robust evaluation."
-    }, 
+    },
     {
       "name": "InSPE: Rapid Evaluation of Heterogeneous Multi-Modal Infrastructure Sensor Placement",
       "publisher": "Submitted to International Conference on Computer Vision",
@@ -90,9 +90,7 @@
       "startDate": "2023-02-01",
       "endDate": "Present",
       "summary": "Contributed to multi-agent perception, sensor fusion, and infrastructure-aware autonomous driving, co-authoring five papers on multi-modal sensor placement (InSPE), misalignment adaptation in cooperative perception (AgentAlign), class-aware map construction (RelMap), spatio-temporal fusion for V2X perception (V2XPnP), and real-world cooperative perception datasets (V2X-ReaLO).",
-      "highlights": [
-        "Participating in the U.S. DOT Intersection Safety Challenge and won $750,000"
-      ]
+      "highlights": ["Participating in the U.S. DOT Intersection Safety Challenge and won $750,000"]
     },
     {
       "name": "Vwani Roychowdhury's Lab, UCLA",

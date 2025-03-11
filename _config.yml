@@ -221,7 +221,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: 
+include:
   - "_pages"
   - assets
 exclude:

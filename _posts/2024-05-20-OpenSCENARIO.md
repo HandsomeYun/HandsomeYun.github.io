@@ -19,27 +19,34 @@ featured: true
 In **OpenSCENARIO**, positioning refers to the placement and movement of entities within the simulation environment. There are multiple ways to define the positioning of an entity, depending on the reference system you want to use:
 
 #### 1. Absolute/Relative in the World Coordinate System
-   - **Absolute**: Specifies the exact position of an entity in the global world coordinates.
-   - **Relative**: Positions an entity relative to the world coordinate system but based on a reference point.
+
+- **Absolute**: Specifies the exact position of an entity in the global world coordinates.
+- **Relative**: Positions an entity relative to the world coordinate system but based on a reference point.
 
 #### 2. Absolute in the Geographic Coordinate System
-   - Defines the entity’s position using geographic latitude, longitude, and altitude.
+
+- Defines the entity’s position using geographic latitude, longitude, and altitude.
 
 #### 3. Relative to Another Entity
-   - This allows the entity to be positioned based on the location of another entity. Useful for scenarios where entities interact, such as following or overtaking other vehicles.
+
+- This allows the entity to be positioned based on the location of another entity. Useful for scenarios where entities interact, such as following or overtaking other vehicles.
 
 #### 4. Absolute/Relative in the Road Coordinate System
-   - **Road Position**: Positioning based on the road’s centerline (s-coordinate) and distance from the centerline (t-coordinate).
-   - **Relative Road Position**: Specifies the position relative to a given road or path within the environment.
+
+- **Road Position**: Positioning based on the road’s centerline (s-coordinate) and distance from the centerline (t-coordinate).
+- **Relative Road Position**: Specifies the position relative to a given road or path within the environment.
 
 #### 5. Absolute/Relative in the Lane Coordinate System
-   - Used to place vehicles in specific lanes on the road, making it easier to create lane-specific behaviors.
+
+- Used to place vehicles in specific lanes on the road, making it easier to create lane-specific behaviors.
 
 #### 6. Relative to a Route
-   - Position entities along a pre-defined route, usually consisting of waypoints that form a path for entities to follow.
+
+- Position entities along a pre-defined route, usually consisting of waypoints that form a path for entities to follow.
 
 #### 7. Relative to a Trajectory
-   - Entities can follow a custom trajectory defined by a series of waypoints, useful for simulating dynamic movements like overtaking or evasive maneuvers.
+
+- Entities can follow a custom trajectory defined by a series of waypoints, useful for simulating dynamic movements like overtaking or evasive maneuvers.
 
 ---
 
@@ -48,13 +55,16 @@ In **OpenSCENARIO**, positioning refers to the placement and movement of entitie
 In **OpenSCENARIO**, routes and waypoints are essential components for defining paths that entities follow:
 
 #### Route
-   - A **route** defines a path for an entity to follow through the road network. It consists of waypoints, each connected to form a continuous directional path.
+
+- A **route** defines a path for an entity to follow through the road network. It consists of waypoints, each connected to form a continuous directional path.
 
 #### Waypoint
-   - A **waypoint** represents a specific location on a route that an entity should pass through. It consists of the coordinates and route strategy.
+
+- A **waypoint** represents a specific location on a route that an entity should pass through. It consists of the coordinates and route strategy.
 
 #### Position
-   - A waypoint's **position** specifies the coordinates in the road network, determining where the entity should be located at that point.
+
+- A waypoint's **position** specifies the coordinates in the road network, determining where the entity should be located at that point.
 
 ---
 
@@ -75,7 +85,7 @@ To set up global settings like towns and road networks, use the following struct
 </OpenSCENARIO>
 ```
 
-#### Example ####
+#### Example
 
 ```xml
 <?xml version="1.0"?>
@@ -91,11 +101,13 @@ To set up global settings like towns and road networks, use the following struct
 ```
 
 ### Defining Entities
-The category and model for vehicles can be found at [CARLA Vehicle Catalogue](https://carla.readthedocs.io/en/latest/catalogue_vehicles/). Properties like ***BoundingBox*** and ***Axles*** can be consistent across different vehicle models. Here's the general structure for defining entities:
+
+The category and model for vehicles can be found at [CARLA Vehicle Catalogue](https://carla.readthedocs.io/en/latest/catalogue_vehicles/). Properties like **_BoundingBox_** and **_Axles_** can be consistent across different vehicle models. Here's the general structure for defining entities:
 
 Type:
-  - ***Type == “ego_vehicle”*** Indicates this is the car that you want to drive in default when you run manual_control.py. 
-  - ***Type == “simulation”*** indicates this is the car for simulation. You can also drive them when run manual_control.py with –filter=${modelName}
+
+- **_Type == “ego_vehicle”_** Indicates this is the car that you want to drive in default when you run manual_control.py.
+- **_Type == “simulation”_** indicates this is the car for simulation. You can also drive them when run manual_control.py with –filter=${modelName}
 
 ```xml
 <Entities>
@@ -144,6 +156,7 @@ Type:
 ```
 
 ### Storyboard Structure
+
 Starting the Scenario
 
 ```xml
@@ -165,9 +178,10 @@ Starting the Scenario
 ```
 
 ### Setting your weather
-  - cloudState: “overcast”, “free”...
-  - PrecipitationType: “rain”/”snow”
-  - Can change other weather component with any number you want. The elevation are in radians. 
+
+- cloudState: “overcast”, “free”...
+- PrecipitationType: “rain”/”snow”
+- Can change other weather component with any number you want. The elevation are in radians.
 
 ```xml
 <Storyboard>
@@ -190,27 +204,35 @@ Starting the Scenario
   </Init>
 </Storyboard>
 ```
+
 #### Spawning Entities
+
 Entity positioning can be defined using RoadPosition or WorldPosition:
 
-***Road Position Example***: 
+**_Road Position Example_**:
+
 ```xml
 <RoadPosition roadId="${roadId}" s="${s}" t="${t}">
   <Orientation h="0.0" p="0.0" r="0" type="relative"/>
 </RoadPosition>
 ```
 
-***Road Position Example***: 
+**_Road Position Example_**:
+
 ```xml
 <RoadPosition roadId="${roadId}" s="${s}" t="${t}">
   <Orientation h="0.0" p="0.0" r="0" type="relative"/>
 </RoadPosition>
 ```
-***World Position Example***: 
+
+**_World Position Example_**:
+
 ```xml
 <WorldPosition x="2" y="68.03" z="0.3" h="-1.57"/>
 ```
-***Road Position Example***: 
+
+**_Road Position Example_**:
+
 ```xml
 <RoadPosition roadId="${roadId}" s="${s}" t="${t}">
   <Orientation h="0.0" p="0.0" r="0" type="relative"/>
@@ -218,6 +240,7 @@ Entity positioning can be defined using RoadPosition or WorldPosition:
 ```
 
 #### Teleporting Non-Ego Vehicles
+
 ```xml
 <Private entityRef="${EntityName}">
   <PrivateAction>
@@ -231,7 +254,9 @@ Entity positioning can be defined using RoadPosition or WorldPosition:
   </PrivateAction>
 </Private>
 ```
-***Example Storyboard for Ego Vehicle***: 
+
+**_Example Storyboard for Ego Vehicle_**:
+
 ```xml
 <Private entityRef="hero">
   <PrivateAction>
@@ -267,15 +292,17 @@ Entity positioning can be defined using RoadPosition or WorldPosition:
 
 #### Defining Acts and Maneuvers
 
-An ***Act*** groups ***Maneuvers***, which are further broken down into ***Events***. Each event can have ***Actions***, and conditions are used to start or stop these actions.
+An **_Act_** groups **_Maneuvers_**, which are further broken down into **_Events_**. Each event can have **_Actions_**, and conditions are used to start or stop these actions.
 
-***Maneuver***: used to group two instances of Event. Two instances of Maneuver may also be used, each hosting one Event. Both alternatives yield the same simulation outcome, as long as each Event retain its startTrigger.
+**_Maneuver_**: used to group two instances of Event. Two instances of Maneuver may also be used, each hosting one Event. Both alternatives yield the same simulation outcome, as long as each Event retain its startTrigger.
 
-You can organize ***Acts*** and ***Maneuvers*** in different ways, but the outcome remains the same as long as the ***startTrigger*** conditions for each event are maintained.
-  - ***Start Trigger***: Defines when the event or act should begin. This is a required part of each event or act.
-  - ***Stop Trigger***: Optional. Defines when the event or act should end.
+You can organize **_Acts_** and **_Maneuvers_** in different ways, but the outcome remains the same as long as the **_startTrigger_** conditions for each event are maintained.
 
-***General Structure***: 
+- **_Start Trigger_**: Defines when the event or act should begin. This is a required part of each event or act.
+- **_Stop Trigger_**: Optional. Defines when the event or act should end.
+
+**_General Structure_**:
+
 ```xml
 <Story name="StoryName">
   <Act name="YourActName">
@@ -310,6 +337,7 @@ You can organize ***Acts*** and ***Maneuvers*** in different ways, but the outco
   </Act>
 </Story>
 ```
+
 ---
 
 Example: A Straight-Driving Scenario
@@ -360,11 +388,14 @@ Below is an example of a simple Act where a vehicle starts driving straight base
 ```
 
 #### Triggers and Conditions
-There are two main types of conditions that determine when actions and events start or stop:
-  - ***ByEntityCondition***: These conditions evaluate entity-related states like position, speed, or distance from other entities. They help in defining interactions between entities.
-  - ***ByValueCondition***: Logical expressions based on simulation parameters such as time, traffic signal states, or other non-entity values.
 
-***Stop Triggers for Stories***
+There are two main types of conditions that determine when actions and events start or stop:
+
+- **_ByEntityCondition_**: These conditions evaluate entity-related states like position, speed, or distance from other entities. They help in defining interactions between entities.
+- **_ByValueCondition_**: Logical expressions based on simulation parameters such as time, traffic signal states, or other non-entity values.
+
+**_Stop Triggers for Stories_**
+
 ```xml
 <StopTrigger>
   <ConditionGroup>
@@ -377,17 +408,20 @@ There are two main types of conditions that determine when actions and events st
 </StopTrigger>
 ```
 
-***Private Actions***
-Private actions apply to specific entities and can be used in the init section or during a ***Maneuver***. Some commonly used private actions include:
-  - ***LongitudinalAction***: Controls the speed of the entity.
-LateralAction: Controls lane changes or turning.
-  - ***VisibilityAction***: Modifies visibility conditions for the entity.
-SynchronizeAction: Synchronizes the behavior of multiple entities.
+**_Private Actions_**
+Private actions apply to specific entities and can be used in the init section or during a **_Maneuver_**. Some commonly used private actions include:
+
+- **_LongitudinalAction_**: Controls the speed of the entity.
+  LateralAction: Controls lane changes or turning.
+- **_VisibilityAction_**: Modifies visibility conditions for the entity.
+  SynchronizeAction: Synchronizes the behavior of multiple entities.
 
 You can explore more about private actions and conditions in the ASAM [OpenSCENARIO documentation](https://www.asam.net/index.php?eID=dumpFile&t=f&f=4092&token=d3b6a55e911b22179e3c0895fe2caae8f5492467#_maneuvergroups_maneuvers_events_and_actions).
 
-----
+---
+
 ### Complete Example
+
 ```xml
 <?xml version="1.0"?>
 <OpenSCENARIO>
@@ -888,7 +922,7 @@ You can explore more about private actions and conditions in the ASAM [OpenSCENA
          </ConditionGroup>
        </StartTrigger>
      </Act>
-    
+
    </Story>
    <StopTrigger>
      <ConditionGroup>

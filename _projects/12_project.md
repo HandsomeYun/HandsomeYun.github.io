@@ -7,7 +7,8 @@ importance: 1
 category: technical
 ---
 
-## Overview  
+## Overview
+
 To systematically evaluate the effectiveness of **infrastructure-based multi-modal sensor placement**, we introduce **surrogate metrics** that quantify sensor perception performance. These metrics enable a structured assessment of different sensor configurations across diverse environmental conditions.
 
 <div class="row">
@@ -21,20 +22,22 @@ This page details the design of **perception coverage, perception occlusion, and
 
 ---
 
-## Camera and LiDAR Sensing Modeling  
+## Camera and LiDAR Sensing Modeling
+
 To evaluate the sensing capability of multi-modal sensor placements at intersections, we introduce a **ray-cast sensing model** for camera and LiDAR. This approach builds upon prior work and employs the **Bresenham algorithm** to efficiently compute the sensor’s **view frustum** or **sensing range** under a given placement $$$ P_0 $$$:
 
 $$
     \Omega | P_0 = \{V_1^{P_0},V_2^{P_0},...,V_n^{P_0}, n \in N\}
 $$
 
-### **Camera Sensing Model**  
-We model the camera's **field of view (FoV)** as a frustum using the **pinhole camera model**. Each pixel in the image corresponds to a **ray projection model**, linking real-world coordinates $$$ P(p_x, p_y, p_z) $$$, the image pixel $$$ p(h_i, w_j) $$$, and the camera principal point $$$ O^C(c_x, c_y) $$$. 
+### **Camera Sensing Model**
+
+We model the camera's **field of view (FoV)** as a frustum using the **pinhole camera model**. Each pixel in the image corresponds to a **ray projection model**, linking real-world coordinates $$$ P(p_x, p_y, p_z) $$$, the image pixel $$$ p(h_i, w_j) $$$, and the camera principal point $$$ O^C(c_x, c_y) $$$.
 
 The camera ray equation is defined as:
 
 $$
-    r_{ij}^{C}(\mu) = O^C + \mu \cdot d_{ij} = O^C + \mu \cdot 
+    r_{ij}^{C}(\mu) = O^C + \mu \cdot d_{ij} = O^C + \mu \cdot
     \begin{bmatrix}
     (w_{j} - c_x)/f \\
     (h_{i} - c_y)/f \\
@@ -44,7 +47,8 @@ $$
 
 where $$$ \mu \geq 0 $$$, and $$$ d_{ij} $$$ is the ray direction.
 
-### **LiDAR Sensing Model**  
+### **LiDAR Sensing Model**
+
 LiDAR sensing is modeled using **discrete beam emission**, where each beam is a ray emanating from the LiDAR origin $$$ O^L $$$, with direction defined by **horizontal scanning angle $$$ \theta^L $$$** and **vertical scanning angle $$$ \psi^L $$$**:
 
 $$
@@ -60,9 +64,10 @@ where $$$ 0 \le t \le t_{\max} $$$.
 
 ---
 
-## Surrogate Metric Design  
+## Surrogate Metric Design
 
-### **Perception Coverage Metric**  
+### **Perception Coverage Metric**
+
 We define a **perception coverage metric $$$ C $$$** to quantify the effective sensing region of sensors in an intersection. Using the ray-cast sensor model:
 
 $$
@@ -83,7 +88,8 @@ where $$$ w(V_i) $$$ represents importance weights assigned to different interse
 
 ---
 
-### **Perception Occlusion Metric**  
+### **Perception Occlusion Metric**
+
 To measure the occlusion effect caused by objects (e.g., vehicles, pedestrians), we introduce an **occlusion probability metric $$$ O $$$**. This metric integrates a **waypoint-based bounding box traffic model**, defining occluded regions based on vehicle positions and trajectories.
 
 The occlusion ratio for a given waypoint frame $$$ k $$$ is:
@@ -100,7 +106,8 @@ $$
 
 ---
 
-## **Comparison with Benchmarking Models**  
+## **Comparison with Benchmarking Models**
+
 To validate the **effectiveness of our surrogate metrics**, we compared them with **multi-class mAP results** from several **benchmarking models**. The results, shown in Figure 4, demonstrate a **strong positive correlation** between perception surrogate metrics and **multi-class detection performance**.
 
 <div class="row">
@@ -110,18 +117,20 @@ To validate the **effectiveness of our surrogate metrics**, we compared them wit
     </div>
 </div>
 
-- **Higher perception coverage (C) and lower occlusion (O) values lead to improved mAP across different sensor placements.**  
-- **LiDAR-enhanced placements outperform camera-only setups in multi-class detection.**  
-- **Hybrid camera-LiDAR configurations provide the most robust perception across all sensor placements.**  
+- **Higher perception coverage (C) and lower occlusion (O) values lead to improved mAP across different sensor placements.**
+- **LiDAR-enhanced placements outperform camera-only setups in multi-class detection.**
+- **Hybrid camera-LiDAR configurations provide the most robust perception across all sensor placements.**
 
 These findings confirm that **our surrogate metrics align well with real-world perception performance**, making them valuable for optimizing sensor deployments in infrastructure-based perception systems.
 
 ---
 
-## Summary  
-This page introduces the **design of surrogate metrics** for infrastructure-based perception evaluation, focusing on:  
-- **Perception Coverage**: Measuring sensor effectiveness in different spatial regions.  
-- **Perception Occlusion**: Capturing occlusion effects caused by dynamic objects.  
+## Summary
+
+This page introduces the **design of surrogate metrics** for infrastructure-based perception evaluation, focusing on:
+
+- **Perception Coverage**: Measuring sensor effectiveness in different spatial regions.
+- **Perception Occlusion**: Capturing occlusion effects caused by dynamic objects.
 
 These metrics provide a structured approach for assessing sensor placement strategies. The benchmarking results validate that **higher perception surrogate scores correspond to improved object detection accuracy**.
 
