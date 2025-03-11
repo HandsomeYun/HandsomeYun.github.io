@@ -223,7 +223,6 @@ kramdown:
 # Includes & excludes
 include:
   - "_pages"
-  - assets
 exclude:
   - bin/
   - CONTRIBUTING.md
