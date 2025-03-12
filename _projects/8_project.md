@@ -2,7 +2,7 @@
 layout: page
 title: Peach Party
 description: 2D Arcade Mario Party "clone"
-img: assets/img/peachParty.png
+img: assets/img/peach.png
 importance: 6
 category: technical
 ---
@@ -14,7 +14,7 @@ Each player controls their character using distinct keyboard inputs, with Peach 
 
 <div class="column">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/peachParty.png" title="Illustration of Sensor Placement Strategies" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/peach.png" title="Illustration of Sensor Placement Strategies" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

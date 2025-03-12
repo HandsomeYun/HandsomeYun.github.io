@@ -14,7 +14,7 @@ As part of a team, we utilized advanced Large Language Models (LLMs) to generate
 
 <div class="column">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/flowchart.png" title="Illustration of Sensor Placement Strategies" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/llm.png" title="Illustration of Sensor Placement Strategies" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
