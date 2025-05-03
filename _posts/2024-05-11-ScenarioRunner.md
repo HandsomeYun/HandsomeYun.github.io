@@ -26,6 +26,7 @@ https://github.com/carla-simulator/scenario_runner/releases/tag/0.9.12
 ````
 
 ### Setting Up a Virtual Environment
+
 CARLA and Scenario Runner work best with Python 3.7, so we’ll create a virtual environment using Conda:
 
 ````markdown
@@ -75,6 +76,7 @@ $ gedit ~/.bashrc
 ````
 
 Paste the following lines at the end of the file:
+
 ````markdown
 ```bash
 export CARLA_ROOT=/path/to/your/carla/installation
@@ -85,6 +87,7 @@ export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla
 ````
 
 You can also create an alias for quickly navigating to the Scenario Runner folder:
+
 ````markdown
 ```bash
 alias open_scenario_runner="cd /path_to_scenario_runner"
@@ -92,7 +95,9 @@ alias open_scenario_runner="cd /path_to_scenario_runner"
 ````
 
 ### Running Scenario Runner
+
 Once everything is set up, you can start using Scenario Runner. Open a terminal and run:
+
 ````markdown
 ```bash
 # Example for running a traditional scenario
@@ -101,6 +106,7 @@ $ python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld
 ````
 
 You can also run custom scenarios using OpenSCENARIO files:
+
 ````markdown
 ```bash
 # Running an OpenSCENARIO file
@@ -109,7 +115,9 @@ $ python scenario_runner.py --openscenario /path/to/openscenario.xosc --reloadWo
 ````
 
 ### Running Manual Control
+
 To interact manually with the CARLA environment, open another terminal and use the manual_control.py script:
+
 ````markdown
 ```bash
 # Install pygame first, if you haven't
@@ -121,15 +129,19 @@ $ python manual_control.py
 ````
 
 ### Listing Available Scenarios
+
 To see the full list of available scenarios, run the following command:
+
 ````markdown
 ```bash
 $ python scenario_runner.py --list
 ```
 ````
+
 This will display all predefined scenarios available in Scenario Runner.
 
 ### Conclusion
+
 Scenario Runner adds significant flexibility to the CARLA simulator, allowing you to run complex scenarios. By following this guide, you should now be able to set up Scenario Runner and explore different scenarios. Stay tuned for more advanced usage and tips!
 
 For additional documentation, visit the Scenario Runner Documentation.

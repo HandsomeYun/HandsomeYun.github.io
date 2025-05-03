@@ -1,21 +1,80 @@
 ---
 layout: page
 title: Multi-Modality Brain Tumor Segmentation
-description: Leveraging MiniGPT-4 for integrating MRI modalities
+description: Leveraging MiniGPT-4 to enhance brain tumor segmentation through MRI modality fusion.
 img: assets/img/Brain_tumour_segmentation.jpg
-importance: 1
+importance: 3
 category: work
 related_publications: false
 ---
 
-In this project, I developed an advanced brain tumor segmentation framework that leverages MiniGPT-4 to integrate four distinct MRI modalities: T1c, T1n, T2, and FLAIR. This multimodal approach enables the model to extract detailed information from each imaging modality, leading to more precise segmentation of brain tumors. By utilizing context-aware preprocessing techniques, the model achieves significant improvements in accuracy while minimizing false positives. The integration of these MRI modalities onto a common space ensures that the model captures intricate variations in tumor characteristics, leading to a 212.3% increase in segmentation precision.
+## Overview
 
-The success of this approach lies not only in its technical innovation but also in its accessibility. The framework simplifies complex segmentation tasks, making it user-friendly for medical professionals without machine learning expertise. This work was recognized during a research symposium where I was awarded Best Presenter, and it subsequently led to a PhD offer with a Presidential Scholarship. The project stands as a testament to the potential of AI-driven solutions in medical imaging, offering a more reliable and efficient method for brain tumor diagnosis and treatment planning.
+This project presents a novel approach to **brain tumor segmentation** by integrating **multiple MRI modalities** using **MiniGPT-4**. Traditional segmentation methods rely on **single-modality MRI scans** and often require significant **manual effort** or **technical expertise** to implement. By leveraging **MiniGPT-4**, we introduce a simple yet powerful **multi-modal segmentation framework** that fuses four distinct MRI modalities—**T1c, T1n, T2, and FLAIR**—for improved tumor detection and localization.
 
-<iframe 
-    src="/assets/pdf/brain_tumor_segmentation.pdf" 
-    width="100%" 
-    height="600px">
+Our approach **enhances segmentation accuracy**, making it more accessible to medical professionals **without requiring coding experience**. The integration of these MRI modalities ensures **a comprehensive understanding of tumor structures**, significantly improving segmentation precision and reducing false positives.
+
+---
+
+## Key Innovations
+
+1. **Multi-Modality Fusion:**
+
+   - Combines **T1c, T1n, T2, and FLAIR MRI scans** to provide a more detailed and comprehensive view of brain tumors.
+   - Reduces errors associated with single-modality segmentation models.
+
+2. **Large Language Model (LLM) Integration:**
+
+   - Utilizes **MiniGPT-4** to interpret both **visual and textual medical data**, ensuring **context-aware** tumor segmentation.
+   - **Interactive chat-based interface** allows for seamless user interaction.
+
+3. **Enhanced Preprocessing & Training Strategies:**
+
+   - Custom preprocessing pipeline including **random rotation, flipping, and normalization** to improve model robustness.
+   - **Fusion network integration** to synchronize tumor detection across MRI modalities.
+   - **Projection layer adaptation** to enable **BioMedClip**, a biomedical visual encoder, to work with MiniGPT-4.
+
+4. **Optimized Bounding Box Prediction:**
+   - **Generalized IoU (GIoU) loss** ensures **precise tumor localization**, even when bounding boxes are initially misaligned.
+   - **Smooth L1 loss** refines the predicted coordinates, balancing stability and accuracy.
+
+---
+
+## Results
+
+Our **multi-modal segmentation framework** achieved a **200% increase in Intersection over Union (IoU)** compared to the baseline MiniGPT-4 model.
+
+- **Single-image segmentation using default MiniGPT-4**: **IoU ~0.2**
+- **Integration of BioMedClip visual encoder**: **150% relative IoU increase**
+- **Improved preprocessing techniques**: **Further IoU gains**
+- **Fusion network for four MRI modalities**: **10% additional IoU improvement**
+
+The final model **significantly outperforms existing segmentation frameworks** while remaining **intuitive and easy to use**.
+
+---
+
+## Future Work
+
+- **Incorporating SAM (Segment Anything Model):**
+  - Utilize the predicted bounding boxes as inputs to **SAM** for generating refined tumor segmentation masks.
+- **Integrating Patient Data:**
+  - Explore the impact of **patient-specific data** on segmentation performance.
+- **Optimizing Fusion Network:**
+  - Further refining **modality synchronization** to enhance segmentation accuracy.
+
+This research has profound implications for **automated medical imaging**, paving the way for more efficient, **LLM-assisted diagnostic tools** in clinical settings.
+
+---
+
+## Recognition & Impact
+
+This work was presented at a **research symposium**, where it earned the **Best Presenter Award** and led to a **PhD offer with a Presidential Scholarship**. It highlights the **potential of AI-driven solutions** in medical imaging, offering **a more reliable and efficient** method for **brain tumor diagnosis and treatment planning**.
+
+---
+
+## View the Full Poster
+
+<iframe src="/assets/pdf/brain_tumor_segmentation.pdf" width="100%" height="600px">
     This browser does not support PDFs. Please download the PDF to view it:
     <a href="/assets/pdf/brain_tumor_segmentation.pdf">Download PDF</a>
 </iframe>

@@ -8,16 +8,16 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: 
+  more_info:
 
 news: true # includes a list of news items
 selected_papers: false
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi, I’m Yun Zhang, a passionate researcher specializing in computational mathematics, data science, and multi-modal data-driven AI solutions. I’m currently pursuing my Bachelor’s degrees at UCLA, where I’ve developed expertise in AI, machine learning, and sensor technologies.
+Hi, I’m Yun Zhang, an undergraduate and incoming PhD student at [UCLA's Mobility Lab](https://mobility-lab.seas.ucla.edu/), specializing in autonomous driving, multi-agent perception, and sensor fusion. My research focuses on cooperative perception, V2X communication, and intelligent transportation systems, aiming to enhance vehicle autonomy and real-time decision-making in connected environments.
 
-My research spans from using Large Language Models to enhance brain tumor segmentation, to optimizing sensor configurations for smart intersections in autonomous driving systems. With a deep interest in leveraging emerging technologies to drive innovation, I’m focused on applying AI to both medical imaging and automobile safety. This website reflects my journey as I pursue a PhD in either of these dynamic fields, where I aim to push the boundaries of AI and data science to make a meaningful impact.
+At UCLA, I have worked on optimizing infrastructure-aware sensing, mitigating sensor misalignment in multi-agent systems, and developing spatio-temporal fusion techniques for V2X applications. As I embark on my PhD, I am dedicated to advancing AI-driven mobility solutions that improve safety, efficiency, and robustness in autonomous transportation.
 
 ### Education
 
