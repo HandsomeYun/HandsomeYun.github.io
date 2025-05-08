@@ -81,6 +81,13 @@
       "releaseDate": "2025-03-09",
       "url": "https://arxiv.org/abs/2504.08240", 
       "summary": "Co-firsr Author. This paper introduces InSPE, a framework for evaluating heterogeneous multi-modal infrastructure sensor placement by integrating metrics like sensor coverage, occlusion, and information gain, supported by a new dataset and benchmarking experiments to optimize perception in intelligent intersections."
+    },
+    {
+      "name": "InSPE: Rapid Evaluation of Heterogeneous Multi-Modal Infrastructure Sensor Placement",
+      "publisher": "Submitted to International Conference on Computer Vision",
+      "releaseDate": "2025-03-09",
+      "url": "https://arxiv.org/abs/2504.08240", 
+      "summary": "Co-firsr Author. This paper introduces InSPE, a framework for evaluating heterogeneous multi-modal infrastructure sensor placement by integrating metrics like sensor coverage, occlusion, and information gain, supported by a new dataset and benchmarking experiments to optimize perception in intelligent intersections."
     }
   ],
   "research": [
