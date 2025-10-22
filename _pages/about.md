@@ -15,9 +15,9 @@ selected_papers: false
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi, I’m Yun Zhang, an undergraduate and incoming PhD student at [UCLA's Mobility Lab](https://mobility-lab.seas.ucla.edu/), specializing in autonomous driving, multi-agent perception, and sensor fusion. My research focuses on cooperative perception, V2X communication, and intelligent transportation systems, aiming to enhance vehicle autonomy and real-time decision-making in connected environments.
+Hi, I’m Yun Zhang, a first year PhD student at [UCLA's Mobility Lab](https://mobility-lab.seas.ucla.edu/), specializing in autonomous driving, computer vision, and physical intelligence. My research centers on building machines that understand and interact with the physical world, whether it’s a self-driving car navigating complex traffic or a robot moving safely among people.
 
-At UCLA, I have worked on optimizing infrastructure-aware sensing, mitigating sensor misalignment in multi-agent systems, and developing spatio-temporal fusion techniques for V2X applications. As I embark on my PhD, I am dedicated to advancing AI-driven mobility solutions that improve safety, efficiency, and robustness in autonomous transportation.
+At UCLA, I’ve developed perception and decision-making systems that integrate vision, motion, and spatial reasoning to improve real-world autonomy. As I begin my PhD, I aim to push the boundaries of embodied intelligence, creating agents that can perceive, plan, and adapt with human-level intuition and environmental awareness.
 
 ### Education
 
