@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Yun Zhang",
-    "label": "Incomming PhD student at UCLA's Mobility Lab",
+    "label": "First year PhD student at UCLA's Mobility Lab",
     "image": "prof_pic.jpg",
     "email": "yun666@g.ucla.edu",
     "phone": "(310) 694-6791",
     "url": "https://HandsomeYun.github.io/",
-    "summary": "Researcher in autonomous driving and intelligent transportation systems, specializing in multi-agent perception, sensor fusion, and cooperative perception.",
+    "summary": "Researcher specializing in autonomous driving, computer vision, and physical intelligence.",
     "location": {
       "address": "",
       "postalCode": "CA 90024",
@@ -20,7 +20,7 @@
       "institution": "University of California, Los Angeles (UCLA)",
       "location": "United States",
       "url": "https://www.ucla.edu/",
-      "studyType": "Incomming PhD",
+      "studyType": "PhD",
       "area": "Mobility Lab",
       "startDate": "2025-09-01",
       "score": "11"
@@ -30,7 +30,7 @@
       "location": "United States",
       "url": "https://www.ucla.edu/",
       "studyType": "Undergraduate",
-      "area": "B.S. in Computational Mathematics, B.S. in Statistics and Data Science",
+      "area": "B.S. in Mathematics in Computer Science, B.S. in Statistics and Data Science",
       "startDate": "2021-09-01",
       "endDate": "2025-06-15",
       "score": "10",
@@ -49,38 +49,45 @@
   ],
   "publications": [
     {
-      "name": "V2X-ReaLO: An Open Online Framework and Dataset for Cooperative Perception in Reality",
-      "publisher": "Submitted to International Conference on Computer Vision",
-      "releaseDate": "2025-03-09",
-      "author": "Zhaoliang Zheng, Yun Zhang, Zonglin Meng, Johnson Liu, Xin Xia, Jiaqi Ma",
-      "summary": "Eighth Author. V2X-ReaLO is an open online cooperative perception framework that enables real-time V2X fusion in real-world urban environments, introducing a large-scale benchmark dataset and validating online intermediate fusion for practical deployment."
+      "name": "MIC-BEV: Multi-Infrastructure Camera Bird's-Eye-View Perception Transformer for 3D Object Detection",
+      "publisher": "Submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), Best Paper Award for DriveX Workshop",
+      "releaseDate": "2025-09-01",
+      "author": "<u>Yun Zhang</u>, Zhaoliang Zheng, Johnson Liu, Zhiyu Huang, Zewei Zhou, Zonglin Meng, Tianhui Cai, and Jiaqi Ma",
+      "summary": "First Author. MIC-BEV is a Transformer-based framework for multi-camera infrastructure perception. It performs 3D object detection and BEV segmentation by fusing features from multiple cameras through a geometry-aware graph module. Designed for diverse camera setups and harsh conditions, MIC-BEV maintains strong robustness under sensor degradation. To support this, we introduce M2I, a synthetic dataset covering varied layouts, weather, and viewpoints. Experiments on both M2I and the real-world RoScenes dataset show that MIC-BEV achieves state-of-the-art performance and reliability for real-world deployment. (Currently releasing the Workshop version)"
     },
     {
       "name": "V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for Multi-Agent Perception and Prediction",
-      "publisher": "Submitted to International Conference on Computer Vision",
+      "publisher": "Accepted by International Conference on Computer Vision (ICCV)",
       "releaseDate": "2025-03-09",
       "url": "https://arxiv.org/abs/2412.01812",
       "summary": "Sixth Author. V2XPnP proposes a spatio-temporal fusion framework for multi-agent perception and prediction, leveraging a Transformer-based architecture and a novel sequential dataset to benchmark when, what, and how to fuse information in V2X scenarios."
     },
     {
       "name": "RelMap: Enhancing Online Map Construction with Class-Aware Spatial Relation and Semantic Priors",
-      "publisher": "Submitted to International Conference on Computer Vision",
+      "publisher": "Submitted to The 40th Annual AAAI Conference on Artificial Intelligence (AAAI)",
       "releaseDate": "2025-03-09",
       "summary": "Second Author. RelMap is an online HD map construction framework that enhances vectorized map generation using class-aware spatial relations and semantic priors, significantly improving accuracy and data efficiency on nuScenes and Argoverse 2 datasets."
     },
     {
       "name": "AgentAlign: Misalignment-Adapted Multi-Agent Perception for Resilient Inter-Agent Sensor Correlations",
-      "publisher": "Submitted to International Conference on Computer Vision",
+      "publisher": "Submitted to The IEEE/CVF Winter Conference on Applications of Computer Vision 2026 (WACV)",
       "releaseDate": "2025-03-09",
       "url": "https://arxiv.org/abs/2412.06142",
       "summary": "Second Author. This work presents AgentAlign, a real-world multi-agent perception framework that mitigates multi-modality misalignment in cooperative autonomous systems using cross-modality feature alignment and introduces the V2XSet-Noise dataset for robust evaluation."
     },
     {
       "name": "InSPE: Rapid Evaluation of Heterogeneous Multi-Modal Infrastructure Sensor Placement",
-      "publisher": "Submitted to International Conference on Computer Vision",
+      "publisher": "Submitted to The IEEE/CVF Winter Conference on Applications of Computer Vision 2026 (WACV)",
       "releaseDate": "2025-03-09",
       "url": "https://arxiv.org/abs/2504.08240", 
       "summary": "Co-firsr Author. This paper introduces InSPE, a framework for evaluating heterogeneous multi-modal infrastructure sensor placement by integrating metrics like sensor coverage, occlusion, and information gain, supported by a new dataset and benchmarking experiments to optimize perception in intelligent intersections."
+    },
+    {
+      "name": "AutoVLA: Vision-Language-Action Model for End-to-End Autonomous Driving with Adaptive Reasoning and Reinforcement Fine-Tuning",
+      "publisher": "Accepted by Neural Information Processing Systems (NeurIPS)",
+      "releaseDate": "2025-03-09",
+      "url": "https://autovla.github.io/", 
+      "summary": "Fourth Author. AutoVLA is a vision-language-action model for end-to-end autonomous driving with adaptive reasoning and reinforcement fine-tuning capabilities."
     }
   ],
   "research": [
@@ -89,7 +96,7 @@
       "position": "Research Assistant",
       "url": "https://mobility-lab.seas.ucla.edu/",
       "startDate": "2023-02-01",
-      "endDate": "Present",
+      "endDate": "2025-09-01",
       "summary": "Contributed to multi-agent perception, sensor fusion, and infrastructure-aware autonomous driving, co-authoring five papers on multi-modal sensor placement (InSPE), misalignment adaptation in cooperative perception (AgentAlign), class-aware map construction (RelMap), spatio-temporal fusion for V2X perception (V2XPnP), and real-world cooperative perception datasets (V2X-ReaLO).",
       "highlights": ["Participating in the U.S. DOT Intersection Safety Challenge and won $750,000"]
     },
