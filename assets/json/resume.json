@@ -49,9 +49,10 @@
   ],
   "publications": [
     {
-      "name": "MIC-BEV: Multi-Infrastructure Camera Bird's-Eye-View Perception Transformer for 3D Object Detection",
+      "name": "MIC-BEV: Multi-Infrastructure Camera Bird's-Eye-View Transformer with Relation-Aware Fusion for 3D Object Detection",
       "publisher": "Submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), Best Paper Award for DriveX Workshop",
       "releaseDate": "2025-09-01",
+      "url": "http://arxiv.org/abs/2510.24688",
       "author": "<u>Yun Zhang</u>, Zhaoliang Zheng, Johnson Liu, Zhiyu Huang, Zewei Zhou, Zonglin Meng, Tianhui Cai, and Jiaqi Ma",
       "summary": "First Author. MIC-BEV is a Transformer-based framework for multi-camera infrastructure perception. It performs 3D object detection and BEV segmentation by fusing features from multiple cameras through a geometry-aware graph module. Designed for diverse camera setups and harsh conditions, MIC-BEV maintains strong robustness under sensor degradation. To support this, we introduce M2I, a synthetic dataset covering varied layouts, weather, and viewpoints. Experiments on both M2I and the real-world RoScenes dataset show that MIC-BEV achieves state-of-the-art performance and reliability for real-world deployment. (Currently releasing the Workshop version)"
     },
