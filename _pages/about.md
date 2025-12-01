@@ -11,7 +11,7 @@ profile:
   more_info:
 
 news: true # includes a list of news items
-selected_papers: false
+selected_papers: true
 social: true # includes social icons at the bottom of the page
 latest_posts: false # disabled blog posts section
 ---
