@@ -13,8 +13,11 @@ profile:
 news: true # includes a list of news items
 selected_papers: false
 social: true # includes social icons at the bottom of the page
+latest_posts: false # disabled blog posts section
 ---
 
-Hi, I’m Yun Zhang, a first year PhD student at [UCLA's Mobility Lab](https://mobility-lab.seas.ucla.edu/), specializing in autonomous driving, computer vision, and physical intelligence. My research centers on building machines that understand and interact with the physical world, whether it’s a self-driving car navigating complex traffic or a robot moving safely among people.
+Hi, I’m Yun Zhang, a first-year PhD student at [UCLA's Mobility Lab](https://mobility-lab.seas.ucla.edu/). I work on physical intelligence, focusing on how machines perceive their surroundings, understand human intent, and interact safely and effectively with the world.
 
-At UCLA, I’ve developed perception and decision-making systems that integrate vision, motion, and spatial reasoning to improve real-world autonomy. As I begin my PhD, I aim to push the boundaries of embodied intelligence, creating agents that can perceive, plan, and adapt with human-level intuition and environmental awareness.
+My recent projects explore how robots move through complex, dynamic environments and make informed decisions using visual, linguistic, and motion cues. I am broadly interested in building embodied systems that maintain reliability under real-world constraints and adapt to changing conditions, whether in navigation, interaction, or broader physical tasks.
+
+I am also an Amazon Trainium Fellow, supported for my research on large-scale vision and action learning for embodied intelligence.

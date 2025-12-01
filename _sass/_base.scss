@@ -195,6 +195,13 @@ ul.task-list input[type="checkbox"] {
 .profile {
   width: 100%;
 
+  img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: auto;
+  }
+
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -692,10 +699,46 @@ footer.sticky-bottom {
       margin-bottom: 1rem;
 
       .preview {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        max-width: 700px;
+        background-color: var(--global-card-bg-color);
+        padding: 8px;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+        }
+        
+        // Style the picture and img inside figure.preview
+        picture {
+          display: block;
+          width: 100%;
+          margin: 0;
+        }
+        
+        img {
+          width: 100%;
+          height: auto;
+          max-height: 200px;
+          object-fit: contain;
+          display: block;
+          margin: 0 auto;
+          border-radius: 4px;
+        }
       }
 
       .abbr {
         margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
 
         abbr {
           display: inline-block;
