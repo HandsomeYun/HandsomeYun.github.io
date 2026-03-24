@@ -17,6 +17,7 @@ group :jekyll_plugins do
     gem 'jekyll-tabs'
     gem 'jekyll-toc'
     gem 'jekyll-twitter-plugin'
+    gem 'ostruct'
     gem 'jemoji'
     gem 'mini_racer'
     gem 'unicode_utils'
