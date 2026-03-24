@@ -47,13 +47,13 @@
   "publications": [
     {
       "name": "MIC-BEV: Multi-Infrastructure Camera Bird's-Eye-View Transformer with Relation-Aware Fusion for 3D Object Detection",
-      "publisher": "Submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), Best Paper Award for DriveX Workshop at ICCV 2025",
+      "publisher": "Under Review, Best Paper Award for DriveX Workshop at ICCV 2025",
       "releaseDate": "2025-09-01",
       "url": "http://arxiv.org/abs/2510.24688"
     },
     {
       "name": "TIC-VLA: A Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments",
-      "publisher": "Submitted to the International Conference on Machine Learning (ICML) 2026",
+      "publisher": "Under Review",
       "releaseDate": "2026-03-09",
       "url": "https://arxiv.org/abs/2602.02459"
     }
