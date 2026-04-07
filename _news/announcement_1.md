@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-Honored to be selected as a <a href="https://aws.amazon.com/ai/machine-learning/trainium/research/">2025 Amazon Trainium Fellow</a>.
+Honored to be selected as a <a href="https://www.sciencehub.ucla.edu/2025-amazon-trainium-fellows/">2025 Amazon Trainium Fellow</a>.
 

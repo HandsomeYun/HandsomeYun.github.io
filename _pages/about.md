@@ -20,4 +20,4 @@ I am currently a first-year PhD student at the the [UCLA's Mobility Lab](https:/
 
 My work lies at the intersection of robotics, artificial intelligence, and mobility. I am particularly interested in developing methods that allow physical AI systems to integrate visual and linguistic understanding with action, maintain structured memory over time, and perform reliable decision-making in long-horizon tasks. My research spans topics including navigation, manipulation, and memory-driven reasoning, with the goal of building robust and adaptable embodied agents.
 
-I am also an Amazon Trainium Fellow, supported for my research on large-scale vision and action learning for embodied intelligence.
+I am also an [Amazon Trainium Fellow](https://www.sciencehub.ucla.edu/2025-amazon-trainium-fellows/), supported for my research on large-scale vision and action learning for embodied intelligence.
