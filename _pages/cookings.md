@@ -63,14 +63,25 @@ nav_order: 5
 <!-- Selection Bar -->
 <div id="category-selection">
   <button class="filter-btn" onclick="filterSelection('all')">Show All</button>
+  <button class="filter-btn" onclick="filterSelection('western')">Western</button>
   <button class="filter-btn" onclick="filterSelection('chinese')">Chinese</button>
   <button class="filter-btn" onclick="filterSelection('dessert')">Dessert</button>
   <button class="filter-btn" onclick="filterSelection('fusion')">Fusion</button>
-  <button class="filter-btn" onclick="filterSelection('western')">Western</button>
 </div>
 
 <!-- Image Gallery -->
 <div class="gallery">
+
+  <!-- Loop for Western Category -->
+
+{% for image in site.static_files %}
+{% if image.path contains '/assets/img/cooking/western/' and image.extname != '.webp' %}
+
+  <div class="filter western">
+    <img src="{{ image.path }}" alt="Western Dish" width="300px">
+  </div>
+  {% endif %}
+{% endfor %}
 
   <!-- Loop for Chinese Category -->
 
@@ -101,17 +112,6 @@ nav_order: 5
 
   <div class="filter fusion">
     <img src="{{ image.path }}" alt="Fusion Dish" width="300px">
-  </div>
-  {% endif %}
-{% endfor %}
-
-<!-- Loop for Western Category -->
-
-{% for image in site.static_files %}
-{% if image.path contains '/assets/img/cooking/western/' and image.extname != '.webp' %}
-
-  <div class="filter western">
-    <img src="{{ image.path }}" alt="Western Dish" width="300px">
   </div>
   {% endif %}
 {% endfor %}
