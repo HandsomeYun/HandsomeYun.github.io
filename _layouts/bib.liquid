@@ -47,7 +47,15 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-7{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    <div class="title">
+      {% if entry.url %}
+        <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ entry.title }}</a>
+      {% elsif entry.website %}
+        <a href="{{ entry.website }}" target="_blank" rel="noopener noreferrer">{{ entry.title }}</a>
+      {% else %}
+        {{ entry.title }}
+      {% endif %}
+    </div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -246,6 +254,8 @@
       {% endif %}
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+      {% elsif entry.url %}
+        <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
