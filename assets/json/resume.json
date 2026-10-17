@@ -46,10 +46,16 @@
   ],
   "publications": [
     {
+      "name": "Mem4Act: Learning Effective Latent Memory for Long-Horizon Robotic Manipulation",
+      "publisher": "Under Review",
+      "releaseDate": "2026-10-15",
+      "url": "https://handsomeyun.github.io/Mem4Act/"
+    },
+    {
       "name": "MIC-BEV: Multi-Infrastructure Camera Bird's-Eye-View Transformer with Relation-Aware Fusion for 3D Object Detection",
       "publisher": "Under Review, Best Paper Award for DriveX Workshop at ICCV 2025",
       "releaseDate": "2025-09-01",
-      "url": "http://arxiv.org/abs/2510.24688"
+      "url": "https://ucla-mobility.github.io/TIC-VLA/"
     },
     {
       "name": "TIC-VLA: A Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments",

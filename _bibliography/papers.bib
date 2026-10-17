@@ -2,10 +2,32 @@
 ---
 
 @article{zhang2025ticvla,
-  title={TIC-VLA: A Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments},
-  journal={International Conference on Machine Learning (ICML)},
+  title={Mem4Act: Learning Effective Latent Memory for Long-Horizon Robotic Manipulation},
+  journal={Under Review},
   year={2026},
-  url = {https://arxiv.org/abs/2602.02459},
+  url = {https://handsomeyun.github.io/Mem4Act/},
+  preview = {mem4act.png},
+  selected = {true},
+  abstract={Long-horizon robotic manipulation fundamentally depends on memory: agents must retain information from past experiences and interactions and take correct actions. Existing approaches typically preserve historical observations, compressed visual tokens, or language summaries, but these representations either expose the action policy to increasingly long histories or risk discarding task-relevant temporal, semantic, and perceptual information. We introduce Mem4Act, a framework for learning effective latent memory as a fixed-size representation explicitly optimized for long-horizon robotic control. Mem4Act addresses three coupled challenges: how to cover long histories, what information to retain, and how to ensure the policy actually uses memory. It organizes history through multi-granularity temporal aggregation, preserves complementary semantic and perceptual information through question answering and key-frame DINO feature reconstruction, and adopts memory-first two-stage training to mitigate reactive shortcuts. The resulting representation captures both high-level task state and fine-grained perceptual evidence while maintaining a bounded interface to the action policy. Across RoboMME, RMBench, and four real-world manipulation tasks, Mem4Act achieves state-of-the-art performance in memory-dependent control, reaching success rates of 49.88%, 61.0%, and 81.50%, respectively. Ablations further demonstrate the importance of temporal structure, complementary memory supervision, and memory-first two-stage learning.},
+  note={<u>Yun Zhang</u>, Zhiyu Huang, Tianhui Cai, Chen Tang, Wei Wang, and Jiaqi Ma},
+}
+
+@article{zhang2025ticvla,
+  title={nuReasoning: A Reasoning-Centric Dataset and Benchmark for Long-Tail Autonomous Driving},
+  journal={Neural Information Processing Systems (NeurIPS) 2026},
+  year={2026},
+  url = {https://nuscenes.org/nureasoning},
+  preview = {nureasoning.png},
+  selected = {false},
+  abstract={Reasoning is essential for autonomous driving (AD) in long-tail scenarios, where vehicles must apply commonsense knowledge, understand spatial relations, infer agent interactions, and make safe decisions. However, existing AD datasets and benchmarks mainly target perception, prediction, or planning, and provide limited supervision for reasoning over realistic long-tail driving scenes. We introduce nuReasoning, a large-scale real-world dataset and benchmark for reasoning-centric AD. Following the lineage of nuScenes and nuPlan, nuReasoning advances real-world AD datasets and benchmarks toward reasoning in long-tail driving scenarios. The dataset contains 20,000 clips, each 20 seconds long, collected across multiple cities, with synchronized multi-camera images, LiDAR data, HD maps, object annotations, and human-verified reasoning annotations spanning Spatial Reasoning, Decision Reasoning, and Counterfactual Reasoning. Unlike prior datasets that focus primarily on visual question answering, nuReasoning supports both reasoning evaluation and planning evaluation, enabling a direct study of how reasoning supervision affects driving performance. Experiments show that fine-tuning VLMs on nuReasoning substantially improves driving-specific question answering, while incorporating reasoning supervision into VLA training improves planning performance even when textual reasoning outputs are disabled at inference time. These results establish nuReasoning as a foundation for evaluating and improving robust, interpretable, reasoning-driven AD systems in realistic long-tail settings.},
+  note={Zhiyu Huang, Johnson Liu, Rui Song, Zewei Zhou, Ruining Yang, <u>Yun Zhang</u>, Tianhui Cai, Hanyin Zhang, Mingxuan Gao, Valeria Xu, Jiali Chen, Yishan Shen, Yiluan Guo, Tony (Xuewei)Qi, Jiaqi Ma},
+}
+
+@article{zhang2025ticvla,
+  title={TIC-VLA: A Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments},
+  journal={International Conference on Machine Learning (ICML) 2026},
+  year={2026},
+  url = {https://ucla-mobility.github.io/TIC-VLA/},
   preview = {ticvla.png},
   selected = {true},
   abstract={Robots in dynamic, human-centric environments must follow language instructions while maintaining real-time reactive control. Vision-language-action (VLA) models offer a promising framework, but they assume temporally aligned reasoning and control, despite semantic inference being inherently delayed relative to real-time action. We introduce Think-in-Control (TIC)-VLA, a latency-aware framework that explicitly models delayed semantic reasoning during action generation. TIC-VLA defines a delayed semantic-control interface that conditions action generation on delayed vision-language semantic states and explicit latency metadata, in addition to current observations, enabling policies to compensate for asynchronous reasoning. We further propose a latency-consistent training pipeline that injects reasoning inference delays during imitation learning and online reinforcement learning, aligning training with asynchronous deployment. To support realistic evaluation, we present DynaNav, a physics-accurate, photo-realistic simulation suite for language-guided navigation in dynamic environments. Extensive experiments in simulation and on a real robot show that TIC-VLA consistently outperforms prior VLA models while maintaining robust real-time control under multi-second reasoning latency. },
@@ -40,22 +62,35 @@
   year={2025},
   url={https://arxiv.org/abs/2412.06142},
   preview = {agentalign1.png},
+  selected = {false},
   abstract={This work presents AgentAlign, a real-world multi-agent perception framework that mitigates multi-modality misalignment in cooperative autonomous systems using cross-modality feature alignment and introduces the V2XSet-Noise dataset for robust evaluation.},
   note={Zonglin Meng, <u>Yun Zhang</u>, Zhaoliang Zheng, Seth Z. Zhao, Jiaqi Ma}
 }
 
+@article{zhang2025agentalign,
+  title={EnerGS: Energy-Based Gaussian Splatting with Partial Geometric Priors},
+  journal={ICML 2026},
+  year={2025},
+  url={https://arxiv.org/pdf/2604.26238},
+  preview = {enerGS.png},
+  selected = {false},
+  abstract={3D Gaussian Splatting (3DGS) has been widely adopted for scene reconstruction, where training inherently constitutes a highly coupled and non-convex optimization problem. Recent works commonly incorporate geometric priors, such as LiDAR measurements, either for initialization or as training constraints, with the goal of improving photometric reconstruction quality. However, in large-scale outdoor scenarios, such geometric supervision is often spatially incomplete and uneven, which limits its effectiveness as a reliable prior and can even be detrimental to the final reconstruction. To address this challenge, we model partially observable geometry as a continuous energy field induced by geometric evidence and propose EnerGS. Rather than enforcing geometry as a hard constraint, EnerGS provides a soft geometric guidance for the optimization of Gaussian primitives, allowing geometric information to steer the optimization process without directly restricting the solution space. Extensive experiments on large-scale outdoor scenes demonstrate that, under both sparse multi-view and monocular settings, EnerGS consistently improves photometric quality and geometric stability, while effectively mitigating overfitting during 3DGS training.},
+  note={Rui Song, Tianhui Cai, Markus Gross, <u>Yun Zhang</u>, Walter Zimmer, Zhiyu Huang, Olaf Wysocki, Jiaqi Ma}
+}
+
 @article{zhang2025relmap,
   title={RelMap: Enhancing Online Map Construction with Class-Aware Spatial Relation and Semantic Priors},
-  journal={International Conference on Robotics and Automation (ICRA)},
+  journal={International Conference on Robotics and Automation (ICRA) 2026},
   year={2025},
   preview = {relmap.png},
+  selected = {false},
   abstract={RelMap is an online HD map construction framework that enhances vectorized map generation using class-aware spatial relations and semantic priors, significantly improving accuracy and data efficiency on nuScenes and Argoverse 2 datasets.},
   note={Tianhui Cai, <u>Yun Zhang</u>, Zewei Zhou, Zhiyu Huang, Jiaqi Ma}
 }
 
 @article{zhang2025v2xpnp,
   title={V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for Multi-Agent Perception and Prediction},
-  journal={International Conference on Computer Vision (ICCV)},
+  journal={International Conference on Computer Vision (ICCV) 2025},
   year={2025},
   url={https://arxiv.org/abs/2412.01812},
   preview = {v2xpnp.png},
@@ -65,7 +100,7 @@
 
 @article{huang2025mdg,
   title={MDG: Multi-Agent Behavior Modeling in Traffic Scenarios through Masked Denoising Generation},
-  journal={CVPR 2026 Findings Track},
+  journal={CVPR 2026 Findings Track 2026},
   year={2025},
   preview = {mdg.png},
   abstract={MDG is a novel generative model that formulates multi-agent trajectory generation as a masked denoising process.},
@@ -74,7 +109,7 @@
 
 @article{huang2025autovla,
   title={AutoVLA: Vision-Language-Action Model for End-to-End Autonomous Driving with Adaptive Reasoning and Reinforcement Fine-Tuning},
-  journal={Neural Information Processing Systems (NeurIPS)},
+  journal={Neural Information Processing Systems (NeurIPS) 2025},
   year={2025},
   url = {https://autovla.github.io/},
   preview = {autovla.png},
