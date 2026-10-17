@@ -6,7 +6,7 @@ title: Yun Zhang # the website title (if blank, full name will be used instead)
 first_name: Yun
 middle_name:
 last_name: Zhang
-email: yun666@g.ucla.edu
+email: yun666@cs.ucla.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Yun Zhang is a Computer Vision researcher at UCLA's Mobility Lab, working on autonomous driving and intelligent perception systems.
 footer_text: >
