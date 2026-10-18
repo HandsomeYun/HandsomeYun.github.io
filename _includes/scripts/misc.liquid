@@ -40,4 +40,31 @@
 <!-- Jupyter Open External Links New Tab -->
 <script defer src="{{ '/assets/js/jupyter_new_tab.js' | relative_url | bust_file_cache }}"></script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const videos = document.querySelectorAll('video.preview');
+
+    if (!('IntersectionObserver' in window)) {
+      videos.forEach((video) => video.play().catch(() => {}));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    videos.forEach((video) => observer.observe(video));
+  });
+</script>
+
 {% assign site.test-library.url = site.test-library.url | append: 'teste' %}

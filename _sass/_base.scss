@@ -731,6 +731,12 @@ footer.sticky-bottom {
           margin: 0 auto;
           border-radius: 4px;
         }
+
+      }
+
+      video.preview {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
       }
 
       .abbr {
